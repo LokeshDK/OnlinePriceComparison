@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:show, :edit, :update, :destroy, :account]
 
   # GET /users
   # GET /users.json
@@ -60,6 +60,13 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+# To display my account page of a particular user
+  # user/1/account
+  #
+  def account
+  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

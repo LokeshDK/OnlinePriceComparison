@@ -13,6 +13,7 @@
 
   <div class="field">
     <%= form.label :title %>
+    <%= form.select :desired_attribute, ['Mr.', 'Ms.', 'Mrs.']%>
     <%= form.text_field :title %>
   </div>
 
@@ -38,10 +39,10 @@
 
   <div class="field">
     <%= form.label :password %>
-    <%= form.text_field :password %>
+    <%= form.password_field :password %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
-  </div>
+  <%= form.submit %>
+</div>
 <% end %>
