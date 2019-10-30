@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Store Infos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Store name</th>
+      <th>Address</th>
+      <th>Phone no</th>
+      <th>Buisness</th>
+      <th>Branches</th>
+      <th>Store incharge</th>
+      <th>Contact no</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @store_infos.each do |store_info| %>
+      <tr>
+        <td><%= store_info.store_name %></td>
+        <td><%= store_info.address %></td>
+        <td><%= store_info.phone_no %></td>
+        <td><%= store_info.buisness_id %></td>
+        <td><%= store_info.branches %></td>
+        <td><%= store_info.store_incharge %></td>
+        <td><%= store_info.contact_no %></td>
+        <td><%= link_to 'Show', store_info %></td>
+        <td><%= link_to 'Edit', edit_store_info_path(store_info) %></td>
+        <td><%= link_to 'Destroy', store_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Store Info', new_store_info_path %>

@@ -1,0 +1,52 @@
+<%= form_with(model: store_info, local: true) do |form| %>
+  <% if store_info.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(store_info.errors.count, "error") %> prohibited this store_info from being saved:</h2>
+
+      <ul>
+        <% store_info.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :store_name %>
+    <%= form.text_field :store_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone_no %>
+    <%= form.number_field :phone_no %>
+  </div>
+
+  <div class="field">
+    <%= form.label :buisness_id %>
+    <%= form.text_field :buisness_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :branches %>
+    <%= form.number_field :branches %>
+  </div>
+
+  <div class="field">
+    <%= form.label :store_incharge %>
+    <%= form.text_field :store_incharge %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contact_no %>
+    <%= form.number_field :contact_no %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
