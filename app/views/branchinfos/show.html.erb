@@ -4,5 +4,25 @@
   <b>Branch details: </b>
   <%= @currentBranch.branchname %></p>
 
+<p>
+  <strong>Branch Address:</strong>
+  <%= @currentBranch.address %>
+</p>
+
+<p>
+  <strong>Phoneno:</strong>
+  <%= @currentBranch.phoneno %>
+</p>
+
+<p>
+  <strong>Branchincharge:</strong>
+  <%= @currentBranch.branchincharge %>
+</p>
+
+<p>
+  <strong>Contactno:</strong>
+  <%= @currentBranch.contactno %>
+</p>
+
 <%= link_to'Edit', edit_storeinfo_branchinfo_path(@currentStore, @currentBranch) %> |
 <%= link_to'Back', storeinfo_branchinfos_path(@currentStore) %>

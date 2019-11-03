@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_02_211453) do
+ActiveRecord::Schema.define(version: 2019_11_03_093940) do
 
   create_table "branchinfos", force: :cascade do |t|
     t.string "branchname"
@@ -22,6 +22,25 @@ ActiveRecord::Schema.define(version: 2019_11_02_211453) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["storeinfo_id"], name: "index_branchinfos_on_storeinfo_id"
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "categoryname"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "productinfos", force: :cascade do |t|
+    t.string "productname"
+    t.string "storeproductid"
+    t.decimal "productprice"
+    t.integer "branchinfo_id", null: false
+    t.string "image"
+    t.integer "categorie_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["branchinfo_id"], name: "index_productinfos_on_branchinfo_id"
+    t.index ["categorie_id"], name: "index_productinfos_on_categorie_id"
   end
 
   create_table "store_infos", force: :cascade do |t|
@@ -61,4 +80,6 @@ ActiveRecord::Schema.define(version: 2019_11_02_211453) do
   end
 
   add_foreign_key "branchinfos", "storeinfos"
+  add_foreign_key "productinfos", "branchinfos"
+  add_foreign_key "productinfos", "categories", column: "categorie_id"
 end

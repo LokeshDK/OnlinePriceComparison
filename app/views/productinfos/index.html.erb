@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Productinfos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Productname</th>
+      <th>Storeproductid</th>
+      <th>Productprice</th>
+      <th>Branchinfo</th>
+      <th>Image</th>
+      <th>Categorie</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @productinfos.each do |productinfo| %>
+      <tr>
+        <td><%= productinfo.productname %></td>
+        <td><%= productinfo.storeproductid %></td>
+        <td><%= productinfo.productprice %></td>
+        <td><%= productinfo.branchinfo_id %></td>
+        <td><%= productinfo.image %></td>
+        <td><%= productinfo.categorie_id %></td>
+        <td><%= link_to 'Show', productinfo %></td>
+        <td><%= link_to 'Edit', edit_productinfo_path(productinfo) %></td>
+        <td><%= link_to 'Destroy', productinfo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Productinfo', new_productinfo_path %>
