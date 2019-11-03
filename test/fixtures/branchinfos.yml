@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  branchname: MyString
+  address: MyString
+  phoneno: 1
+  branchincharge: MyString
+  contactno: 1
+  storeinfo: one
+
+two:
+  branchname: MyString
+  address: MyString
+  phoneno: 1
+  branchincharge: MyString
+  contactno: 1
+  storeinfo: two

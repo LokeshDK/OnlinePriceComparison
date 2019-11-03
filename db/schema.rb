@@ -10,7 +10,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_24_171121) do
+ActiveRecord::Schema.define(version: 2019_11_02_211453) do
+
+  create_table "branchinfos", force: :cascade do |t|
+    t.string "branchname"
+    t.string "address"
+    t.integer "phoneno"
+    t.string "branchincharge"
+    t.integer "contactno"
+    t.integer "storeinfo_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["storeinfo_id"], name: "index_branchinfos_on_storeinfo_id"
+  end
+
+  create_table "store_infos", force: :cascade do |t|
+    t.string "store_name"
+    t.string "address"
+    t.integer "phone_no"
+    t.string "buisness_id"
+    t.integer "branches"
+    t.string "store_incharge"
+    t.integer "contact_no"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "storeinfos", force: :cascade do |t|
+    t.string "storename"
+    t.string "address"
+    t.integer "phoneno"
+    t.string "buisnessid"
+    t.integer "branchcount"
+    t.string "storeincharge"
+    t.integer "contactno"
+    t.string "image"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "title"
@@ -23,4 +60,5 @@ ActiveRecord::Schema.define(version: 2019_10_24_171121) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "branchinfos", "storeinfos"
 end

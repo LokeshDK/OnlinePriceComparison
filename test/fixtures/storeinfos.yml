@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  storename: MyString
+  address: MyString
+  phoneno: 1
+  buisnessid: MyString
+  branchcount: 1
+  storeincharge: MyString
+  contactno: 1
+  image: MyString
+
+two:
+  storename: MyString
+  address: MyString
+  phoneno: 1
+  buisnessid: MyString
+  branchcount: 1
+  storeincharge: MyString
+  contactno: 1
+  image: MyString

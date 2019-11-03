@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Storename:</strong>
+  <%= @storeinfo.storename %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @storeinfo.address %>
+</p>
+
+<p>
+  <strong>Phoneno:</strong>
+  <%= @storeinfo.phoneno %>
+</p>
+
+<p>
+  <strong>Buisnessid:</strong>
+  <%= @storeinfo.buisnessid %>
+</p>
+
+<p>
+  <strong>Branchcount:</strong>
+  <%= @storeinfo.branchcount %>
+</p>
+
+<p>
+  <strong>Storeincharge:</strong>
+  <%= @storeinfo.storeincharge %>
+</p>
+
+<p>
+  <strong>Contactno:</strong>
+  <%= @storeinfo.contactno %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @storeinfo.image %>
+</p>
+
+<!-- Display the reviews of a movie -->
+<h2>Branches</h2>
+<% @storeinfo.branchinfos.each do |cBranch| %>
+  <p>
+    <b>branch details:</b>
+    <%= cBranch.branchname %></p>
+<% end %>
+
+<%= link_to 'Edit', edit_storeinfo_path(@storeinfo) %> |
+<%= link_to 'Back', storeinfos_path %>
+<%= link_to'Show Branches', storeinfo_branchinfos_path(@storeinfo) %>

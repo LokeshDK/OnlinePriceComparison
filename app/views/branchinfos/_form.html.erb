@@ -1,0 +1,19 @@
+<%= form_for([@currentStore, @currentBranch]) do |f| %>
+  <% if @currentBranch.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@currentBranch.errors.count, "error")%> prohibited this review from being saved:</h2>
+      <ul><% @currentBranch.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <p><%= f.label :Branchname %>
+      <br />
+      <%= f.text_field :branchname %>
+    </p>
+  </div>
+  <div class="actions">
+    <%= f.submit %></div>
+<% end %>
