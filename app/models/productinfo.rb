@@ -1,4 +1,4 @@
 class Productinfo < ApplicationRecord
   belongs_to :branchinfo
-  belongs_to :categorie
+  has_many :categorie
 end

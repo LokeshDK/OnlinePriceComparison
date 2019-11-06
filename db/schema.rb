@@ -43,18 +43,6 @@ ActiveRecord::Schema.define(version: 2019_11_03_093940) do
     t.index ["categorie_id"], name: "index_productinfos_on_categorie_id"
   end
 
-  create_table "store_infos", force: :cascade do |t|
-    t.string "store_name"
-    t.string "address"
-    t.integer "phone_no"
-    t.string "buisness_id"
-    t.integer "branches"
-    t.string "store_incharge"
-    t.integer "contact_no"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "storeinfos", force: :cascade do |t|
     t.string "storename"
     t.string "address"

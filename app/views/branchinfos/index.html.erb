@@ -3,11 +3,19 @@
 <table>
   <tr>
     <th>Branch details</th>
+    <th>Address</th>
+    <th>Phone No</th>
+    <th>Branch Incharge</th>
+    <th>Contact No</th>
   </tr>
 
 <% for br in @branchList %>
        <tr>
        <td><%= br.branchname %></td>
+         <td><%= br.address %></td>
+         <td><%= br.phoneno %></td>
+         <td><%= br.branchincharge %></td>
+         <td><%= br.contactno %></td>
         <td><%= link_to'Show', storeinfo_branchinfo_path(@currentStore, br)%></td>
         <td><%= link_to'Edit', edit_storeinfo_branchinfo_path(@currentStore, br)%></td>
         <td><%= link_to'Destroy', storeinfo_branchinfo_path(@currentStore, br),

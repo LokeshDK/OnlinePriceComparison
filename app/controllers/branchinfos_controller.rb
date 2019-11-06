@@ -34,7 +34,7 @@ class BranchinfosController < ApplicationController
     # For URL like /storeinfos/1/branchinfoss
     # Populate an review associate with storeinfo 1 with form data
     # stores will be associated with the branches
-    @currentBranch = @currentStore.branchinfos.build(params.require(:branchinfo).permit(:branchname))
+    @currentBranch = @currentStore.branchinfos.build(params.require(:branchinfo).permit(:branchname, :address, :phoneno, :branchincharge, :contactno))
 
     if @currentBranch.save
       # Save the branch successfully
@@ -59,7 +59,7 @@ class BranchinfosController < ApplicationController
     @currentStore = Storeinfo.find(params[:storeinfo_id])
 
     @currentBranch = branchinfos.find(params[:id])
-    if @currentBranch.update_attributes(params.require(:branchinfo).permit(:branchname))
+    if @currentBranch.update_attributes(params.require(:branchinfo).permit(:branchname, :address, :phoneno, :branchincharge, :contactno))
       # Save the branchinfo successfully
       redirect_to storeinfo_branchinfo_url(@currentStore, @currentBranch)
     else
