@@ -1,10 +1,16 @@
 Rails.application.routes.draw do
-  resources :productinfos
+  #resources :productinfos
   #resources :categories
 
   resources :storeinfos do
-    resources :branchinfos
+    resources :branchinfos do
+      resources :productinfos
+    end
   end
+
+ # resources :branchinfos do
+  #  resources :productinfos
+ # end
 
   resources :users
   get '/users/:id/account', to: 'users#account'

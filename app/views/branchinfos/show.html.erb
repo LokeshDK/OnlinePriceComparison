@@ -1,4 +1,4 @@
-<h1>Branches in <%= @currentStore.storename %></h1>
+<h1>Branches in <%= @currentBranch.branchname %></h1>
 
 <p>
   <b>Branch details: </b>
@@ -26,3 +26,5 @@
 
 <%= link_to'Edit', edit_storeinfo_branchinfo_path(@currentStore, @currentBranch) %> |
 <%= link_to'Back', storeinfo_branchinfos_path(@currentStore) %>
+<%= link_to'Show Products', {:controller => "productinfos", :action => "new",
+                             :storeinfo_id => @currentBranch.storeinfo_id, :branchinfo_id => @currentBranch.id} %>

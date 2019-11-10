@@ -1,47 +1,41 @@
-<%= form_with(model: productinfo, local: true) do |form| %>
-  <% if productinfo.errors.any? %>
+<%= form_for([@currentStore, @currentBranch, @currentProduct]) do |f| %>
+  <% if @currentProduct.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(productinfo.errors.count, "error") %> prohibited this productinfo from being saved:</h2>
-
-      <ul>
-        <% productinfo.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
+      <h2><%= pluralize(@currentProduct.errors.count, "error")%> prohibited this product from being saved:</h2>
+      <ul><% @currentProduct.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
-
   <div class="field">
-    <%= form.label :productname %>
-    <%= form.text_field :productname %>
+    <p><%= f.label :Productname %>
+      <br />
+      <%= f.text_field :productname %>
+    </p>
   </div>
 
-  <div class="field">
-    <%= form.label :storeproductid %>
-    <%= form.text_field :storeproductid %>
+  <div>
+    <p><%= f.label :StoreProductID %>
+      <br />
+      <%= f.text_field :storeproductid %>
+    </p>
   </div>
 
-  <div class="field">
-    <%= form.label :productprice %>
-    <%= form.text_field :productprice %>
+  <div>
+    <p><%= f.label :PProductPrice %>
+      <br />
+      <%= f.text_field :productprice %>
+    </p>
   </div>
 
-  <div class="field">
-    <%= form.label :branchinfo_id %>
-    <%= form.text_field :branchinfo_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :image %>
-    <%= form.text_field :image %>
-  </div>
-
-  <div class="field">
-    <%= form.label :categorie_id %>
-    <%= form.text_field :categorie_id %>
+  <div>
+    <p><%= f.label :Image %>
+      <br />
+      <%= f.text_field :image %>
+    </p>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
-  </div>
+    <%= f.submit %></div>
 <% end %>

@@ -4,60 +4,82 @@ class ProductinfosController < ApplicationController
   # GET /productinfos
   # GET /productinfos.json
   def index
-    @productinfos = Productinfo.all
+    @currentBranch = Branchinfo.find(params[:branchinfo_id])
+  
+    @productList = @currentBranch.productinfos
   end
 
   # GET /productinfos/1
   # GET /productinfos/1.json
   def show
+    @currentBranch = Branchinfo.find(params[:branchinfo_id])
+
+    # For URL like /storeinfo/1/branchinfos/2
+    # Find an branchinfo in storeinfo 1 that has id=2
+    @currentProduct = @currentBranch.productinfos.find(params[:id])
   end
 
   # GET /productinfos/new
   def new
-    @productinfo = Productinfo.new
-  end
-
-  # GET /productinfos/1/edit
-  def edit
+    @currentBranch = Branchinfo.find(params[:branchinfo_id])
+    # Associate an branchinfo object with storeinfo 1
+    @currentProduct = @currentBranch.productinfos.build
   end
 
   # POST /productinfos
   # POST /productinfos.json
   def create
-    @productinfo = Productinfo.new(productinfo_params)
+    @currentBranch = Branchinfo.find(params[:branchinfo_id])
 
-    respond_to do |format|
-      if @productinfo.save
-        format.html { redirect_to @productinfo, notice: 'Productinfo was successfully created.' }
-        format.json { render :show, status: :created, location: @productinfo }
-      else
-        format.html { render :new }
-        format.json { render json: @productinfo.errors, status: :unprocessable_entity }
-      end
+    # For URL like /storeinfos/1/branchinfoss
+    # Populate an review associate with storeinfo 1 with form data
+    # stores will be associated with the branches
+    @currentProduct = @currentBranch.productinfos.build(params.require(:productinfo).permit(
+        :productname, :storeproductid, :productprice, :image))
+
+    if @currentBranch.save
+      # Save the branch successfully
+      redirect_to storeinfo_branchinfo_productinfo_url(@currentBranch, @currentProduct)
+    else
+      render :action => "new"
     end
+  end
+
+  # GET /branchinfos/1/edit
+  def edit
+    @currentBranch = Branchinfo.find(params[:branchinfo_id])
+
+    # For URL like /storeinfo/1/branchinfo/2/edit
+    # Get branchinfo id=2 for storeinfo 1
+    @currentProduct = @currentBranch.productinfos.find(params[:id])
   end
 
   # PATCH/PUT /productinfos/1
   # PATCH/PUT /productinfos/1.json
   def update
-    respond_to do |format|
-      if @productinfo.update(productinfo_params)
-        format.html { redirect_to @productinfo, notice: 'Productinfo was successfully updated.' }
-        format.json { render :show, status: :ok, location: @productinfo }
-      else
-        format.html { render :edit }
-        format.json { render json: @productinfo.errors, status: :unprocessable_entity }
-      end
+    @currentBranch = Branchinfo.find(params[:branchinfo_id])
+
+    @currentProduct = productinfos.find(params[:id])
+    if @currentProduct.update_attributes(params.require(:productinfo).permit(
+        :productname, :storeproductid, :productprice, :image))
+      # Save the branchinfo successfully
+      redirect_to storeinfo_branchinfo_productinfo_url(@currentBranch, @currentProduct)
+    else
+      render :action => "edit"
     end
   end
 
   # DELETE /productinfos/1
   # DELETE /productinfos/1.json
   def destroy
-    @productinfo.destroy
+    @currentBranch = Branchinfo.find(params[:branchinfo_id])
+
+    @currentProduct = Productinfo.find(params[:id])
+    @currentProduct.destroy
+
     respond_to do |format|
-      format.html { redirect_to productinfos_url, notice: 'Productinfo was successfully destroyed.' }
-      format.json { head :no_content }
+      format.html { redirect_to storeinfo_branchinfo_productinfos_path(@currentBranch) }
+      format.xml  { head :ok }
     end
   end
 

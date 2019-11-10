@@ -1,37 +1,28 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Productinfos</h1>
+<h1>Products in <%= @currentBranch.branchname %></h1>
 
 <table>
-  <thead>
+  <tr>
+    <th>Product Name</th>
+    <th>Store Product Id</th>
+    <th>Product Price</th>
+    <th>Image</th>
+  </tr>
+
+  <% for product in @productList %>
     <tr>
-      <th>Productname</th>
-      <th>Storeproductid</th>
-      <th>Productprice</th>
-      <th>Branchinfo</th>
-      <th>Image</th>
-      <th>Categorie</th>
-      <th colspan="3"></th>
+      <td><%= product.productname %></td>
+      <td><%= product.storeproductid %></td>
+      <td><%= product.productprice %></td>
+      <td><%= product.image %></td>
+      <td><%= link_to'Show', storeinfo_branchinfo_productinfo_path(@currentBranch, product)%></td>
+      <td><%= link_to'Edit', edit_storeinfo_branchinfo_productinfo_path(@currentBranch, product)%></td>
+      <td><%= link_to'Destroy', storeinfo_branchinfo_productinfo_path(@currentBranch, product),
+                     :confirm =>'Are you sure?',
+                     :method => :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
-  </thead>
-
-  <tbody>
-    <% @productinfos.each do |productinfo| %>
-      <tr>
-        <td><%= productinfo.productname %></td>
-        <td><%= productinfo.storeproductid %></td>
-        <td><%= productinfo.productprice %></td>
-        <td><%= productinfo.branchinfo_id %></td>
-        <td><%= productinfo.image %></td>
-        <td><%= productinfo.categorie_id %></td>
-        <td><%= link_to 'Show', productinfo %></td>
-        <td><%= link_to 'Edit', edit_productinfo_path(productinfo) %></td>
-        <td><%= link_to 'Destroy', productinfo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+  <% end %>
 </table>
+<br />
 
-<br>
-
-<%= link_to 'New Productinfo', new_productinfo_path %>
+<%= link_to'New Product', new_storeinfo_branchinfo_productinfo_path(@currentBranch.storeinfo_id, @currentBranch) %>
+<%= link_to'Back to Branches', storeinfo_branchinfos_path(@currentBranch.storeinfo_id, @currentBranch) %>
