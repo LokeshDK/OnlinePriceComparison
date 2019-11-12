@@ -4,82 +4,71 @@ class ProductinfosController < ApplicationController
   # GET /productinfos
   # GET /productinfos.json
   def index
-    @currentBranch = Branchinfo.find(params[:branchinfo_id])
+    @branchinfo = Branchinfo.find(params[:branchinfo_id])
   
-    @productList = @currentBranch.productinfos
+    @productList = @branchinfo.productinfos
   end
 
   # GET /productinfos/1
   # GET /productinfos/1.json
   def show
-    @currentBranch = Branchinfo.find(params[:branchinfo_id])
-
-    # For URL like /storeinfo/1/branchinfos/2
-    # Find an branchinfo in storeinfo 1 that has id=2
-    @currentProduct = @currentBranch.productinfos.find(params[:id])
   end
 
   # GET /productinfos/new
   def new
-    @currentBranch = Branchinfo.find(params[:branchinfo_id])
+    @branchinfo = Branchinfo.find(params[:branchinfo_id])
     # Associate an branchinfo object with storeinfo 1
-    @currentProduct = @currentBranch.productinfos.build
+    @productinfo =Productinfo.new
   end
 
   # POST /productinfos
   # POST /productinfos.json
   def create
-    @currentBranch = Branchinfo.find(params[:branchinfo_id])
+    @productinfo = Productinfo.new(productinfo_params)
 
-    # For URL like /storeinfos/1/branchinfoss
-    # Populate an review associate with storeinfo 1 with form data
-    # stores will be associated with the branches
-    @currentProduct = @currentBranch.productinfos.build(params.require(:productinfo).permit(
-        :productname, :storeproductid, :productprice, :image))
-
-    if @currentBranch.save
-      # Save the branch successfully
-      redirect_to storeinfo_branchinfo_productinfo_url(@currentBranch, @currentProduct)
-    else
-      render :action => "new"
+    respond_to do |format|
+      if @productinfo.save
+        format.html { redirect_to @productinfo, notice: 'Product was successfully created.' }
+        format.json { render :index, status: :created, location: @productinfo }
+      else
+        format.html { render :new }
+        format.json { render json: @productinfo.errors, status: :unprocessable_entity }
+      end
     end
   end
 
   # GET /branchinfos/1/edit
   def edit
-    @currentBranch = Branchinfo.find(params[:branchinfo_id])
-
-    # For URL like /storeinfo/1/branchinfo/2/edit
-    # Get branchinfo id=2 for storeinfo 1
-    @currentProduct = @currentBranch.productinfos.find(params[:id])
   end
 
   # PATCH/PUT /productinfos/1
   # PATCH/PUT /productinfos/1.json
   def update
-    @currentBranch = Branchinfo.find(params[:branchinfo_id])
-
-    @currentProduct = productinfos.find(params[:id])
-    if @currentProduct.update_attributes(params.require(:productinfo).permit(
-        :productname, :storeproductid, :productprice, :image))
-      # Save the branchinfo successfully
-      redirect_to storeinfo_branchinfo_productinfo_url(@currentBranch, @currentProduct)
-    else
-      render :action => "edit"
+    respond_to do |format|
+      if @productinfo.update(productinfo_params)
+        format.html { redirect_to @productinfo, notice: 'Productinfo was successfully updated.' }
+        format.json { render :show, status: :ok, location: @productinfo }
+      else
+        format.html { render :edit }
+        format.json { render json: @productinfo.errors, status: :unprocessable_entity }
+      end
     end
   end
 
   # DELETE /productinfos/1
   # DELETE /productinfos/1.json
   def destroy
-    @currentBranch = Branchinfo.find(params[:branchinfo_id])
+    branchid = @productinfo.branchinfo_id
 
-    @currentProduct = Productinfo.find(params[:id])
-    @currentProduct.destroy
+    @branchinfo = Branchinfo.find(branchid)
 
+    storeid = @branchinfo.storeinfo_id
+    @productinfo.destroy
     respond_to do |format|
-      format.html { redirect_to storeinfo_branchinfo_productinfos_path(@currentBranch) }
-      format.xml  { head :ok }
+      format.html { redirect_to :controller => "productinfos",
+                                :action => "index", :branchinfo_id => branchid,
+                                :storeinfo_id => storeid }
+      format.json { head :no_content }
     end
   end
 

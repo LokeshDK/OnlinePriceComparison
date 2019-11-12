@@ -1,20 +1,28 @@
-<%= form_for([@currentStore, @currentBranch]) do |f| %>
-  <% if @currentBranch.errors.any? %>
+<%= form_for([@branchinfo]) do |f| %>
+  <% if @branchinfo.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@currentBranch.errors.count, "error")%> prohibited this branch from being saved:</h2>
-      <ul><% @currentBranch.errors.full_messages.each do |msg| %>
+      <h2><%= pluralize(@branchinfo.errors.count, "error")%> prohibited this branch from being saved:</h2>
+      <ul><% @branchinfo.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
   <div class="field">
+
+    <% if @storeinfo.present? %>
+
+    <p><%= f.label :StoreinfoID %>
+      <br />
+      <%= f.text_field :storeinfo_id, :value => @storeinfo.id %>
+    </p>
+
     <p><%= f.label :Branchname %>
       <br />
-      <%= f.text_field :branchname %>
+      <%= f.text_field :branchname, :value => @storeinfo.storename %>
     </p>
   </div>
-
+    <% end %>
   <div>
     <p><%= f.label :Address %>
       <br />

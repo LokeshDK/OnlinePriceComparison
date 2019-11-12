@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_03_093940) do
+ActiveRecord::Schema.define(version: 2019_11_12_152907) do
 
   create_table "branchinfos", force: :cascade do |t|
     t.string "branchname"
@@ -36,11 +36,9 @@ ActiveRecord::Schema.define(version: 2019_11_03_093940) do
     t.decimal "productprice"
     t.integer "branchinfo_id", null: false
     t.string "image"
-    t.integer "categorie_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["branchinfo_id"], name: "index_productinfos_on_branchinfo_id"
-    t.index ["categorie_id"], name: "index_productinfos_on_categorie_id"
   end
 
   create_table "storeinfos", force: :cascade do |t|
@@ -69,5 +67,4 @@ ActiveRecord::Schema.define(version: 2019_11_03_093940) do
 
   add_foreign_key "branchinfos", "storeinfos"
   add_foreign_key "productinfos", "branchinfos"
-  add_foreign_key "productinfos", "categories", column: "categorie_id"
 end

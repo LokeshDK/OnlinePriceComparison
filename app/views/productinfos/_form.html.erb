@@ -1,14 +1,23 @@
-<%= form_for([@currentStore, @currentBranch, @currentProduct]) do |f| %>
-  <% if @currentProduct.errors.any? %>
+<%= form_for([@productinfo]) do |f| %>
+  <% if @productinfo.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@currentProduct.errors.count, "error")%> prohibited this product from being saved:</h2>
-      <ul><% @currentProduct.errors.full_messages.each do |msg| %>
+      <h2><%= pluralize(@productinfo.errors.count, "error")%> prohibited this product from being saved:</h2>
+      <ul><% @productinfo.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
   <div class="field">
+
+    <% if @branchinfo.present? %>
+
+    <p><%= f.label :BranchinfoID %>
+      <br />
+      <%= f.text_field :branchinfo_id, :value => @branchinfo.id %>
+    </p>
+      <% end %>
+
     <p><%= f.label :Productname %>
       <br />
       <%= f.text_field :productname %>
@@ -23,7 +32,7 @@
   </div>
 
   <div>
-    <p><%= f.label :PProductPrice %>
+    <p><%= f.label :ProductPrice %>
       <br />
       <%= f.text_field :productprice %>
     </p>

@@ -9,6 +9,8 @@ gem 'rails', '~> 6.0.0'
 # Use bootstrap for views
 gem 'bootstrap', '~> 4.0.0'
 
+gem 'devise'
+
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server

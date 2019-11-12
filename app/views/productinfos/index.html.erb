@@ -1,4 +1,4 @@
-<h1>Products in <%= @currentBranch.branchname %></h1>
+<h1>Products in Branch <%= @branchinfo.branchname %></h1>
 
 <table>
   <tr>
@@ -14,9 +14,8 @@
       <td><%= product.storeproductid %></td>
       <td><%= product.productprice %></td>
       <td><%= product.image %></td>
-      <td><%= link_to'Show', storeinfo_branchinfo_productinfo_path(@currentBranch, product)%></td>
-      <td><%= link_to'Edit', edit_storeinfo_branchinfo_productinfo_path(@currentBranch, product)%></td>
-      <td><%= link_to'Destroy', storeinfo_branchinfo_productinfo_path(@currentBranch, product),
+      <td><%= link_to'Edit', edit_productinfo_path(product) %></td>
+      <td><%= link_to'Destroy', productinfo_path(product),
                      :confirm =>'Are you sure?',
                      :method => :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
@@ -24,5 +23,5 @@
 </table>
 <br />
 
-<%= link_to'New Product', new_storeinfo_branchinfo_productinfo_path(@currentBranch.storeinfo_id, @currentBranch) %>
-<%= link_to'Back to Branches', storeinfo_branchinfos_path(@currentBranch.storeinfo_id, @currentBranch) %>
+<%= link_to'New Product', {:controller => "productinfos", :action => "new", :branchinfo_id => @branchinfo.id} %>
+<%= link_to'Back to Branches', {:controller => "branchinfos", :action => "index", :branchinfo_id => @branchinfo.id, :storeinfo_id => @branchinfo.storeinfo_id} %>

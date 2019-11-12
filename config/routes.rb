@@ -2,11 +2,11 @@ Rails.application.routes.draw do
   #resources :productinfos
   #resources :categories
 
-  resources :storeinfos do
-    resources :branchinfos do
-      resources :productinfos
-    end
-  end
+  resources :storeinfos
+  resources :branchinfos
+  resources :productinfos
+
+
 
  # resources :branchinfos do
   #  resources :productinfos

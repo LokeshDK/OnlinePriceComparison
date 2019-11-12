@@ -4,80 +4,65 @@ class BranchinfosController < ApplicationController
   # GET /branchinfos
   # GET /branchinfos.json
   def index
-    @currentStore = Storeinfo.find(params[:storeinfo_id])
+    @storeinfo = Storeinfo.find(params[:storeinfo_id])
 
-    @branchList = @currentStore.branchinfos
+    @branchList = @storeinfo.branchinfos
   end
 
   # GET /branchinfos/1
   # GET /branchinfos/1.json
   def show
-    @currentStore = Storeinfo.find(params[:storeinfo_id])
-
-    # For URL like /storeinfo/1/branchinfos/2
-    # Find an branchinfo in storeinfo 1 that has id=2
-    @currentBranch = @currentStore.branchinfos.find(params[:id])
   end
 
   # GET /branchinfos/new
   def new
-    @currentStore = Storeinfo.find(params[:storeinfo_id])
+    @storeinfo = Storeinfo.find(params[:storeinfo_id])
     # Associate an branchinfo object with storeinfo 1
-    @currentBranch = @currentStore.branchinfos.build
+    @branchinfo = Branchinfo.new
   end
 
   # POST /branchinfos
   # POST /branchinfos.json
   def create
-    @currentStore = Storeinfo.find(params[:storeinfo_id])
+    @branchinfo = Branchinfo.new(branchinfo_params)
 
-    # For URL like /storeinfos/1/branchinfoss
-    # Populate an review associate with storeinfo 1 with form data
-    # stores will be associated with the branches
-    @currentBranch = @currentStore.branchinfos.build(params.require(:branchinfo).permit(:branchname, :address, :phoneno, :branchincharge, :contactno))
-
-    if @currentBranch.save
-      # Save the branch successfully
-      redirect_to storeinfo_branchinfo_url(@currentStore, @currentBranch)
-    else
-      render :action => "new"
+    respond_to do |format|
+      if @branchinfo.save
+        format.html { redirect_to @branchinfo, notice: 'Branchinfo was successfully created.' }
+        format.json { render :index, status: :created, location: @branchinfo }
+      else
+        format.html { render :new }
+        format.json { render json: @branchinfo.errors, status: :unprocessable_entity }
+      end
     end
   end
 
   # GET /branchinfos/1/edit
   def edit
-    @currentStore = Storeinfo.find(params[:storeinfo_id])
-
-    # For URL like /storeinfo/1/branchinfo/2/edit
-    # Get branchinfo id=2 for storeinfo 1
-    @currentBranch = @currentStore.branchinfos.find(params[:id])
   end
 
   # PATCH/PUT /branchinfos/1
   # PATCH/PUT /branchinfos/1.json
   def update
-    @currentStore = Storeinfo.find(params[:storeinfo_id])
-
-    @currentBranch = branchinfos.find(params[:id])
-    if @currentBranch.update_attributes(params.require(:branchinfo).permit(:branchname, :address, :phoneno, :branchincharge, :contactno))
-      # Save the branchinfo successfully
-      redirect_to storeinfo_branchinfo_url(@currentStore, @currentBranch)
-    else
-      render :action => "edit"
+    respond_to do |format|
+      if @branchinfo.update(branchinfo_params)
+        format.html { redirect_to @branchinfo, notice: 'Branchinfo was successfully updated.' }
+        format.json { render :show, status: :ok, location: @branchinfo }
+      else
+        format.html { render :edit }
+        format.json { render json: @branchinfo.errors, status: :unprocessable_entity }
+      end
     end
   end
 
   # DELETE /branchinfos/1
   # DELETE /branchinfos/1.json
   def destroy
-    @currentStore = Storeinfo.find(params[:storeinfo_id])
-
-    @currentBranch = Branchinfo.find(params[:id])
-    @currentBranch.destroy
-
+    storeid = @branchinfo.storeinfo_id
+    @branchinfo.destroy
     respond_to do |format|
-      format.html { redirect_to storeinfo_branchinfos_path(@currentStore) }
-      format.xml  { head :ok }
+      format.html { redirect_to :controller => "branchinfos", :action => "index", :storeinfo_id => storeid }
+      format.json { head :no_content }
     end
   end
 
