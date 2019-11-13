@@ -10,6 +10,10 @@ gem 'rails', '~> 6.0.0'
 gem 'bootstrap', '~> 4.0.0'
 
 gem 'devise'
+gem 'rubyzip', '>= 1.2.1'
+gem 'axlsx', git: 'https://github.com/randym/axlsx.git', ref: 'c8ac844'
+gem 'axlsx_rails'
+gem "roo", "~> 2.7.0"
 
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3', '~> 1.4'

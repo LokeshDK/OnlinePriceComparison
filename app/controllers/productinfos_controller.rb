@@ -4,9 +4,22 @@ class ProductinfosController < ApplicationController
   # GET /productinfos
   # GET /productinfos.json
   def index
+
     @branchinfo = Branchinfo.find(params[:branchinfo_id])
-  
+
     @productList = @branchinfo.productinfos
+
+    storeid = @branchinfo.storeinfo_id
+    branchid = @branchinfo.id
+
+    respond_to do |format|
+      format.xlsx {
+        response.headers[
+            'Content-Disposition'
+        ] = "attachment; filename=product.xlsx"
+      }
+      format.html { render :index, :branchinfo_id => branchid }
+    end
   end
 
   # GET /productinfos/1
@@ -80,6 +93,6 @@ class ProductinfosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def productinfo_params
-      params.require(:productinfo).permit(:productname, :storeproductid, :productprice, :branchinfo_id, :image, :categorie_id)
+      params.require(:productinfo).permit(:productname, :storeproductid, :productprice, :branchinfo_id, :image)
     end
 end

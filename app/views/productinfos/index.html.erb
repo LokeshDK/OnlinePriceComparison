@@ -1,5 +1,14 @@
 <h1>Products in Branch <%= @branchinfo.branchname %></h1>
 
+<%=
+  link_to 'Download as Excel',
+          productinfos_path(format: :xlsx, :branchinfo_id => @branchinfo.id)
+%>
+<%=
+  link_to 'Upload from Excel',
+          new_productinfos_import_path(:branchinfo_id => @branchinfo.id)
+%>
+
 <table>
   <tr>
     <th>Product Name</th>

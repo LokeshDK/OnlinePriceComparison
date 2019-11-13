@@ -1,0 +1,22 @@
+<h1>Import Products From Excel</h1>
+
+<p>
+  Note: Only import spreadsheets that were previously downloaded from this
+  application.
+</p>
+
+<h5>Select File</h5>
+<%= form_for @productinfos_import do |f| %>
+  <% if @productinfos_import.errors.any? %>
+    <%= pluralize(@productinfos_import.errors.count, "error") %> prevented us from
+    importing your spreadsheet. Please update your spreadsheet and try agin.
+    <ul>
+      <% @productinfos_import.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <%= f.file_field :file %>
+  <%= f.submit "Import File" %>
+<% end %>

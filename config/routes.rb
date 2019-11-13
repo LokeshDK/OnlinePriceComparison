@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
+  get 'productinfos_imports/new'
+  get 'productinfos_imports/create'
   #resources :productinfos
   #resources :categories
 
   resources :storeinfos
   resources :branchinfos
   resources :productinfos
+  resources :productinfos_imports, only: [:new, :create]
 
 
 
