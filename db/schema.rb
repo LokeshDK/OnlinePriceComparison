@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2019_11_12_152907) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "branchinfos", force: :cascade do |t|
     t.string "branchname"
     t.string "address"
