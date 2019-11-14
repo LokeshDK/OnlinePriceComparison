@@ -1,5 +1,5 @@
-<h1>Editing Branch</h1>
+<h1>Editing Branch <%=@branchinfo.branchname %></h1>
 
 <%= render'form'%>
-<%= link_to'Show', storeinfo_branchinfo_path(@currentStore, @currentBranch) %> |
-<%= link_to'Back', storeinfo_branchinfos_path(@currentStore) %>
+<%= link_to'Show', branchinfo_path(@branchinfo) %> |
+<%= link_to'Back', branchinfos_path(@storeinfo) %>

@@ -1,6 +1,5 @@
-<h1>Editing Productinfo</h1>
+<h1>Editing Product</h1>
 
-<%= render 'form', productinfo: @productinfo %>
-
-<%= link_to 'Show', @productinfo %> |
-<%= link_to 'Back', productinfos_path %>
+<%= render'form'%>
+<%= link_to'Show', productinfo_path(@productinfo) %> |
+<%= link_to'Back', productinfos_path(@branchinfo) %>

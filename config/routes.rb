@@ -1,10 +1,19 @@
 Rails.application.routes.draw do
-  resources :productinfos
+  get 'productinfos_imports/new'
+  get 'productinfos_imports/create'
+  #resources :productinfos
   #resources :categories
 
-  resources :storeinfos do
-    resources :branchinfos
-  end
+  resources :storeinfos
+  resources :branchinfos
+  resources :productinfos
+  resources :productinfos_imports, only: [:new, :create]
+
+
+
+ # resources :branchinfos do
+  #  resources :productinfos
+ # end
 
   resources :users
   get '/users/:id/account', to: 'users#account'

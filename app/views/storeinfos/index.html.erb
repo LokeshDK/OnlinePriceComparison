@@ -28,7 +28,8 @@
         <td><%= storeinfo.storeincharge %></td>
         <td><%= storeinfo.contactno %></td>
         <td><%= storeinfo.image %></td>
-        <td><%= link_to 'Show', storeinfo %></td>
+        <td><%= link_to 'Show Branches',
+                        {:controller => "branchinfos", :action => "index", :storeinfo_id => storeinfo.id}%></td>
         <td><%= link_to 'Edit', edit_storeinfo_path(storeinfo) %></td>
         <td><%= link_to 'Destroy', storeinfo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

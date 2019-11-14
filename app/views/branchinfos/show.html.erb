@@ -1,28 +1,32 @@
-<h1>Branches in <%= @currentStore.storename %></h1>
+
 
 <p>
   <b>Branch details: </b>
-  <%= @currentBranch.branchname %></p>
+  <%= @branchinfo.branchname %></p>
 
 <p>
   <strong>Branch Address:</strong>
-  <%= @currentBranch.address %>
+  <%= @branchinfo.address %>
 </p>
 
 <p>
   <strong>Phoneno:</strong>
-  <%= @currentBranch.phoneno %>
+  <%= @branchinfo.phoneno %>
 </p>
 
 <p>
   <strong>Branchincharge:</strong>
-  <%= @currentBranch.branchincharge %>
+  <%= @branchinfo.branchincharge %>
 </p>
 
 <p>
   <strong>Contactno:</strong>
-  <%= @currentBranch.contactno %>
+  <%= @branchinfo.contactno %>
 </p>
 
-<%= link_to'Edit', edit_storeinfo_branchinfo_path(@currentStore, @currentBranch) %> |
-<%= link_to'Back', storeinfo_branchinfos_path(@currentStore) %>
+<%= link_to'Edit', {:controller => "branchinfos", :action => "edit",
+                    :storeinfo_id => @branchinfo.storeinfo_id, :branchinfo_id => @branchinfo.id} %> |
+<%= link_to'Back', {:controller => "branchinfos", :action => "index",
+                    :storeinfo_id => @branchinfo.storeinfo_id} %>
+<%= link_to'Show Products', {:controller => "productinfos", :action => "index",
+                             :storeinfo_id => @branchinfo.storeinfo_id, :branchinfo_id => @branchinfo.id} %>

@@ -1,37 +1,36 @@
-<p id="notice"><%= notice %></p>
+<h1>Products in Branch <%= @branchinfo.branchname %></h1>
 
-<h1>Productinfos</h1>
+<%=
+  link_to 'Download as Excel',
+          productinfos_path(format: :xlsx, :branchinfo_id => @branchinfo.id)
+%>
+<%=
+  link_to 'Upload from Excel',
+          new_productinfos_import_path(:branchinfo_id => @branchinfo.id)
+%>
 
 <table>
-  <thead>
+  <tr>
+    <th>Product Name</th>
+    <th>Store Product Id</th>
+    <th>Product Price</th>
+    <th>Image</th>
+  </tr>
+
+  <% for product in @productList %>
     <tr>
-      <th>Productname</th>
-      <th>Storeproductid</th>
-      <th>Productprice</th>
-      <th>Branchinfo</th>
-      <th>Image</th>
-      <th>Categorie</th>
-      <th colspan="3"></th>
+      <td><%= product.productname %></td>
+      <td><%= product.storeproductid %></td>
+      <td><%= product.productprice %></td>
+      <td><%= product.image %></td>
+      <td><%= link_to'Edit', edit_productinfo_path(product) %></td>
+      <td><%= link_to'Destroy', productinfo_path(product),
+                     :confirm =>'Are you sure?',
+                     :method => :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
-  </thead>
-
-  <tbody>
-    <% @productinfos.each do |productinfo| %>
-      <tr>
-        <td><%= productinfo.productname %></td>
-        <td><%= productinfo.storeproductid %></td>
-        <td><%= productinfo.productprice %></td>
-        <td><%= productinfo.branchinfo_id %></td>
-        <td><%= productinfo.image %></td>
-        <td><%= productinfo.categorie_id %></td>
-        <td><%= link_to 'Show', productinfo %></td>
-        <td><%= link_to 'Edit', edit_productinfo_path(productinfo) %></td>
-        <td><%= link_to 'Destroy', productinfo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+  <% end %>
 </table>
+<br />
 
-<br>
-
-<%= link_to 'New Productinfo', new_productinfo_path %>
+<%= link_to'New Product', {:controller => "productinfos", :action => "new", :branchinfo_id => @branchinfo.id} %>
+<%= link_to'Back to Branches', {:controller => "branchinfos", :action => "index", :branchinfo_id => @branchinfo.id, :storeinfo_id => @branchinfo.storeinfo_id} %>

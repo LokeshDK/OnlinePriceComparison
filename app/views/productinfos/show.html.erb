@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+
 
 <p>
   <strong>Productname:</strong>
@@ -25,10 +25,7 @@
   <%= @productinfo.image %>
 </p>
 
-<p>
-  <strong>Categorie:</strong>
-  <%= @productinfo.categorie_id %>
-</p>
-
-<%= link_to 'Edit', edit_productinfo_path(@productinfo) %> |
-<%= link_to 'Back', productinfos_path %>
+<%= link_to'Edit', {:controller => "productinfos", :action => "edit",
+                    :productinfo_id => @productinfo.id} %> |
+<%= link_to'Back', {:controller => "productinfos", :action => "index",
+                     :branchinfo_id => @productinfo.branchinfo_id} %>

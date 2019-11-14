@@ -1,4 +1,4 @@
-<h1>Branches in <%= @currentStore.storename %></h1>
+<h1>Branches in <%= @storeinfo.storename %></h1>
 
 <table>
   <tr>
@@ -16,9 +16,11 @@
          <td><%= br.phoneno %></td>
          <td><%= br.branchincharge %></td>
          <td><%= br.contactno %></td>
-        <td><%= link_to'Show', storeinfo_branchinfo_path(@currentStore, br)%></td>
-        <td><%= link_to'Edit', edit_storeinfo_branchinfo_path(@currentStore, br)%></td>
-        <td><%= link_to'Destroy', storeinfo_branchinfo_path(@currentStore, br),
+         <td><%= link_to 'Show Products',
+                         {:controller => "productinfos", :action => "index",
+                          :branchinfo_id => br.id, :storeinfo_id => br.storeinfo_id}%></td>
+         <td><%= link_to'Edit', edit_branchinfo_path(br) %></td>
+        <td><%= link_to'Destroy', branchinfo_path(br),
                        :confirm =>'Are you sure?',
                        :method => :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -26,5 +28,5 @@
 </table>
 <br />
 
-<%= link_to'New Branch', new_storeinfo_branchinfo_path(@currentStore) %>
-<%= link_to'Back to Stores', @currentStore %>
+<%= link_to'New Branch', {:controller => "branchinfos", :action => "new", :storeinfo_id => @storeinfo.id} %>
+<%= link_to'Back to Stores', {:controller => "storeinfos", :action => "index"} %>
