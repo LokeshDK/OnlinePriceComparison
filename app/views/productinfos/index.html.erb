@@ -23,6 +23,8 @@
       <td><%= product.storeproductid %></td>
       <td><%= product.productprice %></td>
       <td><%= product.image %></td>
+      <td><%= link_to'Show', {:controller => "productinfos", :action => "show",
+                              :id => product.id, :branchinfo_id => product.branchinfo_id}%></td>
       <td><%= link_to'Edit', edit_productinfo_path(product) %></td>
       <td><%= link_to'Destroy', productinfo_path(product),
                      :confirm =>'Are you sure?',
@@ -32,5 +34,7 @@
 </table>
 <br />
 
-<%= link_to'New Product', {:controller => "productinfos", :action => "new", :branchinfo_id => @branchinfo.id} %>
-<%= link_to'Back to Branches', {:controller => "branchinfos", :action => "index", :branchinfo_id => @branchinfo.id, :storeinfo_id => @branchinfo.storeinfo_id} %>
+<%= link_to'New Product', {:controller => "productinfos", :action => "new",
+                           :branchinfo_id => @branchinfo.id} %>
+<%= link_to'Back to Branches', {:controller => "branchinfos", :action => "index",
+                                :branchinfo_id => @branchinfo.id, :storeinfo_id => @branchinfo.storeinfo_id} %>

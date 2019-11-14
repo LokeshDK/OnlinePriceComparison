@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2dff8dc9-7408-43a3-a18e-10211e208d1c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/OnlinePriceComparison.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/OnlinePriceComparison.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/productinfos_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/productinfos_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/productinfo.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/productinfo.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/productinfos/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/productinfos/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/productinfos/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/productinfos/show.html.erb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +36,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../decoratorApp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../movieApp" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="yarn" />
   </component>
