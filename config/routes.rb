@@ -8,12 +8,15 @@ Rails.application.routes.draw do
   resources :branchinfos
   resources :productinfos
   resources :productinfos_imports, only: [:new, :create]
+  resources :places
+  get '/locator', to: 'places#locator'
+  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
 
-
- # resources :branchinfos do
-  #  resources :productinfos
- # end
+  get '/check' =>'places#checkStore'
+  #validate that a number is even
+  post '/results', :controller=>'places', :action=>'locator'
+  post '/details', :controller=>'places', :action=>'details'
 
   resources :users
   get '/users/:id/account', to: 'users#account'

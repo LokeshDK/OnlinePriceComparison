@@ -26,4 +26,8 @@
 <%= link_to'Edit', {:controller => "productinfos", :action => "edit",
                     :productinfo_id => @productinfo.id} %> |
 <%= link_to'Back', {:controller => "productinfos", :action => "index",
-                     :branchinfo_id => @productinfo.branchinfo_id} %>
+                     :branchinfo_id => @productinfo.branchinfo_id} %> |
+<%= link_to 'Find store', check_path %>
+
+
+

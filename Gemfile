@@ -70,3 +70,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #Needed for Windows - added by Surya, 24 Oct 2019
 
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+gem 'locateStore', '~> 3.0.0'
