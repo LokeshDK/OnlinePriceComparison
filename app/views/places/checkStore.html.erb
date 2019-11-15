@@ -1,0 +1,23 @@
+<h1>Find your nearest Tesco store</h1>
+<%= form_tag "/results" do %>
+
+  <table>
+    <thead>
+    <tr>
+      <th>Your location</th>
+      <th>No. of results</th>
+      <th colspan="2"></th>
+    </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td><%= text_field_tag :location_entered %></td>
+        <td><%= text_field_tag :no_of_results %></td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <%= submit_tag "Find" %>
+<% end %>

@@ -1,0 +1,68 @@
+
+<h2> Branch name - <%= params["name"] %> </h2>
+
+
+
+  <p>
+    <strong>Opening Hours</strong>
+  </p>
+
+
+  <table>
+    <thead>
+    <tr>
+      <td> <strong> Monday </strong> </td>
+      <td> <%= params["mon_open"] %> </td>
+      <td> to </td>
+      <td> <%= params["mon_close"] %> </td>
+    </tr>
+    <tr>
+      <td> <strong> Tuesday </strong> </td>
+      <td> <%= params["tues_open"] %> </td>
+      <td> to </td>
+      <td> <%= params["tues_close"] %> </td>
+    </tr>
+    <tr>
+      <td> <strong> Wednesday </strong> </td>
+      <td> <%= params["wed_open"] %> </td>
+      <td> to </td>
+      <td> <%= params["wed_close"] %> </td>
+    </tr>
+    <tr>
+      <td> <strong> Thursday </strong> </td>
+      <td> <%= params["thurs_open"] %> </td>
+      <td> to </td>
+      <td> <%= params["thurs_close"] %> </td>
+    </tr>
+    <tr>
+      <td> <strong> Friday </strong> </td>
+      <td> <%= params["fri_open"] %> </td>
+      <td> to </td>
+      <td> <%= params["fri_close"] %> </td>
+    </tr>
+    <tr>
+      <td> <strong> Saturday </strong> </td>
+      <td> <%= params["sat_open"] %> </td>
+      <td> to </td>
+      <td> <%= params["sat_close"] %> </td>
+    </tr>
+    <tr>
+      <td> <strong> Sunday </strong> </td>
+      <td> <%= params["sun_open"] %> </td>
+      <td> to </td>
+      <td> <%= params["sun_close"] %> </td>
+    </tr>
+        </thead>
+    </tbody>
+   </table>
+
+  </tbody>
+
+<p>
+  <%= link_to "https://www.google.com/maps?q=#{params["latitude"]},#{params["longitude"]}", target: :_blank do %>
+    <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=15&size=500x400&markers=size:small%7Ccolor:red%7C#{params["latitude"]},#{params["longitude"]}&key=AIzaSyD0amoqetefKmBzelsLdJMlFzuEaC1qTEo", alt: "Map" %>
+  <% end %>
+</p>
+
+
+<td><%= link_to 'Back', check_path %></td>
