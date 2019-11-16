@@ -26,8 +26,12 @@
 <%= link_to'Edit', {:controller => "productinfos", :action => "edit",
                     :productinfo_id => @productinfo.id} %> |
 <%= link_to'Back', {:controller => "productinfos", :action => "index",
-                     :branchinfo_id => @productinfo.branchinfo_id} %> |
-<%= link_to 'Find store', check_path %>
-
+                     :branchinfo_id => @productinfo.branchinfo_id} %>
+<% branchid = @productinfo.branchinfo_id %>
+<% storeid = Branchinfo.find(branchid).storeinfo_id %>
+<% storename = Storeinfo.find(storeid).storename %>
+<% if storename.downcase.include? "tesco" %>
+  | <%= link_to 'Find store', check_path %>
+<% end %>
 
 
