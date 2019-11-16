@@ -1,10 +1,11 @@
 class ProductinfosController < ApplicationController
+  before_action :authenticate_user!
+  before_action :ensure_admin, :only => [:new, :edit, :destroy]
   before_action :set_productinfo, only: [:show, :edit, :update, :destroy]
 
   # GET /productinfos
   # GET /productinfos.json
   def index
-
     @branchinfo = Branchinfo.find(params[:branchinfo_id])
 
     @productList = @branchinfo.productinfos
@@ -82,6 +83,12 @@ class ProductinfosController < ApplicationController
                                 :action => "index", :branchinfo_id => branchid,
                                 :storeinfo_id => storeid }
       format.json { head :no_content }
+    end
+  end
+
+  def ensure_admin
+    unless current_user || current_user.admin?
+      render :text => "Access Error Message", :status => :unauthorized
     end
   end
 

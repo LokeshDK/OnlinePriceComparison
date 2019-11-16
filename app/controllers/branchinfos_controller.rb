@@ -1,4 +1,6 @@
 class BranchinfosController < ApplicationController
+  before_action :authenticate_user!
+  before_action :ensure_admin, :only => [:new, :edit, :destroy]
   before_action :set_branchinfo, only: [:show, :edit, :update, :destroy]
 
   # GET /branchinfos
@@ -63,6 +65,12 @@ class BranchinfosController < ApplicationController
     respond_to do |format|
       format.html { redirect_to :controller => "branchinfos", :action => "index", :storeinfo_id => storeid }
       format.json { head :no_content }
+    end
+  end
+
+  def ensure_admin
+    unless current_user || current_user.admin?
+      render :text => "Access Error Message", :status => :unauthorized
     end
   end
 

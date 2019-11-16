@@ -52,5 +52,9 @@
   </div>
 
   <div class="actions">
-    <%= f.submit %></div>
+    <%= f.submit %>
+    <%= link_to 'Cancel',
+                    {:controller => "storeinfos", :action => "index",
+                     :storeinfo_id => @storeinfo.id}%>
+  </div>
 <% end %>

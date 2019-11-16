@@ -1,4 +1,6 @@
 class StoreinfosController < ApplicationController
+  before_action :authenticate_user!
+  before_action :ensure_admin, :only => [:new, :edit, :destroy]
   before_action :set_storeinfo, only: [:show, :edit, :update, :destroy]
 
   # GET /storeinfos
@@ -61,6 +63,12 @@ class StoreinfosController < ApplicationController
     end
   end
 
+  def ensure_admin
+    unless current_user || current_user.admin?
+      render :text => "Access Error Message", :status => :unauthorized
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_storeinfo
@@ -69,6 +77,7 @@ class StoreinfosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def storeinfo_params
-      params.require(:storeinfo).permit(:storename, :address, :phoneno, :buisnessid, :branchcount, :storeincharge, :contactno, :image)
+      params.require(:storeinfo).permit(
+          :storename, :address, :phoneno, :buisnessid, :branchcount, :storeincharge, :contactno, :image, :user_id)
     end
 end

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :profiles
+  devise_for :users
   get 'productinfos_imports/new'
   get 'productinfos_imports/create'
   #resources :productinfos
@@ -21,6 +23,8 @@ Rails.application.routes.draw do
   resources :users
   get '/users/:id/account', to: 'users#account'
 
-  root to: 'storeinfos#index'
+  get 'home/Index'
+
+  root to: 'home#Index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

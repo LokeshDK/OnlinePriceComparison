@@ -1,4 +1,5 @@
 class ProductinfosImportsController < ApplicationController
+
   def new
     @branchinfo = Branchinfo.find(params[:branchinfo_id])
     @productinfos_import = ProductinfosImport.new

@@ -4,22 +4,23 @@
 
 <table>
   <thead>
-    <tr>
-      <th>Storename</th>
-      <th>Address</th>
-      <th>Phoneno</th>
-      <th>Buisnessid</th>
-      <th>Branchcount</th>
-      <th>Storeincharge</th>
-      <th>Contactno</th>
-      <th>Image</th>
-      <th colspan="3"></th>
-    </tr>
+  <tr>
+    <th>Storename</th>
+    <th>Address</th>
+    <th>Phoneno</th>
+    <th>Buisnessid</th>
+    <th>Branchcount</th>
+    <th>Storeincharge</th>
+    <th>Contactno</th>
+    <th>Image</th>
+    <th colspan="3"></th>
+  </tr>
   </thead>
 
   <tbody>
-    <% @storeinfos.each do |storeinfo| %>
-      <tr>
+  <% @storeinfos.each do |storeinfo| %>
+    <tr>
+      <% if current_user.admin? || storeinfo.user_id == current_user.id %>
         <td><%= storeinfo.storename %></td>
         <td><%= storeinfo.address %></td>
         <td><%= storeinfo.phoneno %></td>
@@ -32,8 +33,9 @@
                         {:controller => "branchinfos", :action => "index", :storeinfo_id => storeinfo.id}%></td>
         <td><%= link_to 'Edit', edit_storeinfo_path(storeinfo) %></td>
         <td><%= link_to 'Destroy', storeinfo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+      <% end %>
+    </tr>
+  <% end %>
   </tbody>
 </table>
 

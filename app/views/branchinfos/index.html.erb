@@ -9,21 +9,23 @@
     <th>Contact No</th>
   </tr>
 
-<% for br in @branchList %>
-       <tr>
-       <td><%= br.branchname %></td>
-         <td><%= br.address %></td>
-         <td><%= br.phoneno %></td>
-         <td><%= br.branchincharge %></td>
-         <td><%= br.contactno %></td>
-         <td><%= link_to 'Show Products',
-                         {:controller => "productinfos", :action => "index",
-                          :branchinfo_id => br.id, :storeinfo_id => br.storeinfo_id}%></td>
-         <td><%= link_to'Edit', edit_branchinfo_path(br) %></td>
+  <% for br in @branchList %>
+    <tr>
+      <% if current_user.admin? || br.user_id == current_user.id %>
+        <td><%= br.branchname %></td>
+        <td><%= br.address %></td>
+        <td><%= br.phoneno %></td>
+        <td><%= br.branchincharge %></td>
+        <td><%= br.contactno %></td>
+        <td><%= link_to 'Show Products',
+                        {:controller => "productinfos", :action => "index",
+                         :branchinfo_id => br.id, :storeinfo_id => br.storeinfo_id}%></td>
+        <td><%= link_to'Edit', edit_branchinfo_path(br) %></td>
         <td><%= link_to'Destroy', branchinfo_path(br),
                        :confirm =>'Are you sure?',
                        :method => :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <% end %>
+    </tr>
   <% end %>
 </table>
 <br />
