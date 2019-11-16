@@ -50,4 +50,5 @@
 
 <%= link_to 'Edit', edit_storeinfo_path(@storeinfo) %> |
 <%= link_to 'Back', storeinfos_path %>
-<%= link_to'Show Branches', branchinfos_path(@storeinfo) %>
+<%= link_to'Show Branches', {:controller => "branchinfos", :action => "index",
+                             :storeinfo_id => @storeinfo.id} %>
