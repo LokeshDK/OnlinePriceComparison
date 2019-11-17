@@ -2,3 +2,7 @@
 +++ ProductObserver: The price of Milk 2 litre
 has been updated. New price is 3.0
 ##############################
+###############Observer Demo:#
++++ ProductObserver: The price of Tesco Gold has been updated. New price is 5.0
+##############################
++++ ProductObserver: The price of Tesco Gold has been updated. New price is 6.0
