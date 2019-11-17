@@ -1,5 +1,44 @@
-<h1>Home#Index</h1>
-<p>Find me in app/views/home/Index.html.erb</p>
+<h1>Search for your Product</h1>
+<table>
+  <tr>
+    <th>Product Name</th>
+    <th>Store Product Id</th>
+    <th>Product Price</th>
+    <th>Image</th>
+  </tr>
+
+  <% @productList = Productinfo.all %>
+  <% for product in @productList %>
+    <tr>
+
+        <td><%= product.productname %></td>
+        <td><%= product.storeproductid %></td>
+        <td><%= product.productprice %></td>
+        <td><%= product.image %></td>
+        <td><%= link_to'Show', {:controller => "productinfos", :action => "show",
+                                :id => product.id, :branchinfo_id => product.branchinfo_id}%></td>
+      <% if current_user != nil %>
+        <% if current_user.admin? == true || product.user_id == current_user.id  %>
+          <% storeid = Branchinfo.find(product.branchinfo_id).storeinfo_id %>
+          <td><%= link_to'Edit', {:controller => "productinfos", :action => "edit",
+                                  :id => product.id, :branchinfo_id => product.branchinfo_id, :storeinfo_id => storeid} %></td>
+          <td><%= link_to'Destroy', productinfo_path(product),
+                         :confirm =>'Are you sure?',
+                         :method => :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+        <% end %>
+    </tr>
+  <% end %>
+</table>
 <div>
   <%= link_to 'Show Stores', {:controller => "storeinfos", :action => "index"} %>
+  <% if current_user != nil %>
+    <% if current_user.admin? == false %>
+      <% if Profile.find(current_user.id) == nil %>
+        <%= link_to 'Update Your Profile', {:controller => "profiles", :action => "new", :user_id => current_user.id} %>
+      <% else %>
+        <%= link_to 'Update Your Profile', edit_profile_path(current_user.id) %>
+      <% end %>
+    <% end %>
+  <% end %>
 </div>

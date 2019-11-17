@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DecoratorApp</title>
+    <title>Compare Grocery Prices</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,14 +10,18 @@
   </head>
 
   <body>
-
   <% if user_signed_in? %>
     <div>Signed in as... <%= current_user.email %>
       (<%= link_to'Sign out', destroy_user_session_path,:method => :delete%>)</div>
+
+    </br>  </br>
+    <%= link_to 'Home', {:controller => "home", :action => "Index" } %>
     <% else %>
     <%= link_to'Register', new_user_registration_path %> or
     <%= link_to'Sign in', new_user_session_path %>
   <% end %>
     <%= yield %>
+
+
   </body>
 </html>

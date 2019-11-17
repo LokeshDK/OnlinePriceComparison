@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Storeinfos</h1>
 
 <table>
@@ -41,4 +39,7 @@
 
 <br>
 
+<% if current_user.admin? %>
+  <%= link_to 'Make new Admin', {:controller => "profiles", :action => "index" } %>
+<% end %>
 <%= link_to 'New Storeinfo', new_storeinfo_path %>

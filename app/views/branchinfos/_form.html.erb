@@ -17,6 +17,9 @@
       <%= f.text_field :storeinfo_id, :value => @storeinfo.id %>
     </p>
 
+      <%= f.hidden_field :user_id, :value => current_user.id %>
+
+
     <p><%= f.label :Branchname %>
       <br />
       <%= f.text_field :branchname, :value => @storeinfo.storename %>
@@ -53,8 +56,5 @@
 
   <div class="actions">
     <%= f.submit %>
-    <%= link_to 'Cancel',
-                    {:controller => "storeinfos", :action => "index",
-                     :storeinfo_id => @storeinfo.id}%>
   </div>
 <% end %>

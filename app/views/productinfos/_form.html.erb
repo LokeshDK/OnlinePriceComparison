@@ -10,43 +10,41 @@
   <% end %>
   <div class="field">
 
-    <% if @branchinfo.present? %>
+    <% if @productinfo.present? %>
+      <%= f.hidden_field :user_id, :value => @productinfo.user_id %>
+      </br>
+    <% end %>
 
-    <p><%= f.label :BranchinfoID %>
-      <br />
-      <%= f.text_field :branchinfo_id, :value => @branchinfo.id %>
-    </p>
-      <% end %>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+
+    <% if @branchinfo.present? %>
+      <%= f.hidden_field :branchinfo_id, :value => @branchinfo.id %>
+    <% end %>
 
     <p><%= f.label :Productname %>
-      <br />
       <%= f.text_field :productname %>
     </p>
   </div>
 
   <div>
     <p><%= f.label :StoreProductID %>
-      <br />
       <%= f.text_field :storeproductid %>
     </p>
   </div>
 
   <div>
     <p><%= f.label :ProductPrice %>
-      <br />
       <%= f.text_field :productprice %>
     </p>
   </div>
 
   <div>
     <p><%= f.label :Image %>
-      <br />
       <%= f.text_field :image %>
     </p>
   </div>
 
   <div class="actions">
     <%= f.submit %>
-
   </div>
 <% end %>
