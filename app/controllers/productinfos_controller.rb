@@ -1,3 +1,5 @@
+require 'my_logger'
+
 class ProductinfosController < ApplicationController
   before_action :authenticate_user!
   before_action :ensure_admin, :only => [:new, :edit, :destroy]

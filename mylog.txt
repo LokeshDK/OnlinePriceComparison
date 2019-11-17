@@ -1,0 +1,4 @@
+###############Observer Demo:#
++++ ProductObserver: The price of Milk 2 litre
+has been updated. New price is 3.0
+##############################
