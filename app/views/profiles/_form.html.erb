@@ -33,12 +33,11 @@
 
   <div class="field">
     <%= form.label :phoneno %>
-    <%= form.number_field :phoneno %>
+    <%= form.text_field :phoneno %>
   </div>
 
   <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
+    <%= form.hidden_field :user_id, :value => current_user.id %>
   </div>
 
   <div class="actions">

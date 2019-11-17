@@ -2,4 +2,5 @@
 
 <%= render'form'%>
 <%= link_to'Show', branchinfo_path(@branchinfo) %> |
-<%= link_to'Back', branchinfos_path(@storeinfo) %>
+<%= link_to'Back', {:controller => "storeinfos", :action => "index",
+                    :storeinfo_id => Storeinfo.find(@branchinfo.storeinfo_id)} %>
