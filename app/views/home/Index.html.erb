@@ -31,13 +31,23 @@
   <% end %>
 </table>
 <div>
+
+  <% @profileList = Profile.all %>
+  <% profilePresent = false %>
+
   <%= link_to 'Show Stores', {:controller => "storeinfos", :action => "index"} %>
   <% if current_user != nil %>
     <% if current_user.admin? == false %>
-      <% if Profile.find(current_user.id) == nil %>
+      <% for profile in @profileList %>
+        <% if profile.user_id == current_user.id %>
+          <% profilePresent = true %>
+          <%= link_to 'Update Your Profile', edit_profile_path(profile.id) %>
+          <% break %>
+        <% end %>
+      <% end %>
+
+      <% if profilePresent == false %>
         <%= link_to 'Update Your Profile', {:controller => "profiles", :action => "new", :user_id => current_user.id} %>
-      <% else %>
-        <%= link_to 'Update Your Profile', edit_profile_path(current_user.id) %>
       <% end %>
     <% end %>
   <% end %>
