@@ -3,6 +3,7 @@
 <table>
   <thead>
   <tr>
+    <th></th>
     <th>Storename</th>
     <th>Address</th>
     <th>Phoneno</th>
@@ -19,6 +20,7 @@
   <% @storeinfos.each do |storeinfo| %>
     <tr>
       <% if current_user.admin? || storeinfo.user_id == current_user.id %>
+        <td><%= image_tag(storeinfo.image_url(:thumb).to_s) %></td>
         <td><%= storeinfo.storename %></td>
         <td><%= storeinfo.address %></td>
         <td><%= storeinfo.phoneno %></td>
@@ -26,7 +28,6 @@
         <td><%= storeinfo.branchcount %></td>
         <td><%= storeinfo.storeincharge %></td>
         <td><%= storeinfo.contactno %></td>
-        <td><%= storeinfo.image %></td>
         <td><%= link_to 'Show Branches',
                         {:controller => "branchinfos", :action => "index", :storeinfo_id => storeinfo.id}%></td>
         <td><%= link_to 'Edit', edit_storeinfo_path(storeinfo) %></td>

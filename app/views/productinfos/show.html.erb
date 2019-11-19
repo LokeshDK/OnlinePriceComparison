@@ -1,4 +1,9 @@
 <p>
+  <strong>Image:</strong>
+  <%= image_tag(@productinfo.image_url.to_s, width: "15%") %>
+</p>
+
+<p>
   <strong>Productname:</strong>
   <%= @productinfo.productname %>
 </p>
@@ -16,11 +21,6 @@
 <p>
   <strong>Branchinfo:</strong>
   <%= @productinfo.branchinfo_id %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= @productinfo.image %>
 </p>
 
 <%= link_to'Edit', {:controller => "productinfos", :action => "edit",

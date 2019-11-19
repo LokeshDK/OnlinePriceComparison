@@ -15,6 +15,9 @@ gem 'axlsx', git: 'https://github.com/randym/axlsx.git', ref: 'c8ac844'
 gem 'axlsx_rails'
 gem "roo", "~> 2.7.0"
 
+gem 'carrierwave'
+gem 'mini_magick'
+
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
