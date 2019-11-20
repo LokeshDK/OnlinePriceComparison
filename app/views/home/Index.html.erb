@@ -3,9 +3,6 @@
   <tr>
     <th></th>
     <th>Product Name</th>
-    <th>Store Product Id</th>
-    <th>Product Price</th>
-    <th>Image</th>
   </tr>
 
   <% @productList = Productinfo.all %>
@@ -13,8 +10,6 @@
     <tr>
       <td><%= image_tag(product.image_url(:thumb).to_s) %></td>
       <td><%= product.productname %></td>
-      <td><%= product.storeproductid %></td>
-      <td><%= product.productprice %></td>
       <td><%= link_to'Show', {:controller => "productinfos", :action => "show",
                               :id => product.id, :branchinfo_id => product.branchinfo_id}%></td>
       <% if current_user != nil %>
@@ -32,11 +27,28 @@
 </table>
 <div>
 
+  <% if current_user != nil %>
+  <% storeCreated = false %>
+  <% @storeList = Storeinfo.all %>
+  <% for store in @storeList %>
+    <% if store.user_id == current_user.id %>
+      <% storeCreated = true %>
+      <%= link_to 'Show Stores', {:controller => "storeinfos", :action => "index"} %>
+      <% break %>
+    <% end %>
+  <% end %>
+
+  <% if storeCreated == false %>
+    <% if current_user.admin? %>
+      <%= link_to 'Show Stores', {:controller => "storeinfos", :action => "index"} %>
+    <% else %>
+      <%= link_to 'Opened a New Store?', new_storeinfo_path %> |
+    <% end %>
+  <% end %>
+
   <% @profileList = Profile.all %>
   <% profilePresent = false %>
 
-  <%= link_to 'Show Stores', {:controller => "storeinfos", :action => "index"} %>
-  <% if current_user != nil %>
     <% if current_user.admin? == false %>
       <% for profile in @profileList %>
         <% if profile.user_id == current_user.id %>
