@@ -12,12 +12,13 @@ wb.styles do |style|
     # Add a blank row
     sheet.add_row []
     # Create the header row
-    #sheet.add_row ["ID", "Product Name", "Store Product ID", "Product Price"], style: heading
+    #sheet.add_row ["ID", "Product Name", "Store Product ID", "Product Price", "User ID"], style: heading
     # Create the database reference row
-    sheet.add_row ["id", "productname", "storeproductid", "productprice", "branchinfo_id" ], style: heading
+    sheet.add_row ["id", "productname", "storeproductid", "productprice", "branchinfo_id", "user_id" ], style: heading
     # Create entries for each item
     @productList.each do |product|
-          sheet.add_row [product.id, product.productname, product.storeproductid, product.productprice, product.branchinfo_id]
+          sheet.add_row [product.id, product.productname, product.storeproductid,
+          product.productprice, product.branchinfo_id, product.user_id]
      end
   end
 end

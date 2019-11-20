@@ -4,6 +4,7 @@
                     method: "GET", html: { class: 'form-inline' } do |f| %>
   <%= f.input :productname, input_html: {value: ""} %>
   <%= f.submit "Search", class: "btn btn-primary" %>
+  <%= link_to "Clear", {:controller => "home", :action => "Index"} %>
 <% end %>
 
 <% if @productList.present? == false%>
