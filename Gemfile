@@ -7,7 +7,6 @@ ruby '2.6.4'
 gem 'rails', '~> 6.0.0'
 
 # Use bootstrap for views
-gem 'bootstrap', '~> 4.0.0'
 
 gem 'devise'
 gem 'rubyzip', '>= 1.2.1'
@@ -17,6 +16,9 @@ gem "roo", "~> 2.7.0"
 
 gem 'carrierwave'
 gem 'mini_magick'
+
+gem 'simple_form'
+gem 'bootstrap', '~> 4.2.1'
 
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3', '~> 1.4'

@@ -1,11 +1,21 @@
 <h1>Search for your Product</h1>
+
+<%= simple_form_for :search, url: {:controller => "home", :action => "Index"},
+                    method: "GET", html: { class: 'form-inline' } do |f| %>
+  <%= f.input :productname, input_html: {value: ""} %>
+  <%= f.submit "Search", class: "btn btn-primary" %>
+<% end %>
+
+<% if @productList.present? == false%>
+  <% @productList = @productSearch %>
+<% end %>
+
 <table>
   <tr>
     <th></th>
     <th>Product Name</th>
   </tr>
 
-  <% @productList = Productinfo.all %>
   <% for product in @productList %>
     <tr>
       <td><%= image_tag(product.image_url(:thumb).to_s) %></td>
@@ -25,7 +35,8 @@
     </tr>
   <% end %>
 </table>
-<div>
+
+  <div>
 
   <% if current_user != nil %>
   <% storeCreated = false %>

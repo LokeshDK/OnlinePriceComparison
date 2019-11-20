@@ -19,14 +19,12 @@
 </p>
 
 <p>
-  <strong>Branchinfo:</strong>
-  <%= @productinfo.branchinfo_id %>
+  <strong>Storename:</strong>
+  <%= Branchinfo.find(@productinfo.branchinfo_id).branchname %>
 </p>
 
 <%= link_to'Edit', {:controller => "productinfos", :action => "edit",
-                    :productinfo_id => @productinfo.id} %> |
-<%= link_to'Back', {:controller => "productinfos", :action => "index",
-                     :branchinfo_id => @productinfo.branchinfo_id} %>
+                    :productinfo_id => @productinfo.id} %>
 <% branchid = @productinfo.branchinfo_id %>
 <% storeid = Branchinfo.find(branchid).storeinfo_id %>
 <% storename = Storeinfo.find(storeid).storename %>
