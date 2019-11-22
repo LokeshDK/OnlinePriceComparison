@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'compare/index'
+
   resources :profiles
   devise_for :users
   get 'productinfos_imports/new'

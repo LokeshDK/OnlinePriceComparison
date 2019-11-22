@@ -21,7 +21,7 @@ class ProductinfosController < ApplicationController
             'Content-Disposition'
         ] = "attachment; filename=product.xlsx"
       }
-      format.html { render :index, :branchinfo_id => branchid }
+      format.html { render :index, :branchinfo_id => branchid, :user_id => current_user.id }
     end
   end
 

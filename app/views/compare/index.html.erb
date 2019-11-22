@@ -1,0 +1,27 @@
+<h1><%= "Compare Price of the #{@productName}" %> </h1>
+
+<table>
+
+  <tr>
+    <th></th>
+    <th></th>
+    <th>Store Name</th>
+    <th>Store Address</th>
+    <th>Product Price</th>
+  </tr>
+
+  <% @productId.each_with_index { |val| %>
+    <tr>
+      <% product = Productinfo.find(val) %>
+      <% branch = Branchinfo.find(product.branchinfo_id) %>
+      <% store = Storeinfo.find(branch.storeinfo_id) %>
+      <td style="width: 132px;"><%= image_tag(product.image_url.to_s, width: '20%', style: "width: 132px;") %></td>
+      <td><%= image_tag(store.image_url(:thumb).to_s) %></td>
+      <td><%= branch.branchname %></td>
+      <td><%= branch.address %></td>
+      <td><%= product.productprice.to_f %></td>
+    </tr>
+  <% } %>
+</table>
+
+<%= link_to 'Back', {:controller => "home", :action => "Index"} %>
