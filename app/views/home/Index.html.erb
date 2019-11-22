@@ -11,8 +11,37 @@
   <% @productList = @productSearch %>
 <% end %>
 
+<% if @productSearch.present? %>
+  <table>
+    <tr>
+      <th></th>
+      <th>Product Name</th>
+      <th>Product Price</th>
+    </tr>
+  </br>
+
+    <% for product in @productList %>
+      <tr>
+        <td><%= image_tag(product.image_url(:thumb).to_s) %></td>
+        <td><%= product.productname %></td>
+        <td><%= product.storeproductid %></td>
+        <td><%= product.productprice %></td>
+        <td><%= link_to'Show', {:controller => "productinfos", :action => "show",
+                                :id => product.id, :branchinfo_id => product.branchinfo_id}%></td>
+        <% if current_user.admin? || product.user_id == current_user.id %>
+          <td><%= link_to'Edit', edit_productinfo_path(product) %></td>
+          <td><%= link_to'Destroy', productinfo_path(product),
+                         :confirm =>'Are you sure?',
+                         :method => :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%end %>
+      </tr>
+    <% end %>
+  </table>
+<% end %>
+
 </br>
 
+<% if @productHash.present? %>
 <table>
   <tr>
     <th></th>
@@ -27,6 +56,7 @@
     </tr>
   <% end %>
 </table>
+  <% end %>
 
 <div>
   <% if current_user != nil %>
