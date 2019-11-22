@@ -16,6 +16,7 @@
     <tr>
       <th></th>
       <th>Product Name</th>
+      <th>Store Name</th>
       <th>Product Price</th>
     </tr>
   </br>
@@ -24,7 +25,7 @@
       <tr>
         <td><%= image_tag(product.image_url(:thumb).to_s) %></td>
         <td><%= product.productname %></td>
-        <td><%= product.storeproductid %></td>
+        <td><%= Branchinfo.find(product.branchinfo_id).branchname %></td>
         <td><%= product.productprice %></td>
         <td><%= link_to'Show', {:controller => "productinfos", :action => "show",
                                 :id => product.id, :branchinfo_id => product.branchinfo_id}%></td>
