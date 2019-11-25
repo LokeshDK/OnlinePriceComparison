@@ -12,44 +12,40 @@
 
     <% if @storeinfo.present? %>
 
-    <p><%= f.label :StoreinfoID %>
-      <br />
-      <%= f.text_field :storeinfo_id, :value => @storeinfo.id %>
-    </p>
+
+      <%= f.hidden_field :storeinfo_id, :value => @storeinfo.id %>
 
       <%= f.hidden_field :user_id, :value => current_user.id %>
 
 
     <p><%= f.label :Branchname %>
-      <br />
       <%= f.text_field :branchname, :value => @storeinfo.storename %>
     </p>
   </div>
     <% end %>
   <div>
     <p><%= f.label :Address %>
-      <br />
+
       <%= f.text_field :address %>
     </p>
   </div>
 
   <div>
     <p><%= f.label :Phoneno %>
-      <br />
+
       <%= f.text_field :phoneno %>
     </p>
   </div>
 
   <div>
     <p><%= f.label :Branchincharge %>
-      <br />
+
       <%= f.text_field :branchincharge %>
     </p>
   </div>
 
   <div>
     <p><%= f.label :Contactno %>
-      <br />
       <%= f.text_field :contactno %>
     </p>
   </div>
