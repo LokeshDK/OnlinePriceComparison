@@ -3,7 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="2dff8dc9-7408-43a3-a18e-10211e208d1c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/home/Index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/Index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/branchinfo.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/branchinfo.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/storeinfo.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/storeinfo.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/branchinfos/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/branchinfos/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/storeinfos/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/storeinfos/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
