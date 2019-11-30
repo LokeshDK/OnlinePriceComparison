@@ -2,7 +2,7 @@
 
 <%=
   link_to 'Download as Excel',
-          productinfos_path(format: :xlsx, :branchinfo_id => @branchinfo.id)
+          productinfos_path(format: :xlsx, :branchinfo_id => @branchinfo.id, :user_id => current_user.id)
 %>
 <%=
   link_to 'Upload from Excel',

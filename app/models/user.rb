@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
   has_one :profile
   has_many :storeinfos, :dependent => :destroy
+  has_many :branchinfos, :dependent => :destroy
+  has_many :productinfos, :dependent => :destroy
 end

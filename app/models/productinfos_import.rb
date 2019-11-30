@@ -37,6 +37,25 @@ class ProductinfosImport
   end
 
   def save
+    imported_productinfos.each_with_index do |item, index|
+      if Productinfo.exists?(item["id"])
+        if item["user_id"] != Productinfo.find(item["id"])["user_id"]
+          errors.add :base, "Row #{index + 6}: unauthorized access.
+                            Please change your value for user_id to
+                            #{Productinfo.find(item["id"])["user_id"]}"
+          return
+        elsif item["branchinfo_id"] != Productinfo.find(item["id"])["branchinfo_id"]
+          errors.add :base, "Row #{index + 6}: unauthorized access.
+                            Please change your value for branchinfo_id to
+                            #{Productinfo.find(item["id"])["branchinfo_id"]}"
+          return
+        end
+      else
+        errors.add :base, "Row #{index + 6}: product  with iD #{item["id"]}
+                            has been deleted from database. Please download the file again or remove this row"
+        return
+      end
+    end
     if imported_productinfos.map(&:valid?).all?
       imported_productinfos.each(&:save!)
       true

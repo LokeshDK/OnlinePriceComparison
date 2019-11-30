@@ -3,14 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="2dff8dc9-7408-43a3-a18e-10211e208d1c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/branchinfo.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/branchinfo.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/storeinfo.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/storeinfo.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/productinfos_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/productinfos_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/productinfo.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/productinfo.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/productinfos_import.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/productinfos_import.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/branchinfos/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/branchinfos/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/storeinfos/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/storeinfos/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/productinfos/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/productinfos/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mylog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/mylog.txt" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,25 +44,19 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1Se4TiPdSi6ieJHDVhjxb10BYgY" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Ruby.branchinfos_controller">
     <configuration name="Development: OnlinePriceComparison" type="RailsRunConfigurationType" factoryName="Rails">
@@ -134,7 +127,7 @@
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_VERBOSE" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TESTOPTS" VALUE="" />
       <method v="2" />
     </configuration>
     <configuration name="test: OnlinePriceComparison" type="RakeRunConfigurationType" factoryName="Rake">
@@ -160,7 +153,7 @@
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_VERBOSE" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TESTOPTS" VALUE="" />
       <method v="2" />
     </configuration>
     <configuration name="branchinfos_controller" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
@@ -186,6 +179,18 @@
         <item itemvalue="Ruby.branchinfos_controller" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" RAKE_SPRING_PRE_LOADER_OPTION="true" RAILS_SPRING_PRE_LOADER_OPTION="true" />
   <component name="SvnConfiguration">
@@ -213,6 +218,8 @@
       <workItem from="1574117881239" duration="11845000" />
       <workItem from="1574218298842" duration="28353000" />
       <workItem from="1574383277445" duration="1598000" />
+      <workItem from="1575054925025" duration="3958000" />
+      <workItem from="1575061901468" duration="7918000" />
     </task>
     <servers />
   </component>
@@ -231,6 +238,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="229" y="98" width="704" height="528" key="find.popup" timestamp="1575070142679">
+      <screen x="45" y="27" width="1075" height="673" />
+    </state>
+    <state x="229" y="98" width="704" height="528" key="find.popup/45.27.1075.673@45.27.1075.673" timestamp="1575070142679" />
+    <state x="244" y="27" width="672" height="671" key="search.everywhere.popup" timestamp="1575074928664">
+      <screen x="45" y="27" width="1075" height="673" />
+    </state>
+    <state x="244" y="27" width="672" height="671" key="search.everywhere.popup/45.27.1075.673@45.27.1075.673" timestamp="1575074928664" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/OnlinePriceComparison@branchinfos_controller.rcov" NAME="branchinfos_controller Coverage Results" MODIFIED="1572699929535" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/controllers" MODULE_NAME="OnlinePriceComparison" />
