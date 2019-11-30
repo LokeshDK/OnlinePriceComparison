@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2dff8dc9-7408-43a3-a18e-10211e208d1c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.generators" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.generators" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/productinfos_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/productinfos_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/productinfo.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/productinfo.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/productinfos_import.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/productinfos_import.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/productinfos/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/productinfos/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/mylog.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/storeinfos_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/storeinfos_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +216,11 @@
       <workItem from="1574218298842" duration="28353000" />
       <workItem from="1574383277445" duration="1598000" />
       <workItem from="1575054925025" duration="3958000" />
-      <workItem from="1575061901468" duration="7918000" />
+      <workItem from="1575061901468" duration="9795000" />
+      <workItem from="1575118923582" duration="1896000" />
+      <workItem from="1575126743309" duration="3361000" />
+      <workItem from="1575153519029" duration="772000" />
+      <workItem from="1575156804107" duration="708000" />
     </task>
     <servers />
   </component>
@@ -240,14 +241,20 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="229" y="98" width="704" height="528" key="find.popup" timestamp="1575070142679">
-      <screen x="45" y="27" width="1075" height="673" />
+    <state x="372" y="120" width="424" height="484" key="FileChooserDialogImpl" timestamp="1575135578312">
+      <screen x="59" y="27" width="1061" height="673" />
+    </state>
+    <state x="372" y="120" width="424" height="484" key="FileChooserDialogImpl/59.27.1061.673@59.27.1061.673" timestamp="1575135578312" />
+    <state x="241" y="98" width="704" height="528" key="find.popup" timestamp="1575157438416">
+      <screen x="59" y="27" width="1061" height="673" />
     </state>
     <state x="229" y="98" width="704" height="528" key="find.popup/45.27.1075.673@45.27.1075.673" timestamp="1575070142679" />
-    <state x="244" y="27" width="672" height="671" key="search.everywhere.popup" timestamp="1575074928664">
-      <screen x="45" y="27" width="1075" height="673" />
+    <state x="241" y="98" width="704" height="528" key="find.popup/59.27.1061.673@59.27.1061.673" timestamp="1575157438416" />
+    <state x="255" y="27" width="672" height="671" key="search.everywhere.popup" timestamp="1575157458713">
+      <screen x="59" y="27" width="1061" height="673" />
     </state>
-    <state x="244" y="27" width="672" height="671" key="search.everywhere.popup/45.27.1075.673@45.27.1075.673" timestamp="1575074928664" />
+    <state x="244" y="27" width="672" height="671" key="search.everywhere.popup/45.27.1075.673@45.27.1075.673" timestamp="1575127994382" />
+    <state x="255" y="27" width="672" height="671" key="search.everywhere.popup/59.27.1061.673@59.27.1061.673" timestamp="1575157458713" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/OnlinePriceComparison@branchinfos_controller.rcov" NAME="branchinfos_controller Coverage Results" MODIFIED="1572699929535" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/controllers" MODULE_NAME="OnlinePriceComparison" />

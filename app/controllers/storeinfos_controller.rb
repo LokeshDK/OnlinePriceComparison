@@ -30,6 +30,12 @@ class StoreinfosController < ApplicationController
 
     respond_to do |format|
       if @storeinfo.save
+        select_query = "SELECT MAX(id) FROM storeinfos"
+        newStore = ActiveRecord::Base.connection.execute(select_query)
+
+        insert_query = "INSERT INTO branchinfos (branchname, address, phoneno, branchincharge, contactno, storeinfo_id, user_id, created_at, updated_at) VALUES ('#{params.as_json["storeinfo"]["storename"]}', '#{params.as_json["storeinfo"]["address"]}', #{params.as_json["storeinfo"]["phoneno"]}, '#{params.as_json["storeinfo"]["storeincharge"]}',#{params.as_json["storeinfo"]["contactno"]}, #{newStore.as_json[0]["max"]}, #{current_user.id}, current_timestamp, current_timestamp)"
+        ActiveRecord::Base.connection.execute(insert_query)
+
         format.html { redirect_to @storeinfo, notice: 'Storeinfo was successfully created.' }
         format.json { render :show, status: :created, location: @storeinfo }
       else
