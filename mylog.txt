@@ -1,43 +1,8 @@
-###############Observer Demo:#
-+++ ProductObserver: The price of Milk 2 litre
-has been updated. New price is 3.0
-##############################
-###############Observer Demo:#
-+++ ProductObserver: The price of Tesco Gold has been updated. New price is 5.0
-##############################
-+++ ProductObserver: The price of Tesco Gold has been updated. New price is 6.0
-+++ ProductObserver: The price of Spinach has been updated. New price is 0.89
++++ A new store 1 has been created. 
++++ ProductObserver: A new product Milk 2 litre has been created. The price is 2.0
 +++ ProductObserver: The price of Milk 2 litre has been updated. New price is 3.0
 +++ ProductObserver: The price of Milk 2 litre has been updated. New price is 4.0
-+++ ProductObserver: The price of Cauliflower has been updated. New price is 0.85
-+++ ProductObserver: The price of Kitchen Towels has been updated. New price is 1.19
-+++ ProductObserver: The price of Cauliflower has been updated. New price is 0.85
-+++ ProductObserver: The price of Kitchen Towels has been updated. New price is 1.19
-+++ ProductObserver: The price of Cauliflower has been updated. New price is 0.85
-+++ ProductObserver: The price of Kitchen Towels has been updated. New price is 1.19
-+++ ProductObserver: The price of Cauliflower has been updated. New price is 0.85
-+++ ProductObserver: The price of Kitchen Towels has been updated. New price is 1.19
-+++ ProductObserver: The price of Cauliflower has been updated. New price is 0.85
-+++ ProductObserver: The price of Kitchen Towels has been updated. New price is 1.19
-+++ ProductObserver: The price of Cauliflower has been updated. New price is 0.85
-+++ ProductObserver: The price of Kitchen Towels has been updated. New price is 1.19
-+++ ProductObserver: The price of Cauliflower has been updated. New price is 0.85
-+++ ProductObserver: The price of Kitchen Towels has been updated. New price is 1.19
-+++ ProductObserver: The price of Cauliflower has been updated. New price is 0.85
-+++ ProductObserver: The price of Kitchen Towels has been updated. New price is 1.19
-+++ ProductObserver: The price of Cauliflower has been updated. New price is 0.85
-+++ ProductObserver: The price of Kitchen Towels has been updated. New price is 1.19
-+++ ProductObserver: The price of Cauliflower has been updated. New price is 0.85
-+++ ProductObserver: The price of Kitchen Towels has been updated. New price is 1.19
-+++ ProductObserver: The price of Cauliflower has been updated. New price is 0.85
-+++ ProductObserver: The price of Kitchen Towels has been updated. New price is 1.19
-+++ ProductObserver: The price of Cauliflower has been updated. New price is 0.85
-+++ ProductObserver: The price of Kitchen Towels has been updated. New price is 1.19
-+++ ProductObserver: The price of Cauliflower has been updated. New price is 0.85
-+++ ProductObserver: The price of Kitchen Towels has been updated. New price is 1.19
-+++ ProductObserver: The price of Cauliflower has been updated. New price is 0.85
-+++ ProductObserver: The price of Kitchen Towels has been updated. New price is 1.19
-+++ ProductObserver: The price of Cauliflower has been updated. New price is 0.85
-+++ ProductObserver: The price of Kitchen Towels has been updated. New price is 1.19
-+++ ProductObserver: The price of Cauliflower has been updated. New price is 0.85
-+++ ProductObserver: The price of Kitchen Towels has been updated. New price is 1.19
++++ ProductObserver: The price of Milk 2 litre has been updated. New price is 5.0
++++ A new store 2 has been created. 
++++ ProductObserver: The price of Milk 2 litre has been updated. New price is 10.0
++++ ProductObserver: The price of Milk 2 litre has been updated. New price is 9.0
