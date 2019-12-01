@@ -1,0 +1,17 @@
+<h1>Your Cart</h1>
+<table>
+  <% @order_items.each do |item| %>
+  <tr>
+      <% product = Productinfo.find(item.productinfo.id) %>
+      <% branch = Branchinfo.find(product.branchinfo_id) %>
+      <% store = Storeinfo.find(branch.storeinfo_id) %>
+      <td style="width: 132px;"><%= image_tag(product.image_url.to_s, width: '20%', style: "width: 132px;") %></td>
+      <td><%= image_tag(store.image_url(:thumb).to_s) %></td>
+      <td><%= branch.branchname %></td>
+      <td><%= branch.address %></td>
+      <td><%= item.productinfo.productname %></td>
+      <td><%= item.productinfo.productprice %></td>
+
+    </tr>
+<% end %>
+</table>
