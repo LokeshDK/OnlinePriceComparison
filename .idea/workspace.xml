@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2dff8dc9-7408-43a3-a18e-10211e208d1c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.generators" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.generators" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/storeinfos_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/storeinfos_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/compare_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/compare_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/productinfo.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/productinfo.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/compare/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/compare/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +54,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../aaa/acts_as_shopping_cart_app" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -241,20 +245,20 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="372" y="120" width="424" height="484" key="FileChooserDialogImpl" timestamp="1575135578312">
+    <state x="372" y="120" width="424" height="484" key="FileChooserDialogImpl" timestamp="1575163782010">
       <screen x="59" y="27" width="1061" height="673" />
     </state>
-    <state x="372" y="120" width="424" height="484" key="FileChooserDialogImpl/59.27.1061.673@59.27.1061.673" timestamp="1575135578312" />
+    <state x="372" y="120" width="424" height="484" key="FileChooserDialogImpl/59.27.1061.673@59.27.1061.673" timestamp="1575163782010" />
     <state x="241" y="98" width="704" height="528" key="find.popup" timestamp="1575157438416">
       <screen x="59" y="27" width="1061" height="673" />
     </state>
     <state x="229" y="98" width="704" height="528" key="find.popup/45.27.1075.673@45.27.1075.673" timestamp="1575070142679" />
     <state x="241" y="98" width="704" height="528" key="find.popup/59.27.1061.673@59.27.1061.673" timestamp="1575157438416" />
-    <state x="255" y="27" width="672" height="671" key="search.everywhere.popup" timestamp="1575157458713">
+    <state x="255" y="27" width="672" height="671" key="search.everywhere.popup" timestamp="1575223633043">
       <screen x="59" y="27" width="1061" height="673" />
     </state>
     <state x="244" y="27" width="672" height="671" key="search.everywhere.popup/45.27.1075.673@45.27.1075.673" timestamp="1575127994382" />
-    <state x="255" y="27" width="672" height="671" key="search.everywhere.popup/59.27.1061.673@59.27.1061.673" timestamp="1575157458713" />
+    <state x="255" y="27" width="672" height="671" key="search.everywhere.popup/59.27.1061.673@59.27.1061.673" timestamp="1575223633043" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/OnlinePriceComparison@branchinfos_controller.rcov" NAME="branchinfos_controller Coverage Results" MODIFIED="1572699929535" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/controllers" MODULE_NAME="OnlinePriceComparison" />

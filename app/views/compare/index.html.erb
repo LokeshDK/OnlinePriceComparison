@@ -20,8 +20,17 @@
       <td><%= branch.branchname %></td>
       <td><%= branch.address %></td>
       <td><%= product.productprice.to_f %></td>
+
+      <td>
+         <%= form_for @order_item do |f| %>
+          <%= f.hidden_field :productinfo_id, :value => product.id %>
+          <%= f.number_field :quantity, :value => 1, :min => 1 %>
+          <%= f.submit "Add to Cart" %>
+        <% end %>
+      </td>
     </tr>
   <% } %>
 </table>
 
 <%= link_to 'Back', {:controller => "home", :action => "Index"} %>
+<%= link_to "#{current_order.order_items.size} items with a value of #{current_order.subtotal} EUR", carts_show_path %>

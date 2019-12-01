@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'carts/show'
   get 'compare/index'
 
   resources :profiles
@@ -16,7 +17,8 @@ Rails.application.routes.draw do
   get '/locator', to: 'places#locator'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
-
+  resources :order_items
+  resources :carts, only:[:show]
   get '/check' =>'places#checkStore'
   #validate that a number is even
   post '/results', :controller=>'places', :action=>'locator'
