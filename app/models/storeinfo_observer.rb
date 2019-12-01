@@ -1,18 +1,18 @@
 require 'my_logger'
 
-class ProductinfoObserver < ActiveRecord::Observer
+class StoreinfoObserver < ActiveRecord::Observer
   def after_update(record)
 # use the MyLogger instance method to retrieve the single instance/object of the class
     @logger = MyLogger.instance
 # use the logger to log/record a message about the updated car
-    @logger.logInformation("+++ ProductObserver: The price of #{record.productname} has been updated. New price is #{record.productprice}")
+    @logger.logInformation("+++ StoreObserver: The details of store #{record.storename} has been updated.")
   end
 
   def after_create(record)
 # use the MyLogger instance method to retrieve the single instance/object of the class
     @logger = MyLogger.instance
 # use the logger to log/record a message about the updated car
-    @logger.logInformation("+++ ProductObserver: A new product #{record.productname} has been created. The price is #{record.productprice}")
+    @logger.logInformation("+++ A new store #{record.storename} has been created. ")
   end
 
 end
