@@ -5,8 +5,10 @@ class ProductinfoObserver < ActiveRecord::Observer
 # use the MyLogger instance method to retrieve the single instance/object of the class
     @logger = MyLogger.instance
 # use the logger to log/record a message about the updated car
-    @logger.logInformation("+++ ProductObserver: The price of #{record.productname} has been updated. New price is #{record.productprice}")
-    UserMailer.with(user: current_user).welcome_email.deliver
+#@user = User.find(params[:record.user_id])
+    @user = User.find(record.user_id)
+    @logger.logInformation("+++ ProductObserver: The price of #{record.productname} has been updated. New price is #{record.productprice} Updated by #{record.user_id} #{@user.email}")
+    UserMailer.with(user: @user).welcome_email.deliver
   end
 
   def after_create(record)
