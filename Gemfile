@@ -14,6 +14,8 @@ gem 'axlsx', git: 'https://github.com/randym/axlsx.git', ref: 'c8ac844'
 gem 'axlsx_rails'
 gem "roo", "~> 2.7.0"
 
+gem 'jquery-rails', '~> 4.3', '>= 4.3.5'
+
 gem 'carrierwave'
 gem 'mini_magick'
 

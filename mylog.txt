@@ -1,8 +1,1 @@
-+++ A new store 1 has been created. 
-+++ ProductObserver: A new product Milk 2 litre has been created. The price is 2.0
-+++ ProductObserver: The price of Milk 2 litre has been updated. New price is 3.0
-+++ ProductObserver: The price of Milk 2 litre has been updated. New price is 4.0
-+++ ProductObserver: The price of Milk 2 litre has been updated. New price is 5.0
-+++ A new store 2 has been created. 
-+++ ProductObserver: The price of Milk 2 litre has been updated. New price is 10.0
-+++ ProductObserver: The price of Milk 2 litre has been updated. New price is 9.0
++++ ProductObserver: The price of Cashews has been updated. New price is 2.19

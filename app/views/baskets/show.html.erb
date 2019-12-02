@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @basket.name %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @basket.status %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @basket.user_id %>
+</p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @basket.order.class %>
+</p>
+
+<% @basket.order.each do |id| %>
+  <% if id.include? "[" %>
+    <% id = id.tr("[", " ") %>
+    <% elsif id.include? "]" %>
+    <% id = id.tr("]", " ") %>
+    <% end %>
+  <%= OrderItem.find(id).unit_price %>
+<% end %>
+
+<%= link_to 'Edit', edit_basket_path(@basket) %> |
+<%= link_to 'Back', baskets_path %>

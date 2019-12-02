@@ -67,6 +67,7 @@
       <% if store.user_id == current_user.id %>
         <% storeCreated = true %>
         <%= link_to 'Show Stores', {:controller => "storeinfos", :action => "index"} %>
+        <%= link_to "#{current_order.order_items.size} items with a value of #{current_order.subtotal} EUR", carts_show_path %>
         <% break %>
       <% end %>
     <% end %>
