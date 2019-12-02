@@ -19,12 +19,14 @@
     <tr>
       <th>Name</th>
       <th>Status</th>
+      <th>Created on</th>
       <th colspan="3"></th>
     </tr>
     </thead>
       <tr>
         <td><%= basket.name %></td>
         <td><%= basket.status %></td>
+        <td><%= basket.created_at %></td>
         <table>
           <% basket.order.each do |id| %>
             <% if id.include? "[" %>

@@ -64,8 +64,10 @@ class BasketsController < ApplicationController
   end
 
   def showOrders
-    @basket = Basket.where(user_id: current_user.id)
+    @storeId = params[:storeinfo_id]
+    @branchId = params[:branchinfo_id]
 
+    @basket = Basket.where(user_id: current_user.id)
   end
 
   private

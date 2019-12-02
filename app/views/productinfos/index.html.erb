@@ -40,3 +40,5 @@
                            :branchinfo_id => @branchinfo.id} %>
 <%= link_to'Back to Branches', {:controller => "branchinfos", :action => "index",
                                 :branchinfo_id => @branchinfo.id, :storeinfo_id => @branchinfo.storeinfo_id} %>
+<%= link_to 'Orders', {:controller => "baskets", :action => "showOrders",
+                       :branchinfo_id => @branchinfo.id, :storeinfo_id => @branchinfo.storeinfo_id}  %>

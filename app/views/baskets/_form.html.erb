@@ -5,7 +5,7 @@
 
   <div class="form-inputs">
     <%= f.input :name %>
-    <%= f.text_field :order, :value => "{#{@odItemIdArr}}" %>
+    <%= f.hidden_field :order, :value => "{#{@odItemIdArr}}" %>
     <%= f.hidden_field :status, :value => "New" %>
     <%= f.hidden_field :user_id, :value => current_user.id %>
   </div>
