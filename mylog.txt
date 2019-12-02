@@ -1,0 +1,18 @@
++++ ProductObserver: The price of Cashews has been updated. New price is 2.19
++++ ProductObserver: The price of Milk 2 litre has been updated. New price is 8.0
++++ ProductObserver: The price of Milk 2 litre has been updated. New price is 10.0
++++ ProductObserver: The price of Milk 2 litre has been updated. New price is 10.0
++++ ProductObserver: The price of Milk 2 litre has been updated. New price is 11.0
++++ ProductObserver: The price of Milk 2 litre has been updated. New price is 2.0
++++ ProductObserver: A new product Milk 2 litre has been created. The price is 3.0
++++ ProductObserver: The price of Milk 2 litre has been updated. New price is 4.0
++++ ProductObserver: The price of Milk 2 litre has been updated. New price is 4.0
++++ ProductObserver: The price of Milk 2 litre has been updated. New price is 4.0
++++ ProductObserver: The price of Milk 2 litre has been updated. New price is 4.0
++++ ProductObserver: The price of Milk 2 litre has been updated. New price is 4.0
++++ ProductObserver: The price of Milk 2 litre has been updated. New price is 4.0
++++ ProductObserver: The price of Milk 2 litre has been updated. New price is 4.0 Updated by 3
++++ ProductObserver: The price of Milk 2 litre has been updated. New price is 7.0 Updated by 3 #<User:0x00007f2da0149658>
++++ ProductObserver: The price of Milk 2 litre has been updated. New price is 8.0 Updated by 3 suryajapan@gmail.com
++++ ProductObserver: The price of Milk 2 litre has been updated. New price is 3.0 Updated by 3 suryajapan@gmail.com
++++ ProductObserver: The price of Milk 2 litre has been updated. New price is 4.0 Updated by 3 suryajapan@gmail.com
