@@ -25,3 +25,4 @@
 +++ ProductObserver: The price of Milk 2 litre has been updated. New price is 11.0 Updated by 3 Surya #<User:0x0000558dd2afd240>
 +++ ProductObserver: The price of Milk 2 litre has been updated. New price is 1.5 Updated by 3 Surya Kumar  suryajapan@gmail.com
 +++ ProductObserver: The price of Milk 2 litre has been updated. New price is 1.0 Updated by  Surya Kumar  suryajapan@gmail.com
++++ ProductObserver: The price of Milk 2 litre has been updated. New price is 2.0 Updated by  Surya Kumar  suryajapan@gmail.com
