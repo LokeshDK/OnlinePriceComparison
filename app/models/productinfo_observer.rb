@@ -6,6 +6,7 @@ class ProductinfoObserver < ActiveRecord::Observer
     @logger = MyLogger.instance
 # use the logger to log/record a message about the updated car
     @logger.logInformation("+++ ProductObserver: The price of #{record.productname} has been updated. New price is #{record.productprice}")
+    UserMailer.with(user: current_user).welcome_email.deliver
   end
 
   def after_create(record)
