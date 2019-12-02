@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  resources :baskets
+  get 'basket/show'
+  get 'basket/new'
+  get 'baskets/index'
+  get 'baskets/show'
+  get 'baskets/new'
+  get 'basket/index'
+  get 'basket/new'
+  get 'basket/index'
+  get 'basket/show'
   get 'carts/show'
   get 'compare/index'
 
@@ -19,6 +29,8 @@ Rails.application.routes.draw do
 
   resources :order_items
   resources :carts, only:[:show]
+  resources :baskets
+
   get '/check' =>'places#checkStore'
   #validate that a number is even
   post '/results', :controller=>'places', :action=>'locator'

@@ -1,4 +1,13 @@
 <h1>Your Cart</h1>
+
+<% @odItems = OrderItem.where(order_id: session[:order_id]) %>
+<% @odItemIdArr = [] %>
+<% @odItems.each do |item| %>
+  <% @odItemIdArr.push(item.id.to_i) %>
+<% end %>
+
+<%= session[:order_id] %>
+
 <table>
   <% @order_items.each do |item| %>
     <tr>
@@ -11,7 +20,6 @@
       <td><%= branch.address %></td>
       <td><%= item.productinfo.productname %></td>
       <td><%= item.productinfo.productprice %></td>
-
       <td>
         <%= form_for item,  remote: true do |f| %>
           <%= f.hidden_field :productinfo_id, :value => item.productinfo.id %>
@@ -29,5 +37,7 @@
 </table>
 
 <h3>Current cart total is <%= current_order.subtotal %></h3>
+<%= link_to "Save this order", {:controller => "baskets", :action => "new",
+                                :odArr => @odItemIdArr}%>
 
 

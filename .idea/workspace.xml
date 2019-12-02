@@ -2,15 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2dff8dc9-7408-43a3-a18e-10211e208d1c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/OnlinePriceComparison.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/OnlinePriceComparison.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/order_items_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/order_items_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/javascript/packs/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/packs/application.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/carts/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/carts/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/compare/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/compare/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/mylog.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/order_item.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/order_item.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/carts/_carts_item.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/carts/_carts_item.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/home/Index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/Index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,8 +38,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Ruby File" />
         <option value="Erb File" />
+        <option value="Ruby File" />
       </list>
     </option>
   </component>
@@ -55,12 +56,17 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../aaa/acts_as_shopping_cart_app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/views/basket" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Ruby.branchinfos_controller">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/views/basket" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Ruby.test">
     <configuration name="Development: OnlinePriceComparison" type="RailsRunConfigurationType" factoryName="Rails">
       <module name="OnlinePriceComparison" />
       <predefined_log_file enabled="true" id="RUBY_RAILS_SERVER" />
@@ -176,8 +182,27 @@
       <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
       <method v="2" />
     </configuration>
+    <configuration name="test" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
+      <module name="OnlinePriceComparison" />
+      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="$MODULE_DIR$/app/controllers" />
+      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/app/controllers/test.rb" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Ruby.test" />
         <item itemvalue="Ruby.branchinfos_controller" />
       </list>
     </recent_temporary>
@@ -226,6 +251,8 @@
       <workItem from="1575126743309" duration="3361000" />
       <workItem from="1575153519029" duration="772000" />
       <workItem from="1575156804107" duration="708000" />
+      <workItem from="1575254663235" duration="3342000" />
+      <workItem from="1575275952095" duration="551000" />
     </task>
     <servers />
   </component>
@@ -250,6 +277,22 @@
       <screen x="59" y="27" width="1061" height="673" />
     </state>
     <state x="372" y="120" width="424" height="484" key="FileChooserDialogImpl/59.27.1061.673@59.27.1061.673" timestamp="1575163782010" />
+    <state width="1015" height="153" key="GridCell.Tab.0.bottom" timestamp="1575241529933">
+      <screen x="59" y="27" width="1061" height="673" />
+    </state>
+    <state width="1015" height="153" key="GridCell.Tab.0.bottom/59.27.1061.673@59.27.1061.673" timestamp="1575241529933" />
+    <state width="1015" height="153" key="GridCell.Tab.0.center" timestamp="1575241529933">
+      <screen x="59" y="27" width="1061" height="673" />
+    </state>
+    <state width="1015" height="153" key="GridCell.Tab.0.center/59.27.1061.673@59.27.1061.673" timestamp="1575241529933" />
+    <state width="1015" height="153" key="GridCell.Tab.0.left" timestamp="1575241529933">
+      <screen x="59" y="27" width="1061" height="673" />
+    </state>
+    <state width="1015" height="153" key="GridCell.Tab.0.left/59.27.1061.673@59.27.1061.673" timestamp="1575241529933" />
+    <state width="1015" height="153" key="GridCell.Tab.0.right" timestamp="1575241529933">
+      <screen x="59" y="27" width="1061" height="673" />
+    </state>
+    <state width="1015" height="153" key="GridCell.Tab.0.right/59.27.1061.673@59.27.1061.673" timestamp="1575241529933" />
     <state x="110" y="183" width="769" height="464" key="dock-window-1" timestamp="1575224681415">
       <screen x="59" y="27" width="1061" height="673" />
     </state>
@@ -258,18 +301,23 @@
       <screen x="59" y="27" width="1061" height="673" />
     </state>
     <state x="290" y="225" width="769" height="631" key="dock-window-2/59.27.1061.673@59.27.1061.673" timestamp="1575226901509" />
-    <state x="241" y="98" width="704" height="528" key="find.popup" timestamp="1575157438416">
+    <state x="256" y="283" width="769" height="464" key="dock-window-3" timestamp="1575253937775">
+      <screen x="59" y="27" width="1061" height="673" />
+    </state>
+    <state x="256" y="283" width="769" height="464" key="dock-window-3/59.27.1061.673@59.27.1061.673" timestamp="1575253937775" />
+    <state x="241" y="98" width="704" height="528" key="find.popup" timestamp="1575253805247">
       <screen x="59" y="27" width="1061" height="673" />
     </state>
     <state x="229" y="98" width="704" height="528" key="find.popup/45.27.1075.673@45.27.1075.673" timestamp="1575070142679" />
-    <state x="241" y="98" width="704" height="528" key="find.popup/59.27.1061.673@59.27.1061.673" timestamp="1575157438416" />
-    <state x="255" y="27" width="672" height="671" key="search.everywhere.popup" timestamp="1575229555362">
+    <state x="241" y="98" width="704" height="528" key="find.popup/59.27.1061.673@59.27.1061.673" timestamp="1575253805247" />
+    <state x="255" y="27" width="672" height="671" key="search.everywhere.popup" timestamp="1575276241953">
       <screen x="59" y="27" width="1061" height="673" />
     </state>
     <state x="244" y="27" width="672" height="671" key="search.everywhere.popup/45.27.1075.673@45.27.1075.673" timestamp="1575127994382" />
-    <state x="255" y="27" width="672" height="671" key="search.everywhere.popup/59.27.1061.673@59.27.1061.673" timestamp="1575229555362" />
+    <state x="255" y="27" width="672" height="671" key="search.everywhere.popup/59.27.1061.673@59.27.1061.673" timestamp="1575276241953" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/OnlinePriceComparison@branchinfos_controller.rcov" NAME="branchinfos_controller Coverage Results" MODIFIED="1572699929535" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/controllers" MODULE_NAME="OnlinePriceComparison" />
+    <SUITE FILE_PATH="coverage/OnlinePriceComparison@test.rcov" NAME="test Coverage Results" MODIFIED="1575240922380" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/controllers" MODULE_NAME="OnlinePriceComparison" />
   </component>
 </project>
