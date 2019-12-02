@@ -36,3 +36,18 @@ Basket observer: A new order has been placed by the user - Surya Kumar . Mail se
 Basket observer: A new order has been placed by the user - Surya Kumar . Mail sent to suryajapan@gmail.com
 Basket observer: A new order has been placed by the user - Surya Kumar . Mail sent to suryajapan@gmail.com
 Basket observer: A new basket - Test has been placed by the user - Surya Kumar . Mail sent to suryajapan@gmail.com
+Basket observer: A new basket - Latest has been placed by the user - Surya Kumar . Mail sent to suryajapan@gmail.com
+Basket observer: A new basket - Latest has been placed by the user - Surya Kumar . Mail sent to suryajapan@gmail.com
+Basket observer: A new basket - Latest has been placed by the user - Surya Kumar . Mail sent to suryajapan@gmail.com
+Basket observer: A new basket - Latest has been placed by the user - Surya Kumar . Mail sent to suryajapan@gmail.com
+Basket observer: A new basket - Testttt has been placed by the user - Surya Kumar . Mail sent to suryajapan@gmail.com
+Basket observer: A new basket - Testststst has been placed by the user - Surya Kumar . Mail sent to suryajapan@gmail.com
+Basket observer: A new basket - Testststst has been placed by the user - Surya Kumar . Mail sent to suryajapan@gmail.com
+Basket observer: A new basket - Testststst has been placed by the user - Surya Kumar . Mail sent to suryajapan@gmail.com
+Basket observer: A new basket - Testststst has been placed by the user - Surya Kumar . Mail sent to suryajapan@gmail.com
+Basket observer: A new basket - Testststst has been placed by the user - Surya Kumar . Mail sent to suryajapan@gmail.com
+Basket observer: A new basket - Testststst has been placed by the user - Surya Kumar . Mail sent to suryajapan@gmail.com
+Basket observer: A new basket - New has been placed by the user - Surya Kumar . Mail sent to suryajapan@gmail.com
+Basket observer: A new basket - New1 has been placed by the user - Surya Kumar . Mail sent to suryajapan@gmail.com
+Basket observer: A new basket - New1 has been placed by the user - Surya Kumar . Mail sent to suryajapan@gmail.com
+Basket observer: A new basket - New1111 has been placed by the user - Surya Kumar . Mail sent to suryajapan@gmail.com
