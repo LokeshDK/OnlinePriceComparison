@@ -31,6 +31,9 @@ Rails.application.routes.draw do
   resources :carts, only:[:show]
   resources :baskets
 
+  get '/showOrders' => 'baskets#showOrders'
+  post '/showOrders' => 'baskets#showOrders'
+
   get '/check' =>'places#checkStore'
   #validate that a number is even
   post '/results', :controller=>'places', :action=>'locator'
