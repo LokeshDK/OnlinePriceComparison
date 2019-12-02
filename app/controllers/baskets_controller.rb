@@ -4,7 +4,7 @@ class BasketsController < ApplicationController
   # GET /baskets
   # GET /baskets.json
   def index
-    @baskets = Basket.all
+    @baskets = Basket.where(user_id: current_user.id)
   end
 
   # GET /baskets/1
@@ -29,7 +29,8 @@ class BasketsController < ApplicationController
 
     respond_to do |format|
       if @basket.save
-        format.html { redirect_to @basket, notice: 'Basket was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Basket was successfully created.' }
+        session.delete(:order_id)
         format.json { render :show, status: :created, location: @basket }
       else
         format.html { render :new }
@@ -60,6 +61,11 @@ class BasketsController < ApplicationController
       format.html { redirect_to baskets_url, notice: 'Basket was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def showOrders
+    @basket = Basket.where(user_id: current_user.id)
+
   end
 
   private

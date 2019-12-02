@@ -8,8 +8,11 @@ class ProductinfosController < ApplicationController
   def index
     @branchinfo = Branchinfo.find(params[:branchinfo_id])
 
-    @productList= @branchinfo.productinfos.where(user_id: current_user.id)
-
+    if !current_user.admin?
+      @productList= @branchinfo.productinfos.where(user_id: current_user.id)
+    else
+      @productList = @branchinfo.productinfos
+    end
     storeid = @branchinfo.storeinfo_id
     branchid = @branchinfo.id
 

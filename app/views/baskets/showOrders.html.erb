@@ -1,0 +1,27 @@
+<h1>showOrders</h1>
+
+<% @basket.each do |basket| %>
+  <td><h5><%= basket.name %></h5></td>
+  <td><h5><%= basket.created_at %></h5></td>
+  <% basket.order.each do |id| %>
+    <% @id = id %>
+
+    <% if @id.include? "[" %>
+      <% @id = @id.tr("[", "") %>
+      <% end %>
+    <% if @id.include? "]" %>
+      <% @id = @id.tr("]", "") %>
+    <% end %>
+    </br>
+    <% product = Productinfo.find(OrderItem.find(@id).productinfo_id) %>
+    <% branch = Branchinfo.find(product.branchinfo_id) %>
+    <% store = Storeinfo.find(branch.storeinfo_id) %>
+    <td style="width: 132px;"><%= image_tag(product.image_url.to_s, width: '20%', style: "width: 132px;") %></td>
+    <td><%= image_tag(store.image_url(:thumb).to_s) %></td>
+    <td><%= branch.branchname %></td>
+    <td><%= branch.address %></td>
+    <td><%= product.productname %></td>
+    <td><%= OrderItem.find(@id).quantity %></td>
+    <td><%= product.productprice %></td>
+  <% end %>
+<% end %>

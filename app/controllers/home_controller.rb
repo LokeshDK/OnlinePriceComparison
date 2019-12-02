@@ -1,5 +1,12 @@
 class HomeController < ApplicationController
   def Index
+
+    if !current_user.nil?
+    if Profile.where(user_id: current_user.id)[0].nil?
+      redirect_to new_profile_path
+    end
+    end
+
     @search = params["search"]
     if @search.present?
       @productname = @search["productname"]
