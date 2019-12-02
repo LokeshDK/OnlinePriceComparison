@@ -26,3 +26,13 @@
 +++ ProductObserver: The price of Milk 2 litre has been updated. New price is 1.5 Updated by 3 Surya Kumar  suryajapan@gmail.com
 +++ ProductObserver: The price of Milk 2 litre has been updated. New price is 1.0 Updated by  Surya Kumar  suryajapan@gmail.com
 +++ ProductObserver: The price of Milk 2 litre has been updated. New price is 2.0 Updated by  Surya Kumar  suryajapan@gmail.com
+Basket observer: A new order has been placed by the user - Surya Kumar . Mail sent to suryajapan@gmail.com
+Basket observer: A new order has been placed by the user - Surya Kumar . Mail sent to suryajapan@gmail.com
+Basket observer: A new order has been placed by the user - Surya Kumar . Mail sent to suryajapan@gmail.com
+Basket observer: A new order has been placed by the user - Surya Kumar . Mail sent to suryajapan@gmail.com
+Basket observer: A new order has been placed by the user - Surya Kumar . Mail sent to suryajapan@gmail.com
+Basket observer: A new order has been placed by the user - Surya Kumar . Mail sent to suryajapan@gmail.com
+Basket observer: A new order has been placed by the user - Surya Kumar . Mail sent to suryajapan@gmail.com
+Basket observer: A new order has been placed by the user - Surya Kumar . Mail sent to suryajapan@gmail.com
+Basket observer: A new order has been placed by the user - Surya Kumar . Mail sent to suryajapan@gmail.com
+Basket observer: A new basket - Test has been placed by the user - Surya Kumar . Mail sent to suryajapan@gmail.com

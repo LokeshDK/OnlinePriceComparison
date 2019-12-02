@@ -6,7 +6,6 @@ class BasketObserver < ActiveRecord::Observer
 # use the MyLogger instance method to retrieve the single instance/object of the class
     @logger = MyLogger.instance
 
-    if record.status == "New"
 # use the logger to log/record a message about the updated car
 #@user = User.find(params[:record.user_id]) #
 
@@ -14,10 +13,8 @@ class BasketObserver < ActiveRecord::Observer
   #@profile = Profile.find(record.user_id)
     profile_id = Profile.find_by(user_id: record.user_id).id
     @profile = Profile.find(profile_id)
-    @logger.logInformation("Basket observer: A new order has been placed by the user - #{@profile.firstname} #{@profile.lastname}. Mail sent to #{@user.email}")
+    @logger.logInformation("Basket observer: A new basket - #{record.name} has been placed by the user - #{@profile.firstname} #{@profile.lastname}. Mail sent to #{@user.email}")
     UserMailer.with(user: @user).order_email.deliver
-    else
-      end
 
   end
 
