@@ -5,7 +5,26 @@ class BasketsController < ApplicationController
   # GET /baskets.json
   def index
     @baskets = Basket.where(user_id: current_user.id)
+
+    renderPDF
   end
+
+  def renderPDF
+    respond_to do |format|
+      # some other formats like: format.html { render :show }
+      format.html
+      format.pdf do
+        pdf = ExportPdf.new(@baskets)
+        pdf.render_file('/home/lokesh/Downloads/prawn.pdf')
+
+        send_data pdf.render,
+                  filename: "/home/lokesh/Downloads/export.pdf",
+                  type: 'application/pdf'
+      end
+    end
+  end
+
+  helper_method :renderPDF
 
   # GET /baskets/1
   # GET /baskets/1.json

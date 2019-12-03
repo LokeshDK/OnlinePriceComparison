@@ -27,6 +27,7 @@
         <td><%= basket.name %></td>
         <td><%= basket.status %></td>
         <td><%= basket.created_at %></td>
+        <td><%= link_to "Printable Invoice (PDF)", "http://localhost:3000/baskets.pdf" %></td>
         <table>
           <% basket.order.each do |id| %>
             <% if id.include? "[" %>
