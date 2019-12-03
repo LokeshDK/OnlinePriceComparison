@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :reviews
   resources :baskets
   get 'basket/show'
   get 'basket/new'

@@ -21,6 +21,8 @@
       <td><%= branch.address %></td>
       <td><%= product.productprice.to_f %></td>
 
+
+
       <td>
          <%= form_for @order_item, remote: true do |f| %>
           <%= f.hidden_field :productinfo_id, :value => product.id %>
@@ -28,6 +30,8 @@
           <%= f.submit "Add to Cart" %>
         <% end %>
       </td>
+      <td ><%= link_to 'Show reviews', {:controller => "reviews", :action => "index",
+                                        :productinfo_id => product.id} %></td>
     </tr>
   <% } %>
 </table>

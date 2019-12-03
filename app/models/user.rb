@@ -11,6 +11,7 @@ class User < ApplicationRecord
   has_many :branchinfos, :dependent => :destroy
   has_many :productinfos, :dependent => :destroy
   has_many :baskets, :dependent => :destroy
+  has_many :reviews, :dependent => :destroy
 
 
 
