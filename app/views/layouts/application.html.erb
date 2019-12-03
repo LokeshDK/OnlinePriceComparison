@@ -43,6 +43,12 @@
     <%= link_to'Register', new_user_registration_path %> or
     <%= link_to'Sign in', new_user_session_path %>
     <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %>
+
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v5.0&appId=578492609360424&autoLogAppEvents=1"></script>
+
+    <div class="fb-login-button" data-width="" data-size="large" data-button-type="login_with" data-auto-logout-link="false" data-use-continue-as="false"></div>
+
     <% session.delete(:order_id) %>
     <%session.delete(current_user) %>
 
