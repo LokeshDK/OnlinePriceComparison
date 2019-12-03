@@ -5,9 +5,17 @@
 
   <div class="form-inputs">
     <%= f.input :name %>
-    <%= f.hidden_field :order, :value => "{#{@odItemIdArr}}" %>
-    <%= f.hidden_field :status, :value => "New" %>
-    <%= f.hidden_field :user_id, :value => current_user.id %>
+    <% if !@basket.order.empty? %>
+      <%= f.hidden_field :order, :value => "{#{@basket.order}}" %>
+    <% else %>
+      <%= f.hidden_field :order, :value => "{#{@odItemIdArr}}" %>
+    <% end %>
+    <%= f.select :status, options_for_select(['New','Approved','Rejected'], @basket.status) %>
+    <% if !@basket.user_id.nil? %>
+      <%= f.hidden_field :user_id, :value => @basket.user_id %>
+    <% else %>
+      <%= f.hidden_field :user_id, :value => current_user.id %>
+    <% end %>
   </div>
 
   <div class="form-actions">
