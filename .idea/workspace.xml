@@ -5,10 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/baskets_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/baskets_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/baskets/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/baskets/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/baskets/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/baskets/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/baskets/showOrders.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/baskets/showOrders.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/productinfos/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/productinfos/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/storeinfos/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/storeinfos/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mylog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/mylog.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -250,7 +248,7 @@
       <workItem from="1575156804107" duration="708000" />
       <workItem from="1575254663235" duration="3342000" />
       <workItem from="1575275952095" duration="7804000" />
-      <workItem from="1575287088888" duration="11088000" />
+      <workItem from="1575287088888" duration="21657000" />
     </task>
     <servers />
   </component>
@@ -303,20 +301,24 @@
       <screen x="59" y="27" width="1061" height="673" />
     </state>
     <state x="239" y="209" width="754" height="464" key="dock-window-2/59.27.1061.673@59.27.1061.673" timestamp="1575305850000" />
-    <state x="256" y="283" width="769" height="464" key="dock-window-3" timestamp="1575253937775">
+    <state x="187" y="236" width="754" height="464" key="dock-window-3" timestamp="1575332322506">
       <screen x="59" y="27" width="1061" height="673" />
     </state>
-    <state x="256" y="283" width="769" height="464" key="dock-window-3/59.27.1061.673@59.27.1061.673" timestamp="1575253937775" />
-    <state x="241" y="98" width="704" height="528" key="find.popup" timestamp="1575301474767">
+    <state x="187" y="236" width="754" height="464" key="dock-window-3/59.27.1061.673@59.27.1061.673" timestamp="1575332322506" />
+    <state x="241" y="98" width="704" height="528" key="find.popup" timestamp="1575332593460">
       <screen x="59" y="27" width="1061" height="673" />
     </state>
     <state x="229" y="98" width="704" height="528" key="find.popup/45.27.1075.673@45.27.1075.673" timestamp="1575070142679" />
-    <state x="241" y="98" width="704" height="528" key="find.popup/59.27.1061.673@59.27.1061.673" timestamp="1575301474767" />
-    <state x="255" y="27" width="672" height="671" key="search.everywhere.popup" timestamp="1575301501242">
+    <state x="241" y="98" width="704" height="528" key="find.popup/59.27.1061.673@59.27.1061.673" timestamp="1575332593460" />
+    <state x="253" y="158" key="run.anything.popup" timestamp="1575330252823">
+      <screen x="59" y="27" width="1061" height="673" />
+    </state>
+    <state x="253" y="158" key="run.anything.popup/59.27.1061.673@59.27.1061.673" timestamp="1575330252823" />
+    <state x="255" y="27" width="672" height="671" key="search.everywhere.popup" timestamp="1575336003616">
       <screen x="59" y="27" width="1061" height="673" />
     </state>
     <state x="244" y="27" width="672" height="671" key="search.everywhere.popup/45.27.1075.673@45.27.1075.673" timestamp="1575127994382" />
-    <state x="255" y="27" width="672" height="671" key="search.everywhere.popup/59.27.1061.673@59.27.1061.673" timestamp="1575301501242" />
+    <state x="255" y="27" width="672" height="671" key="search.everywhere.popup/59.27.1061.673@59.27.1061.673" timestamp="1575336003616" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/OnlinePriceComparison@branchinfos_controller.rcov" NAME="branchinfos_controller Coverage Results" MODIFIED="1572699929535" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/controllers" MODULE_NAME="OnlinePriceComparison" />

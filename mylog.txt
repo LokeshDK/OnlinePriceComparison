@@ -51,3 +51,7 @@ Basket observer: A new basket - New has been placed by the user - Surya Kumar . 
 Basket observer: A new basket - New1 has been placed by the user - Surya Kumar . Mail sent to suryajapan@gmail.com
 Basket observer: A new basket - New1 has been placed by the user - Surya Kumar . Mail sent to suryajapan@gmail.com
 Basket observer: A new basket - New1111 has been placed by the user - Surya Kumar . Mail sent to suryajapan@gmail.com
+Basket observer: A new basket - Test has been placed by the user - Lokesh Arcade. Mail sent to lokesh11292@gmail.com
+Basket observer: A new basket - Dry Fruits has been placed by the user - Lokesh Arcade. Mail sent to lokesh11292@gmail.com
+Basket observer: A new basket - Dry Fruits has been placed by the user - Lokesh Arcade. Mail sent to lokesh11292@gmail.com
+Basket observer: A new basket - Dry Fruits has been placed by the user - Lokesh Arcade. Mail sent to lokesh11292@gmail.com

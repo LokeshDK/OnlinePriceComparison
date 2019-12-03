@@ -67,7 +67,7 @@ class BasketsController < ApplicationController
     @storeId = params[:storeinfo_id]
     @branchId = params[:branchinfo_id]
 
-    @basket = Basket.where(user_id: current_user.id)
+    @basket = Basket.all
   end
 
   private

@@ -1,6 +1,7 @@
 <h1>showOrders</h1>
 
 <% @basket.each do |basket| %>
+  <table>
   <% basket.order.each do |id| %>
     <% @id = id %>
     <% if @id.include? "[" %>
@@ -15,9 +16,10 @@
     <% store = Storeinfo.find(branch.storeinfo_id) %>
     <% if branch.id.to_i.eql? @branchId.to_i %>
       <tr>
-        <td><%= Profile.where(user_id: current_user.id)[0].firstname %></td>
-        <td><%= basket.created_at %></td>
-        <td><%= basket.status %></td>
+        <td><h5><%= Profile.where(user_id: current_user.id)[0].firstname %></h5></td>
+        <td><h5><%= basket.created_at %></h5></td>
+        <td><h5><%= basket.status %></h5></td>
+        <td><%= link_to 'Update Order', edit_basket_path(basket) %></td>
       </tr>
       <td style="width: 132px;"><%= image_tag(product.image_url.to_s, width: '20%', style: "width: 132px;") %></td>
       <td><%= image_tag(store.image_url(:thumb).to_s) %></td>
@@ -28,6 +30,5 @@
       <td><%= product.productprice %></td>
     <% end %>
   <% end %>
-  </br>
-  </br>
+  </table>
 <% end %>
