@@ -34,6 +34,8 @@ Rails.application.routes.draw do
   get '/showOrders' => 'baskets#showOrders'
   post '/showOrders' => 'baskets#showOrders'
 
+  get '/privacy_policy' => 'profiles#privacy_policy'
+
   get '/check' =>'places#checkStore'
   #validate that a number is even
   post '/results', :controller=>'places', :action=>'locator'

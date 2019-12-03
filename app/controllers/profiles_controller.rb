@@ -71,4 +71,8 @@ class ProfilesController < ApplicationController
     def profile_params
       params.require(:profile).permit(:title, :firstname, :lastname, :address, :phoneno, :user_id)
     end
+
+  def privacy_policy
+
+  end
 end
