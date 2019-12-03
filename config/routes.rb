@@ -13,7 +13,9 @@ Rails.application.routes.draw do
   get 'compare/index'
 
   resources :profiles
-  devise_for :users
+  #devise_for :users
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
+
   get 'productinfos_imports/new'
   get 'productinfos_imports/create'
   #resources :productinfos
