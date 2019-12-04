@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2dff8dc9-7408-43a3-a18e-10211e208d1c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.generators" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.generators" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/OnlinePriceComparison.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/OnlinePriceComparison.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/baskets_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/baskets_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/baskets/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/baskets/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/home/Index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/Index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -315,11 +311,11 @@
       <screen x="59" y="27" width="1061" height="673" />
     </state>
     <state x="101" y="181" width="1015" height="631" key="dock-window-9/59.27.1061.673@59.27.1061.673" timestamp="1575403720186" />
-    <state x="241" y="98" width="704" height="528" key="find.popup" timestamp="1575405811413">
+    <state x="241" y="98" width="704" height="528" key="find.popup" timestamp="1575454098788">
       <screen x="59" y="27" width="1061" height="673" />
     </state>
     <state x="229" y="98" width="704" height="528" key="find.popup/45.27.1075.673@45.27.1075.673" timestamp="1575070142679" />
-    <state x="241" y="98" width="704" height="528" key="find.popup/59.27.1061.673@59.27.1061.673" timestamp="1575405811413" />
+    <state x="241" y="98" width="704" height="528" key="find.popup/59.27.1061.673@59.27.1061.673" timestamp="1575454098788" />
     <state x="253" y="158" key="run.anything.popup" timestamp="1575330252823">
       <screen x="59" y="27" width="1061" height="673" />
     </state>
