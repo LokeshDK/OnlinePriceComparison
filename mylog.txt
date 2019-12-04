@@ -55,3 +55,4 @@ Basket observer: A new basket - Test has been placed by the user - Lokesh Arcade
 Basket observer: A new basket - Dry Fruits has been placed by the user - Lokesh Arcade. Mail sent to lokesh11292@gmail.com
 Basket observer: A new basket - Dry Fruits has been placed by the user - Lokesh Arcade. Mail sent to lokesh11292@gmail.com
 Basket observer: A new basket - Dry Fruits has been placed by the user - Lokesh Arcade. Mail sent to lokesh11292@gmail.com
++++ ProductObserver: The price of Cashews has been updated. New price is 2.19 Updated by  Lokesh Arcade lokesh@gmail.com
