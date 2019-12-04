@@ -1,24 +1,51 @@
+<!DOCTYPE html>
+<html>
 
-<%= simple_form_for(@basket) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
 
-  <div class="form-inputs">
-    <%= f.input :name %>
-    <% if !@basket.order.empty? %>
-      <%= f.hidden_field :order, :value => "{#{@basket.order}}" %>
-    <% else %>
-      <%= f.hidden_field :order, :value => "{#{@odItemIdArr}}" %>
-    <% end %>
-    <%= f.select :status, options_for_select(['New','Approved','Rejected'], @basket.status) %>
-    <% if !@basket.user_id.nil? %>
-      <%= f.hidden_field :user_id, :value => @basket.user_id %>
-    <% else %>
-      <%= f.hidden_field :user_id, :value => current_user.id %>
-    <% end %>
-  </div>
+<body>
+<div class ="container">
+  </br>
+  <%= simple_form_for(@basket) do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+    <div class="form-inputs">
+      <div class="row">
+        <div class="col-sm-4">
+          <%= f.input :name %>
+        </div>
+      </div>
+      <% if !@basket.order.empty? %>
+        <%= f.hidden_field :order, :value => "{#{@basket.order}}" %>
+      <% else %>
+        <%= f.hidden_field :order, :value => "{#{@odItemIdArr}}" %>
+      <% end %>
+      <% if @basket.order.empty? %>
+        <%= f.hidden_field :status, :value => "New" %>
+      <% else %>
+        <div class = "row col-sm-4">
+        <p class ="font-weight-bolder"> Status </p>
+        <%= f.select :status, options_for_select(['New','Approved','Rejected'], @basket.status) %>
+        </div>
+      <% end %>
+      <% if !@basket.user_id.nil? %>
+        <%= f.hidden_field :user_id, :value => @basket.user_id %>
+      <% else %>
+        <%= f.hidden_field :user_id, :value => current_user.id %>
+      <% end %>
+      </br>
+    </div>
+
+    <div class="form-actions alert alert-primary col-sm-2">
+      <%= f.button :submit %>
+    </div>
+  <% end %>
+</div>
+</body>
+</html>

@@ -33,7 +33,7 @@
       <% for profile in @profileList %>
         <% if profile.user_id == current_user.id %>
           <% profilePresent = true %>
-          <div class="col-sm-2 float-right">
+          <div class="col-sm-2 pull-right">
           <%= link_to 'Update Your Profile', edit_profile_path(profile.id) %>
           </div>
           <% break %>
@@ -41,14 +41,14 @@
       <% end %>
 
       <% if profilePresent == false %>
-        <div class="col-sm-2 float-right">
+        <div class="col-sm-2 pull-right">
         <%= link_to 'Update Your Profile', {:controller => "profiles", :action => "new", :user_id => current_user.id} %>
         </div>
       <% end %>
     <% end %>
 
     </br>
-      <div class="col-sm-2 float-left">Signed in as... <%= current_user.email %>
+      <div class="col-sm-2 pull-left">Signed in as... <%= current_user.email %>
         (<%= link_to'Sign out', destroy_user_session_path,:method => :delete %>)
       </div>
   <% else %>

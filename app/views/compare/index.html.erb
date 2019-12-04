@@ -1,42 +1,62 @@
-<h1><%= "Compare Price of the #{@productName}" %> </h1>
+<!DOCTYPE html>
+<html>
 
-<table>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
 
-  <tr>
-    <th></th>
-    <th></th>
-    <th>Store Name</th>
-    <th>Store Address</th>
-    <th>Product Price</th>
-  </tr>
+<body>
+<div class ="container">
+</br>
+  <h3 class="card-header"><%= "Compare Price of the #{@productName}" %> </h3>
 
-  <% @productId.each_with_index { |val| %>
+  <table class="table table-striped table-bordered">
     <tr>
-      <% product = Productinfo.find(val) %>
-      <% branch = Branchinfo.find(product.branchinfo_id) %>
-      <% store = Storeinfo.find(branch.storeinfo_id) %>
-      <td style="width: 132px;"><%= image_tag(product.image_url.to_s, width: '20%', style: "width: 132px;") %></td>
-      <td><%= image_tag(store.image_url(:thumb).to_s) %></td>
-      <td><%= branch.branchname %></td>
-      <td><%= branch.address %></td>
-      <td><%= product.productprice.to_f %></td>
-
-
-
-      <td>
-         <%= form_for @order_item, remote: true do |f| %>
-          <%= f.hidden_field :productinfo_id, :value => product.id %>
-          <%= f.number_field :quantity, :value => 1, :min => 1 %>
-          <%= f.submit "Add to Cart" %>
-        <% end %>
-      </td>
-      <td ><%= link_to 'Show reviews', {:controller => "reviews", :action => "index",
-                                        :productinfo_id => product.id} %></td>
+      <th></th>
+      <th></th>
+      <th>Store Name</th>
+      <th>Store Address</th>
+      <th>Product Price</th>
+      <th></th>
+      <th></th>
     </tr>
-  <% } %>
-</table>
 
-<%= link_to 'Back', {:controller => "home", :action => "Index"} %>
-<div id="cart">
-  <%= render 'carts/cart' %>
+    <% @productId.each_with_index { |val| %>
+      <tr>
+        <% product = Productinfo.find(val) %>
+        <% branch = Branchinfo.find(product.branchinfo_id) %>
+        <% store = Storeinfo.find(branch.storeinfo_id) %>
+        <td style="width: 132px;"><%= image_tag(product.image_url.to_s, width: '20%', style: "width: 132px;") %></td>
+        <td><%= image_tag(store.image_url(:thumb).to_s) %></td>
+        <td><%= branch.branchname %></td>
+        <td><%= branch.address %></td>
+        <td><%= product.productprice.to_f %></td>
+
+        <td>
+          <%= form_for @order_item, remote: true do |f| %>
+            <%= f.hidden_field :productinfo_id, :value => product.id %>
+            <%= f.number_field :quantity, :value => 1, :min => 1 %>
+              <%= f.submit "Add to Cart", :class => "btn btn-secondary btn-sm" %>
+
+          <% end %>
+        </td>
+        <td><%= link_to 'Show reviews', {:controller => "reviews", :action => "index",
+                                         :productinfo_id => product.id} %></td>
+      </tr>
+    <% } %>
+  </table>
+
+  <div class="row">
+    <div class="btn alert alert-primary col-sm-4" style="background-color: #eee;">
+      <%= link_to 'Back', {:controller => "home", :action => "Index"} %>
+    </div>
+    <div id="cart" class="alert alert-success col-sm-4">
+      <%= render 'carts/cart' %>
+    </div>
+  </div>
 </div>
+</body>
+</html>

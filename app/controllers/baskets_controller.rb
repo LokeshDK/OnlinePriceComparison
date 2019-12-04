@@ -63,8 +63,8 @@ class BasketsController < ApplicationController
   def update
     respond_to do |format|
       if @basket.update(basket_params)
-        format.html { redirect_to @basket, notice: 'Basket was successfully updated.' }
-        format.json { render :show, status: :ok, location: @basket }
+        format.html { redirect_to root_path, notice: 'Basket was successfully updated.' }
+        format.json { render :show, status: :ok, location: root_path }
       else
         format.html { render :edit }
         format.json { render json: @basket.errors, status: :unprocessable_entity }
