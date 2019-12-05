@@ -60,3 +60,16 @@ Basket observer: A new basket - Grocery has been placed by the user - Lokesh Arc
 Basket observer: A new basket - Grocery has been placed by the user - Lokesh Arcade. Mail sent to lokesh11292@gmail.com
 Basket observer: A new basket - Grocery has been placed by the user - Lokesh Arcade. Mail sent to lokesh11292@gmail.com
 Basket observer: A new basket - Grocery has been placed by the user - Lokesh Arcade. Mail sent to lokesh@gmail.com
++++ A new store  has been created. 
++++ A new store  has been created. 
++++ A new store Test has been created. 
++++ A new store Test has been created. 
++++ A new store Test has been created. 
++++ A new store Dummy has been created. 
++++ A new store Dummy has been created. 
++++ A new store Dummy has been created. 
++++ A new store Dummy has been created. 
++++ A new store Dummy has been created. 
++++ A new store Dummy has been created. 
++++ A new store Test has been created. 
++++ A new store Test has been created. 
