@@ -21,4 +21,28 @@ class BasketObserver < ActiveRecord::Observer
   end
 
 
+
+  def after_update(record)
+# use the MyLogger instance method to retrieve the single instance/object of the class
+    @logger = MyLogger.instance
+
+# use the logger to log/record a message about the updated car
+#@user = User.find(params[:record.user_id]) #
+
+    user = User.find(record.user_id)
+    basket = Basket.find(record.id)
+#@profile = Profile.find(record.user_id)
+    profile_id = Profile.find_by(user_id: record.user_id).id
+    @profile = Profile.find(profile_id)
+
+    if record.status == "Approved" || record.status == "Rejected"
+#order = record.id
+    @logger.logInformation("Basket observer: A new basket - #{record.name} has been placed by the user - #{@profile.firstname} #{@profile.lastname}. Mail sent to #{user.email}")
+#UserMailer.with(user: @user, basket: order).order_email.deliver
+      @logger.logInformation("Basket status has changed")
+
+      UserMailer.status_change_email(user, basket).deliver
+    end
+  end
+
 end

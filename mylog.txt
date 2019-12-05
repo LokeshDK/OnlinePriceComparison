@@ -60,3 +60,11 @@ Basket observer: A new basket - Grocery has been placed by the user - Lokesh Arc
 Basket observer: A new basket - Grocery has been placed by the user - Lokesh Arcade. Mail sent to lokesh11292@gmail.com
 Basket observer: A new basket - Grocery has been placed by the user - Lokesh Arcade. Mail sent to lokesh11292@gmail.com
 Basket observer: A new basket - Grocery has been placed by the user - Lokesh Arcade. Mail sent to lokesh@gmail.com
++++ A new store Aldi has been created. 
++++ ProductObserver: A new product Roasted Peanuts has been created. The price is 0.47
+Basket observer: A new basket - Grocery has been placed by the user - Lokesh Arcade. Mail sent to lokesh11292@gmail.com
+Basket observer: A new basket - Grocery has been placed by the user - Lokesh Arcade. Mail sent to lokesh11292@gmail.com
+Basket observer: A new basket - Grocery has been placed by the user - Lokesh Arcade. Mail sent to lokesh11292@gmail.com
+Basket status has changed
++++ ProductObserver: A new product Garlic Bread has been created. The price is 0.28
++++ ProductObserver: A new product Garlic Bread has been created. The price is 0.28
