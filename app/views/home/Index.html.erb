@@ -50,15 +50,19 @@
           <td><%= image_tag(store.image_url(:thumb).to_s) %></td>
           <td><%= branch.branchname %></td>
           <td><%= product.productprice %></td>
-          <td class="btn badge badge-success"><%= link_to'Show', {:controller => "productinfos", :action => "show",
-                                  :id => product.id, :branchinfo_id => product.branchinfo_id}%></td>
+          <td>
+            <%= form_for @order_item, remote: true do |f| %>
+              <%= f.hidden_field :productinfo_id, :value => product.id %>
+              <%= f.number_field :quantity, :value => 1, :min => 1 %>
+              <%= f.submit "Add to Cart", :class => "btn btn-secondary btn-sm" %>
+            <% end %>
+          </td>
           <% if current_user.admin? || product.user_id == current_user.id %>
             <td class="btn badge badge-success"><%= link_to'Edit', edit_productinfo_path(product) %></td>
             <td class="btn badge badge-danger"><%= link_to'Destroy', productinfo_path(product),
                            :confirm =>'Are you sure?',
                            :method => :delete, data: { confirm: 'Are you sure?' } %></td>
-          <% else %>
-            <td></td>
+            <%else %>
             <td></td>
           <%end %>
         </tr>

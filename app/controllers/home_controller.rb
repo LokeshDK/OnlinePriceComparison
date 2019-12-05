@@ -11,6 +11,7 @@ class HomeController < ApplicationController
     if @search.present?
       @productname = @search["productname"]
       @productSearch = Productinfo.where("lower(productname) like ?", "%#{@productname.downcase}%")
+      @order_item = current_order.order_items.new
     end
 
     if @productSearch.present? == false

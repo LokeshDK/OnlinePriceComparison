@@ -39,8 +39,7 @@
           <%= form_for @order_item, remote: true do |f| %>
             <%= f.hidden_field :productinfo_id, :value => product.id %>
             <%= f.number_field :quantity, :value => 1, :min => 1 %>
-              <%= f.submit "Add to Cart", :class => "btn btn-secondary btn-sm" %>
-
+            <%= f.submit "Add to Cart", :class => "btn btn-secondary btn-sm" %>
           <% end %>
         </td>
         <td><%= link_to 'Show reviews', {:controller => "reviews", :action => "index",

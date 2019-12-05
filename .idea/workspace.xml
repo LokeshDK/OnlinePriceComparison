@@ -3,24 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="2dff8dc9-7408-43a3-a18e-10211e208d1c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/baskets/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/baskets/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/baskets/showOrders.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/baskets/showOrders.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/branchinfos/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/branchinfos/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/branchinfos/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/branchinfos/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/branchinfos/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/branchinfos/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/branchinfos/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/branchinfos/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/carts/_carts_item.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/carts/_carts_item.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/compare/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/compare/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/home/Index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/Index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/productinfos/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/productinfos/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/productinfos/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/productinfos/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/productinfos/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/productinfos/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/productinfos/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/productinfos/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/storeinfos/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/storeinfos/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/storeinfos/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/storeinfos/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/storeinfos/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/storeinfos/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/storeinfos/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/storeinfos/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/mylog.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -263,7 +248,8 @@
       <workItem from="1575254663235" duration="3342000" />
       <workItem from="1575275952095" duration="7804000" />
       <workItem from="1575287088888" duration="21657000" />
-      <workItem from="1575455532590" duration="23624000" />
+      <workItem from="1575455532590" duration="24174000" />
+      <workItem from="1575543709030" duration="1019000" />
     </task>
     <servers />
   </component>
@@ -408,20 +394,20 @@
       <screen x="59" y="27" width="1061" height="673" />
     </state>
     <state x="195" y="169" width="754" height="464" key="dock-window-9/59.27.1061.673@59.27.1061.673" timestamp="1575499993422" />
-    <state x="241" y="98" width="704" height="528" key="find.popup" timestamp="1575506912392">
+    <state x="241" y="98" width="704" height="528" key="find.popup" timestamp="1575544796053">
       <screen x="59" y="27" width="1061" height="673" />
     </state>
     <state x="229" y="98" width="704" height="528" key="find.popup/45.27.1075.673@45.27.1075.673" timestamp="1575070142679" />
-    <state x="241" y="98" width="704" height="528" key="find.popup/59.27.1061.673@59.27.1061.673" timestamp="1575506912392" />
+    <state x="241" y="98" width="704" height="528" key="find.popup/59.27.1061.673@59.27.1061.673" timestamp="1575544796053" />
     <state x="253" y="158" key="run.anything.popup" timestamp="1575330252823">
       <screen x="59" y="27" width="1061" height="673" />
     </state>
     <state x="253" y="158" key="run.anything.popup/59.27.1061.673@59.27.1061.673" timestamp="1575330252823" />
-    <state x="255" y="27" width="672" height="671" key="search.everywhere.popup" timestamp="1575507124253">
+    <state x="255" y="27" width="672" height="671" key="search.everywhere.popup" timestamp="1575544158922">
       <screen x="59" y="27" width="1061" height="673" />
     </state>
     <state x="244" y="27" width="672" height="671" key="search.everywhere.popup/45.27.1075.673@45.27.1075.673" timestamp="1575127994382" />
-    <state x="255" y="27" width="672" height="671" key="search.everywhere.popup/59.27.1061.673@59.27.1061.673" timestamp="1575507124253" />
+    <state x="255" y="27" width="672" height="671" key="search.everywhere.popup/59.27.1061.673@59.27.1061.673" timestamp="1575544158922" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/OnlinePriceComparison@branchinfos_controller.rcov" NAME="branchinfos_controller Coverage Results" MODIFIED="1572699929535" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/controllers" MODULE_NAME="OnlinePriceComparison" />
