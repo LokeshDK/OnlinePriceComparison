@@ -45,7 +45,10 @@ class ProductinfosController < ApplicationController
 
     respond_to do |format|
       if @productinfo.save
-        format.html { redirect_to @productinfo, notice: 'Product was successfully created.' }
+        @branchinfo = Branchinfo.find(@productinfo.branchinfo_id)
+        format.html { redirect_to :controller => "productinfos", :action => "index",
+                                  :branchinfo_id => @branchinfo.id,
+                                  :storeinfo_id => Storeinfo.find(@branchinfo.storeinfo_id), notice: 'Product was successfully created.' }
         format.json { render :index, status: :created, location: @productinfo }
       else
         format.html { render :new }

@@ -2,10 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2dff8dc9-7408-43a3-a18e-10211e208d1c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.generators" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.generators" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/OnlinePriceComparison.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/OnlinePriceComparison.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/compare/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/compare/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/home/Index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/Index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/branchinfos_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/branchinfos_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/productinfos_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/productinfos_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/storeinfos_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/storeinfos_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mailers/user_mailer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/mailers/user_mailer.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/basket_observer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/basket_observer.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mylog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/mylog.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/models/storeinfo_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/storeinfo_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_helper.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,13 +59,14 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/views/basket" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/views/user_mailer" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/views/user_mailer" />
       <recent name="$PROJECT_DIR$/app/views/basket" />
     </key>
   </component>
@@ -294,10 +304,10 @@
       <screen x="59" y="27" width="1061" height="673" />
     </state>
     <state width="1015" height="153" key="GridCell.Tab.0.right/59.27.1061.673@59.27.1061.673" timestamp="1575241529933" />
-    <state x="59" y="187" width="1015" height="464" key="dock-window-1" timestamp="1575481397413">
+    <state x="142" y="236" width="749" height="464" key="dock-window-1" timestamp="1575572679046">
       <screen x="59" y="27" width="1061" height="673" />
     </state>
-    <state x="59" y="187" width="1015" height="464" key="dock-window-1/59.27.1061.673@59.27.1061.673" timestamp="1575481397413" />
+    <state x="142" y="236" width="749" height="464" key="dock-window-1/59.27.1061.673@59.27.1061.673" timestamp="1575572679046" />
     <state x="366" y="159" width="754" height="464" key="dock-window-10" timestamp="1575500039602">
       <screen x="59" y="27" width="1061" height="673" />
     </state>
@@ -338,10 +348,10 @@
       <screen x="59" y="27" width="1061" height="673" />
     </state>
     <state x="171" y="229" width="754" height="464" key="dock-window-19/59.27.1061.673@59.27.1061.673" timestamp="1575504632929" />
-    <state x="59" y="195" width="1015" height="464" key="dock-window-2" timestamp="1575482384076">
+    <state x="371" y="227" width="749" height="464" key="dock-window-2" timestamp="1575573230709">
       <screen x="59" y="27" width="1061" height="673" />
     </state>
-    <state x="59" y="195" width="1015" height="464" key="dock-window-2/59.27.1061.673@59.27.1061.673" timestamp="1575482384076" />
+    <state x="371" y="227" width="749" height="464" key="dock-window-2/59.27.1061.673@59.27.1061.673" timestamp="1575573230709" />
     <state x="366" y="215" width="754" height="464" key="dock-window-20" timestamp="1575505025888">
       <screen x="59" y="27" width="1061" height="673" />
     </state>
@@ -394,20 +404,20 @@
       <screen x="59" y="27" width="1061" height="673" />
     </state>
     <state x="195" y="169" width="754" height="464" key="dock-window-9/59.27.1061.673@59.27.1061.673" timestamp="1575499993422" />
-    <state x="241" y="98" width="704" height="528" key="find.popup" timestamp="1575544796053">
+    <state x="241" y="98" width="704" height="528" key="find.popup" timestamp="1575575328015">
       <screen x="59" y="27" width="1061" height="673" />
     </state>
     <state x="229" y="98" width="704" height="528" key="find.popup/45.27.1075.673@45.27.1075.673" timestamp="1575070142679" />
-    <state x="241" y="98" width="704" height="528" key="find.popup/59.27.1061.673@59.27.1061.673" timestamp="1575544796053" />
+    <state x="241" y="98" width="704" height="528" key="find.popup/59.27.1061.673@59.27.1061.673" timestamp="1575575328015" />
     <state x="253" y="158" key="run.anything.popup" timestamp="1575330252823">
       <screen x="59" y="27" width="1061" height="673" />
     </state>
     <state x="253" y="158" key="run.anything.popup/59.27.1061.673@59.27.1061.673" timestamp="1575330252823" />
-    <state x="255" y="27" width="672" height="671" key="search.everywhere.popup" timestamp="1575544158922">
+    <state x="255" y="27" width="672" height="671" key="search.everywhere.popup" timestamp="1575575403372">
       <screen x="59" y="27" width="1061" height="673" />
     </state>
     <state x="244" y="27" width="672" height="671" key="search.everywhere.popup/45.27.1075.673@45.27.1075.673" timestamp="1575127994382" />
-    <state x="255" y="27" width="672" height="671" key="search.everywhere.popup/59.27.1061.673@59.27.1061.673" timestamp="1575544158922" />
+    <state x="255" y="27" width="672" height="671" key="search.everywhere.popup/59.27.1061.673@59.27.1061.673" timestamp="1575575403372" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/OnlinePriceComparison@branchinfos_controller.rcov" NAME="branchinfos_controller Coverage Results" MODIFIED="1572699929535" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/controllers" MODULE_NAME="OnlinePriceComparison" />
