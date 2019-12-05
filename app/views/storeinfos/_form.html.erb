@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+</br>
 <%= form_with(model: storeinfo, local: true) do |form| %>
   <% if storeinfo.errors.any? %>
     <div id="error_explanation">
@@ -10,56 +22,93 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :storename %>
-    <%= form.text_field :storename %>
-  </div>
-
-  <div class="field">
-    <%= form.label :address %>
-    <%= form.text_field :address %>
-  </div>
-
-  <div class="field">
-    <%= form.label :phoneno %>
-    <%= form.text_field :phoneno %>
-  </div>
-
-  <div class="field">
-    <%= form.label :buisnessid %>
-    <%= form.text_field :buisnessid %>
-  </div>
-
-  <div class="field">
-    <%= form.label :branchcount %>
-    <%= form.number_field :branchcount, :value=>'1' %>
-  </div>
-
-  <div class="field">
-    <%= form.label :storeincharge %>
-    <%= form.text_field :storeincharge %>
-  </div>
-
-  <div class="field">
-    <%= form.label :contactno %>
-    <%= form.text_field :contactno %>
-  </div>
-
-    <div class="field">
-      <% if @storeinfo.storename? == true %>
-        <%= form.hidden_field :user_id, :value => @storeinfo.user_id %>
-      <% else %>
-        <%= form.hidden_field :user_id, :value => current_user.id %>
-      <% end %>
+  <div class="row">
+    <div class="col-sm-2 col-form-label">
+      <%= form.label :storename %>
     </div>
+    <div class="col-sm-2 col-form-label">
+      <%= form.text_field :storename %>
+    </div>
+  </div>
 
-  <div class="field">
-    <%= form.label :image %>
-    <%= form.file_field :image %>
+  <div class="row">
+    <div class="col-sm-2 col-form-label">
+      <%= form.label :address %>
+    </div>
+    <div class="col-sm-2 col-form-label">
+      <%= form.text_field :address %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-2 col-form-label">
+      <%= form.label :phoneno %>
+    </div>
+    <div class="col-sm-2 col-form-label">
+      <%= form.text_field :phoneno %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-2 col-form-label">
+      <%= form.label :buisnessid %>
+    </div>
+    <div class="col-sm-2 col-form-label">
+      <%= form.text_field :buisnessid %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-2 col-form-label">
+      <%= form.label :branchcount %>
+    </div>
+    <div class="col-sm-2 col-form-label">
+      <%= form.number_field :branchcount, :value=>'1' %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-2 col-form-label">
+      <%= form.label :storeincharge %>
+    </div>
+    <div class="col-sm-2 col-form-label">
+      <%= form.text_field :storeincharge %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-2 col-form-label">
+      <%= form.label :contactno %>
+    </div>
+    <div class="col-sm-2 col-form-label">
+      <%= form.text_field :contactno %>
+    </div>
+  </div>
+
+  <div class="row">
+    <% if @storeinfo.storename? == true %>
+      <div class="col-sm-2 col-form-label">
+        <%= form.hidden_field :user_id, :value => @storeinfo.user_id %>
+      </div>
+    <% else %>
+      <div class="col-sm-2 col-form-label">
+        <%= form.hidden_field :user_id, :value => current_user.id %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-2 col-form-label">
+      <%= form.label :image %>
+    </div>
+    <div class="col-sm-2 col-form-label">
+      <%= form.file_field :image %>
+    </div>
   </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+</body>
+</html>

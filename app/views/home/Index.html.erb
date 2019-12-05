@@ -11,7 +11,7 @@
 <body>
 </br>
 <div class ="container">
-  <h1 class="card-header">Search for your Product</h1>
+  <h3 class="card-header">Search for your Product</h3>
 
   <form class="form-inline my-2 my-lg-0">
     <%= simple_form_for :search, url: {:controller => "home", :action => "Index"},
@@ -31,16 +31,13 @@
   <% end %>
 
   <% if @productSearch.present? %>
-    <table class="table table-striped table-bordered" style="width: 50%">
+    <table class="table table-striped table-bordered">
       <tr>
         <th></th>
-        <th></th>
-        <th></th>
         <th>Product Name</th>
+        <th></th>
         <th>Store Name</th>
         <th>Product Price</th>
-        <td></td>
-        <td></td>
       </tr>
       </br>
 
@@ -53,11 +50,11 @@
           <td><%= image_tag(store.image_url(:thumb).to_s) %></td>
           <td><%= branch.branchname %></td>
           <td><%= product.productprice %></td>
-          <td><%= link_to'Show', {:controller => "productinfos", :action => "show",
+          <td class="btn badge badge-success"><%= link_to'Show', {:controller => "productinfos", :action => "show",
                                   :id => product.id, :branchinfo_id => product.branchinfo_id}%></td>
           <% if current_user.admin? || product.user_id == current_user.id %>
-            <td><%= link_to'Edit', edit_productinfo_path(product) %></td>
-            <td><%= link_to'Destroy', productinfo_path(product),
+            <td class="btn badge badge-success"><%= link_to'Edit', edit_productinfo_path(product) %></td>
+            <td class="btn badge badge-danger"><%= link_to'Destroy', productinfo_path(product),
                            :confirm =>'Are you sure?',
                            :method => :delete, data: { confirm: 'Are you sure?' } %></td>
           <% else %>
@@ -76,7 +73,7 @@
       <% @productHash.each do |key, value| %>
         <tr>
           <td style="width: 50%"><%= key %></td>
-          <td class="nav-item nav-link" style="width: 50%"><%= link_to'Show', {:controller => "compare", :action => "index",
+          <td class="btn badge badge-success"><%= link_to'Show', {:controller => "compare", :action => "index",
                                                                                       :pdName => key, :pdID => value } %></td>
         </tr>
       <% end %>
@@ -91,7 +88,7 @@
         <% if store.user_id == current_user.id %>
           <% storeCreated = true %>
           <div class="row">
-            <div class = "alert alert-primary col-sm-4">
+            <div class = "alert alert-primary col-sm-2">
               <%= link_to 'Show Stores', {:controller => "storeinfos", :action => "index"} %>
             </div>
             <% if !current_order.id.nil? %>
@@ -106,7 +103,7 @@
 
       <% if storeCreated == false %>
         <% if current_user.admin? %>
-          <div class = "alert alert-primary">
+          <div class = "alert alert-primary col-sm-2">
             <%= link_to 'Show Stores', {:controller => "storeinfos", :action => "index"} %>
           </div>
         <% else %>

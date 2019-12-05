@@ -1,6 +1,24 @@
-<h1>Editing Branch <%=@branchinfo.branchname %></h1>
+<!DOCTYPE html>
+<html>
 
-<%= render'form'%>
-<%= link_to'Show', branchinfo_path(@branchinfo) %> |
-<%= link_to'Back', {:controller => "storeinfos", :action => "index",
-                    :storeinfo_id => Storeinfo.find(@branchinfo.storeinfo_id)} %>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div class ="container">
+  </br>
+
+  <h3 class="card-header">Editing Branch <%=@branchinfo.branchname %></h3>
+
+  <%= render'form'%>
+  <div class="btn alert alert-primary col-sm-1">
+    <%= link_to'Back', {:controller => "storeinfos", :action => "index",
+                        :storeinfo_id => Storeinfo.find(@branchinfo.storeinfo_id)} %>
+  </div>
+</div>
+</body>
+</html>

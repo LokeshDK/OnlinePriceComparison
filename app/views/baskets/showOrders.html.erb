@@ -1,34 +1,58 @@
-<h1>showOrders</h1>
+<!DOCTYPE html>
+<html>
 
-<% @basket.each do |basket| %>
-  <table>
-  <% basket.order.each do |id| %>
-    <% @id = id %>
-    <% if @id.include? "[" %>
-      <% @id = @id.tr("[", "") %>
-    <% end %>
-    <% if @id.include? "]" %>
-      <% @id = @id.tr("]", "") %>
-    <% end %>
-    </br>
-    <% product = Productinfo.find(OrderItem.find(@id).productinfo_id) %>
-    <% branch = Branchinfo.find(product.branchinfo_id) %>
-    <% store = Storeinfo.find(branch.storeinfo_id) %>
-    <% if branch.id.to_i.eql? @branchId.to_i %>
-      <tr>
-        <td><h5><%= Profile.where(user_id: current_user.id)[0].firstname %></h5></td>
-        <td><h5><%= basket.created_at %></h5></td>
-        <td><h5><%= basket.status %></h5></td>
-        <td><%= link_to 'Update Order', edit_basket_path(basket) %></td>
-      </tr>
-      <td style="width: 132px;"><%= image_tag(product.image_url.to_s, width: '20%', style: "width: 132px;") %></td>
-      <td><%= image_tag(store.image_url(:thumb).to_s) %></td>
-      <td><%= branch.branchname %></td>
-      <td><%= branch.address %></td>
-      <td><%= product.productname %></td>
-      <td><%= OrderItem.find(@id).quantity %></td>
-      <td><%= product.productprice %></td>
-    <% end %>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+</br>
+<div class ="container">
+  <h3 class="card-header">showOrders</h3>
+
+  <% @basket.each do |basket| %>
+    <table class="table table-striped table-bordered">
+      <% basket.order.each do |id| %>
+        <% @id = id %>
+        <% if @id.include? "[" %>
+          <% @id = @id.tr("[", "") %>
+        <% end %>
+        <% if @id.include? "]" %>
+          <% @id = @id.tr("]", "") %>
+        <% end %>
+        </br>
+        <% product = Productinfo.find(OrderItem.find(@id).productinfo_id) %>
+        <% branch = Branchinfo.find(product.branchinfo_id) %>
+        <% store = Storeinfo.find(branch.storeinfo_id) %>
+        <% if branch.id.to_i.eql? @branchId.to_i %>
+          <tr>
+            <th>User Name</th>
+            <th>Order generate on</th>
+            <th>Current Status</th>
+          </tr>
+          <tr>
+            <td><h5><%= Profile.where(user_id: current_user.id)[0].firstname %></h5></td>
+            <td><h5><%= basket.created_at %></h5></td>
+            <td><h5><%= basket.status %></h5></td>
+            <td><%= link_to 'Update Order', edit_basket_path(basket) %></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <td style="width: 132px;"><%= image_tag(product.image_url.to_s, width: '20%', style: "width: 132px;") %></td>
+          <td><%= image_tag(store.image_url(:thumb).to_s) %></td>
+          <td><%= branch.branchname %></td>
+          <td><%= branch.address %></td>
+          <td><%= product.productname %></td>
+          <td><%= OrderItem.find(@id).quantity %></td>
+          <td><%= product.productprice %></td>
+        <% end %>
+      <% end %>
+    </table>
   <% end %>
-  </table>
-<% end %>
+</div>
+</body>
+</html>

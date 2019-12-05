@@ -8,27 +8,21 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 
-<p id="notice"><%= notice %></p>
+<body>
+<div class ="container">
+  </br>
+  <h3 class="card-header">Previous Orders</h3>
 
-<h1 >Baskets</h1>
-
-    <% @baskets.each do |basket| %>
-  <table>
-    <tbody>
-    <thead>
-    <tr>
-      <th>Name</th>
-      <th>Status</th>
-      <th>Created on</th>
-      <th colspan="3"></th>
-    </tr>
-    </thead>
+  <% @baskets.each do |basket| %>
+    <table class="table table-striped table-bordered">
+      <tbody>
       <tr>
-        <td><%= basket.name %></td>
-        <td><%= basket.status %></td>
-        <td><%= basket.created_at %></td>
-        <td><%= link_to "Printable Invoice (PDF)", "http://localhost:3000/baskets.pdf" %></td>
-        <table>
+        <th><%= basket.name %></th>
+        <th>Status  : <%= basket.status %></th>
+        <th><%= basket.created_at %></th>
+        <td class="btn badge badge-success"><%= link_to "Printable Invoice (PDF)", "http://localhost:3000/baskets.pdf" %></td>
+      </tr>
+
           <% basket.order.each do |id| %>
             <% if id.include? "[" %>
               <% id = id.tr("[", " ") %>
@@ -36,24 +30,23 @@
               <% id = id.tr("]", " ") %>
             <% end %>
             <tr>
-            <% product = Productinfo.find(OrderItem.find(id).productinfo_id) %>
-            <% branch = Branchinfo.find(product.branchinfo_id) %>
-            <% store = Storeinfo.find(branch.storeinfo_id) %>
-            <td style="width: 132px;"><%= image_tag(product.image_url.to_s, width: '20%', style: "width: 132px;") %></td>
-            <td><%= image_tag(store.image_url(:thumb).to_s) %></td>
-            <td><%= branch.branchname %></td>
-            <td><%= branch.address %></td>
-            <td><%= product.productname %></td>
-            <td><%= product.productprice %></td>
+              <% product = Productinfo.find(OrderItem.find(id).productinfo_id) %>
+              <% branch = Branchinfo.find(product.branchinfo_id) %>
+              <% store = Storeinfo.find(branch.storeinfo_id) %>
+              <td style="width: 132px;"><%= image_tag(product.image_url.to_s, width: '20%', style: "width: 132px;") %></td>
+              <td><%= image_tag(store.image_url(:thumb).to_s) %></td>
+              <td><%= branch.branchname %></td>
+              <td><%= branch.address %></td>
+              <td><%= product.productname %></td>
+              <td><%= product.productprice %> EUR</td>
             </tr>
           <% end %>
-        </table>
-        </tr>
-    </tbody>
-  </table>
-<% end %>
-<br>
 
-<%= link_to 'New Basket', new_basket_path %>
+      </tbody>
+    </table>
+  <% end %>
+  <br>
 
+</div>
+</body>
 </html>

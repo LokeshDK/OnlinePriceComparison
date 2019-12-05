@@ -17,7 +17,7 @@
 <body>
 <div class ="container">
   <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-  <% if user_signed_in? %>
+    <% if user_signed_in? %>
 
       <div class="col-sm-2 navbar-brand">
         <%= link_to 'Home', {:controller => "home", :action => "Index" } %>
@@ -26,32 +26,34 @@
         <%= link_to 'Previous Orders', {:controller => "baskets", :action => "index" } %>
       </div>
 
-    <% @profileList = Profile.all %>
-    <% profilePresent = false %>
+      <% @profileList = Profile.all %>
+      <% profilePresent = false %>
 
-    <% if current_user.admin? == false %>
-      <% for profile in @profileList %>
-        <% if profile.user_id == current_user.id %>
-          <% profilePresent = true %>
-          <div class="col-sm-2 pull-right">
-          <%= link_to 'Update Your Profile', edit_profile_path(profile.id) %>
+      <% if current_user.admin? == false %>
+        <% for profile in @profileList %>
+          <% if profile.user_id == current_user.id %>
+            <% profilePresent = true %>
+            <div class="col-sm-2">
+              <%= link_to 'Update Your Profile', edit_profile_path(profile.id) %>
+            </div>
+            <% break %>
+          <% end %>
+        <% end %>
+
+        <% if profilePresent == false %>
+          <div class="col-sm-2">
+            <%= link_to 'Update Your Profile', {:controller => "profiles", :action => "new", :user_id => current_user.id} %>
           </div>
-          <% break %>
         <% end %>
       <% end %>
 
-      <% if profilePresent == false %>
-        <div class="col-sm-2 pull-right">
-        <%= link_to 'Update Your Profile', {:controller => "profiles", :action => "new", :user_id => current_user.id} %>
+      </br>
+      <div class="col text-right">
+        <div class="col-sm-4">Signed in as... <%= current_user.email %>
+          (<%= link_to'Sign out', destroy_user_session_path,:method => :delete %>)
         </div>
-      <% end %>
-    <% end %>
-
-    </br>
-      <div class="col-sm-2 pull-left">Signed in as... <%= current_user.email %>
-        (<%= link_to'Sign out', destroy_user_session_path,:method => :delete %>)
       </div>
-  <% else %>
+    <% else %>
 
       <div class="col-sm-2 navbar-brand">
         <%= link_to'Register', new_user_registration_path %>
@@ -62,13 +64,13 @@
       <div class="col-sm-2 navbar-brand">
         <%= link_to "Login with Facebook", user_facebook_omniauth_authorize_path %>
       </div>
-    </nav>
+      </nav>
 
-    <% session.delete(:order_id) %>
-    <%session.delete(current_user) %>
+      <% session.delete(:order_id) %>
+      <%session.delete(current_user) %>
 
-  <% end %>
-</div>
-  <%= yield %>
-  </body>
+    <% end %>
+    </div>
+<%= yield %>
+</body>
 </html>

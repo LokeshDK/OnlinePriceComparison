@@ -1,44 +1,72 @@
-<h1>Products in Branch <%= @branchinfo.branchname %></h1>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
 
-<%=
-  link_to 'Download as Excel',
-          productinfos_path(format: :xlsx, :branchinfo_id => @branchinfo.id, :user_id => current_user.id)
-%>
-<%=
-  link_to 'Upload from Excel',
-          new_productinfos_import_path(:branchinfo_id => @branchinfo.id)
-%>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
 
-<table>
-  <tr>
-    <th></th>
-    <th>Product Name</th>
-    <th>Store Product Id</th>
-    <th>Product Price</th>
-  </tr>
+<body>
+<div class ="container">
+  </br>
+  <h3 class="card-header">Products in Branch <%= @branchinfo.branchname %></h3>
 
-  <% for product in @productList %>
+  Note: Only import spreadsheets that were previously downloaded from this
+  application.
+  </br>
+  <div class="btn badge badge-success col-sm-2" style="background-color: #eee;">
+    <%=
+        link_to 'Download as Excel',
+                productinfos_path(format: :xlsx, :branchinfo_id => @branchinfo.id, :user_id => current_user.id)
+    %>
+  </div>
+  <div class="btn badge badge-success col-sm-2" style="background-color: #eee;">
+    <%=
+        link_to 'Upload from Excel',
+                new_productinfos_import_path(:branchinfo_id => @branchinfo.id)
+    %>
+  </div>
+  <table class="table table-striped table-bordered">
     <tr>
-      <% if current_user.admin? || product.user_id == current_user.id %>
-        <td><%= image_tag(product.image_url(:thumb).to_s) %></td>
-        <td><%= product.productname %></td>
-        <td><%= product.storeproductid %></td>
-        <td><%= product.productprice %></td>
-        <td><%= link_to'Show', {:controller => "productinfos", :action => "show",
-                                :id => product.id, :branchinfo_id => product.branchinfo_id}%></td>
-        <td><%= link_to'Edit', edit_productinfo_path(product) %></td>
-        <td><%= link_to'Destroy', productinfo_path(product),
-                       :confirm =>'Are you sure?',
-                       :method => :delete, data: { confirm: 'Are you sure?' } %></td>
-      <%end %>
+      <th></th>
+      <th>Product Name</th>
+      <th>Store Product Id</th>
+      <th>Product Price</th>
     </tr>
-  <% end %>
-</table>
-<br />
 
-<%= link_to'New Product', {:controller => "productinfos", :action => "new",
-                           :branchinfo_id => @branchinfo.id} %>
-<%= link_to'Back to Branches', {:controller => "branchinfos", :action => "index",
-                                :branchinfo_id => @branchinfo.id, :storeinfo_id => @branchinfo.storeinfo_id} %>
-<%= link_to 'Orders', {:controller => "baskets", :action => "showOrders",
-                       :branchinfo_id => @branchinfo.id, :storeinfo_id => @branchinfo.storeinfo_id}  %>
+    <% for product in @productList %>
+      <tr>
+        <% if current_user.admin? || product.user_id == current_user.id %>
+          <td><%= image_tag(product.image_url(:thumb).to_s) %></td>
+          <td><%= product.productname %></td>
+          <td><%= product.storeproductid %></td>
+          <td><%= product.productprice %></td>
+          <td class="btn badge badge-success"><%= link_to'Edit', edit_productinfo_path(product) %></td>
+          <td class="btn badge badge-danger"><%= link_to'Destroy', productinfo_path(product),
+                         :confirm =>'Are you sure?',
+                         :method => :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%end %>
+      </tr>
+    <% end %>
+  </table>
+  <br />
+
+  <div class = "row">
+    <div class="btn alert alert-info col-sm-2" style="background-color: #eee;">
+      <%= link_to'New Product', {:controller => "productinfos", :action => "new",
+                                 :branchinfo_id => @branchinfo.id} %>
+    </div>
+    <div class="btn alert alert-info col-sm-2" style="background-color: #eee;">
+      <%= link_to'Back to Branches', {:controller => "branchinfos", :action => "index",
+                                      :branchinfo_id => @branchinfo.id, :storeinfo_id => @branchinfo.storeinfo_id} %>
+    </div>
+    <div class="btn alert alert-info col-sm-2" style="background-color: #eee;">
+      <%= link_to 'Orders', {:controller => "baskets", :action => "showOrders",
+                             :branchinfo_id => @branchinfo.id, :storeinfo_id => @branchinfo.storeinfo_id}  %>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,3 +1,16 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+</br>
+
 <%= form_for([@productinfo]) do |f| %>
   <% if @productinfo.errors.any? %>
     <div id="error_explanation">
@@ -8,43 +21,57 @@
       </ul>
     </div>
   <% end %>
-  <div class="field">
 
-    <% if @productinfo.present? %>
-      <%= f.hidden_field :user_id, :value => @productinfo.user_id %>
-      </br>
-    <% end %>
+  <% if @productinfo.present? %>
+    <%= f.hidden_field :user_id, :value => @productinfo.user_id %>
+    </br>
+  <% end %>
 
-    <%= f.hidden_field :user_id, :value => current_user.id %>
+  <%= f.hidden_field :user_id, :value => current_user.id %>
 
-    <% if @branchinfo.present? %>
-      <%= f.hidden_field :branchinfo_id, :value => @branchinfo.id %>
-    <% end %>
-
-    <p><%= f.label :Productname %>
-      <%= f.text_field :productname %>
-    </p>
+  <% if @branchinfo.present? %>
+    <%= f.hidden_field :branchinfo_id, :value => @branchinfo.id %>
+  <% end %>
+  <div class="row">
+  <div class="col-sm-2 col-form-label">
+    <%= f.label :Productname %>
+  </div>
+  <div class="col-sm-2 col-form-label">
+    <%= f.text_field :productname %>
   </div>
 
-  <div>
-    <p><%= f.label :StoreProductID %>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-2 col-form-label">
+      <%= f.label :StoreProductID %>
+    </div>
+    <div class="col-sm-2 col-form-label">
       <%= f.text_field :storeproductid %>
-    </p>
+    </div>
   </div>
 
-  <div>
-    <p><%= f.label :ProductPrice %>
+  <div class="row">
+    <div class="col-sm-2 col-form-label">
+      <%= f.label :ProductPrice %>
+    </div>
+    <div class="col-sm-2 col-form-label">
       <%= f.text_field :productprice %>
-    </p>
+    </div>
   </div>
 
-  <div>
-    <p><%= f.label :Image %>
+  <div class="row">
+    <div class="col-sm-2 col-form-label">
+      <%= f.label :Image %>
+    </div>
+    <div class="col-sm-2 col-form-label">
       <%= f.file_field :image %>
-    </p>
+    </div>
   </div>
 
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+</body>
+</html>

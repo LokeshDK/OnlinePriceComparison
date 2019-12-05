@@ -1,3 +1,24 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div class ="container">
+  </br>
+
+  <h3 class="card-header">New Branch Info</h3>
 
 <%= render'form'%>
+  <div class="btn alert alert-primary col-sm-1">
+    <%= link_to'Back', {:controller => "branchinfos", :action => "index",
+                        :storeinfo_id => @storeinfo.id} %>
+  </div>
+</div>
+</body>
+</html>

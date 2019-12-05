@@ -3,17 +3,24 @@
   <component name="ChangeListManager">
     <list default="true" id="2dff8dc9-7408-43a3-a18e-10211e208d1c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/baskets_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/baskets_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/baskets/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/baskets/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/baskets/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/baskets/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/baskets/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/baskets/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/baskets/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/baskets/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/baskets/showOrders.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/baskets/showOrders.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/branchinfos/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/branchinfos/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/branchinfos/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/branchinfos/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/branchinfos/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/branchinfos/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/branchinfos/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/branchinfos/new.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/carts/_carts_item.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/carts/_carts_item.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/carts/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/carts/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/compare/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/compare/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/home/Index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/Index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/storeinfo/image/11/index.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/storeinfo/image/11/thumb_index.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/productinfos/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/productinfos/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/productinfos/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/productinfos/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/productinfos/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/productinfos/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/productinfos/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/productinfos/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/storeinfos/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/storeinfos/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/storeinfos/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/storeinfos/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/storeinfos/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/storeinfos/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/storeinfos/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/storeinfos/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mylog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/mylog.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -256,7 +263,7 @@
       <workItem from="1575254663235" duration="3342000" />
       <workItem from="1575275952095" duration="7804000" />
       <workItem from="1575287088888" duration="21657000" />
-      <workItem from="1575455532590" duration="12457000" />
+      <workItem from="1575455532590" duration="23624000" />
     </task>
     <servers />
   </component>
@@ -277,10 +284,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="159" y="125" width="861" height="475" key="DiffContextDialog" timestamp="1575301452852">
+    <state x="159" y="125" width="861" height="475" key="DiffContextDialog" timestamp="1575506774378">
       <screen x="59" y="27" width="1061" height="673" />
     </state>
-    <state x="159" y="125" width="861" height="475" key="DiffContextDialog/59.27.1061.673@59.27.1061.673" timestamp="1575301452852" />
+    <state x="159" y="125" width="861" height="475" key="DiffContextDialog/59.27.1061.673@59.27.1061.673" timestamp="1575506774378" />
     <state x="372" y="120" width="424" height="484" key="FileChooserDialogImpl" timestamp="1575163782010">
       <screen x="59" y="27" width="1061" height="673" />
     </state>
@@ -305,14 +312,74 @@
       <screen x="59" y="27" width="1061" height="673" />
     </state>
     <state x="59" y="187" width="1015" height="464" key="dock-window-1/59.27.1061.673@59.27.1061.673" timestamp="1575481397413" />
-    <state x="-5" y="195" width="1015" height="631" key="dock-window-10" timestamp="1575403720186">
+    <state x="366" y="159" width="754" height="464" key="dock-window-10" timestamp="1575500039602">
       <screen x="59" y="27" width="1061" height="673" />
     </state>
-    <state x="-5" y="195" width="1015" height="631" key="dock-window-10/59.27.1061.673@59.27.1061.673" timestamp="1575403720186" />
+    <state x="366" y="159" width="754" height="464" key="dock-window-10/59.27.1061.673@59.27.1061.673" timestamp="1575500039602" />
+    <state x="161" y="199" width="754" height="464" key="dock-window-11" timestamp="1575501456160">
+      <screen x="59" y="27" width="1061" height="673" />
+    </state>
+    <state x="161" y="199" width="754" height="464" key="dock-window-11/59.27.1061.673@59.27.1061.673" timestamp="1575501456160" />
+    <state x="239" y="169" width="754" height="464" key="dock-window-12" timestamp="1575502043613">
+      <screen x="59" y="27" width="1061" height="673" />
+    </state>
+    <state x="239" y="169" width="754" height="464" key="dock-window-12/59.27.1061.673@59.27.1061.673" timestamp="1575502043613" />
+    <state x="215" y="193" width="754" height="464" key="dock-window-13" timestamp="1575502803932">
+      <screen x="59" y="27" width="1061" height="673" />
+    </state>
+    <state x="215" y="193" width="754" height="464" key="dock-window-13/59.27.1061.673@59.27.1061.673" timestamp="1575502803932" />
+    <state x="235" y="195" width="754" height="468" key="dock-window-14" timestamp="1575502876551">
+      <screen x="59" y="27" width="1061" height="673" />
+    </state>
+    <state x="235" y="195" width="754" height="468" key="dock-window-14/59.27.1061.673@59.27.1061.673" timestamp="1575502876551" />
+    <state x="17" y="236" width="754" height="464" key="dock-window-15" timestamp="1575503043561">
+      <screen x="59" y="27" width="1061" height="673" />
+    </state>
+    <state x="17" y="236" width="754" height="464" key="dock-window-15/59.27.1061.673@59.27.1061.673" timestamp="1575503043561" />
+    <state x="189" y="203" width="754" height="464" key="dock-window-16" timestamp="1575503043562">
+      <screen x="59" y="27" width="1061" height="673" />
+    </state>
+    <state x="189" y="203" width="754" height="464" key="dock-window-16/59.27.1061.673@59.27.1061.673" timestamp="1575503043562" />
+    <state x="295" y="113" width="754" height="464" key="dock-window-17" timestamp="1575503925010">
+      <screen x="59" y="27" width="1061" height="673" />
+    </state>
+    <state x="295" y="113" width="754" height="464" key="dock-window-17/59.27.1061.673@59.27.1061.673" timestamp="1575503925010" />
+    <state x="263" y="187" width="754" height="464" key="dock-window-18" timestamp="1575503977297">
+      <screen x="59" y="27" width="1061" height="673" />
+    </state>
+    <state x="263" y="187" width="754" height="464" key="dock-window-18/59.27.1061.673@59.27.1061.673" timestamp="1575503977297" />
+    <state x="171" y="229" width="754" height="464" key="dock-window-19" timestamp="1575504632929">
+      <screen x="59" y="27" width="1061" height="673" />
+    </state>
+    <state x="171" y="229" width="754" height="464" key="dock-window-19/59.27.1061.673@59.27.1061.673" timestamp="1575504632929" />
     <state x="59" y="195" width="1015" height="464" key="dock-window-2" timestamp="1575482384076">
       <screen x="59" y="27" width="1061" height="673" />
     </state>
     <state x="59" y="195" width="1015" height="464" key="dock-window-2/59.27.1061.673@59.27.1061.673" timestamp="1575482384076" />
+    <state x="366" y="215" width="754" height="464" key="dock-window-20" timestamp="1575505025888">
+      <screen x="59" y="27" width="1061" height="673" />
+    </state>
+    <state x="366" y="215" width="754" height="464" key="dock-window-20/59.27.1061.673@59.27.1061.673" timestamp="1575505025888" />
+    <state x="319" y="219" width="754" height="464" key="dock-window-21" timestamp="1575505122860">
+      <screen x="59" y="27" width="1061" height="673" />
+    </state>
+    <state x="319" y="219" width="754" height="464" key="dock-window-21/59.27.1061.673@59.27.1061.673" timestamp="1575505122860" />
+    <state x="366" y="185" width="754" height="464" key="dock-window-22" timestamp="1575505197060">
+      <screen x="59" y="27" width="1061" height="673" />
+    </state>
+    <state x="366" y="185" width="754" height="464" key="dock-window-22/59.27.1061.673@59.27.1061.673" timestamp="1575505197060" />
+    <state x="149" y="229" width="754" height="464" key="dock-window-23" timestamp="1575505498107">
+      <screen x="59" y="27" width="1061" height="673" />
+    </state>
+    <state x="149" y="229" width="754" height="464" key="dock-window-23/59.27.1061.673@59.27.1061.673" timestamp="1575505498107" />
+    <state x="219" y="236" width="754" height="464" key="dock-window-24" timestamp="1575505498107">
+      <screen x="59" y="27" width="1061" height="673" />
+    </state>
+    <state x="219" y="236" width="754" height="464" key="dock-window-24/59.27.1061.673@59.27.1061.673" timestamp="1575505498107" />
+    <state x="79" y="221" width="754" height="464" key="dock-window-25" timestamp="1575506192363">
+      <screen x="59" y="27" width="1061" height="673" />
+    </state>
+    <state x="79" y="221" width="754" height="464" key="dock-window-25/59.27.1061.673@59.27.1061.673" timestamp="1575506192363" />
     <state x="83" y="207" width="1015" height="464" key="dock-window-3" timestamp="1575482421602">
       <screen x="59" y="27" width="1061" height="673" />
     </state>
@@ -337,24 +404,24 @@
       <screen x="59" y="27" width="1061" height="673" />
     </state>
     <state x="149" y="173" width="754" height="464" key="dock-window-8/59.27.1061.673@59.27.1061.673" timestamp="1575487717104" />
-    <state x="101" y="181" width="1015" height="631" key="dock-window-9" timestamp="1575403720186">
+    <state x="195" y="169" width="754" height="464" key="dock-window-9" timestamp="1575499993422">
       <screen x="59" y="27" width="1061" height="673" />
     </state>
-    <state x="101" y="181" width="1015" height="631" key="dock-window-9/59.27.1061.673@59.27.1061.673" timestamp="1575403720186" />
-    <state x="241" y="98" width="704" height="528" key="find.popup" timestamp="1575494235833">
+    <state x="195" y="169" width="754" height="464" key="dock-window-9/59.27.1061.673@59.27.1061.673" timestamp="1575499993422" />
+    <state x="241" y="98" width="704" height="528" key="find.popup" timestamp="1575506912392">
       <screen x="59" y="27" width="1061" height="673" />
     </state>
     <state x="229" y="98" width="704" height="528" key="find.popup/45.27.1075.673@45.27.1075.673" timestamp="1575070142679" />
-    <state x="241" y="98" width="704" height="528" key="find.popup/59.27.1061.673@59.27.1061.673" timestamp="1575494235833" />
+    <state x="241" y="98" width="704" height="528" key="find.popup/59.27.1061.673@59.27.1061.673" timestamp="1575506912392" />
     <state x="253" y="158" key="run.anything.popup" timestamp="1575330252823">
       <screen x="59" y="27" width="1061" height="673" />
     </state>
     <state x="253" y="158" key="run.anything.popup/59.27.1061.673@59.27.1061.673" timestamp="1575330252823" />
-    <state x="255" y="27" width="672" height="671" key="search.everywhere.popup" timestamp="1575494748759">
+    <state x="255" y="27" width="672" height="671" key="search.everywhere.popup" timestamp="1575507124253">
       <screen x="59" y="27" width="1061" height="673" />
     </state>
     <state x="244" y="27" width="672" height="671" key="search.everywhere.popup/45.27.1075.673@45.27.1075.673" timestamp="1575127994382" />
-    <state x="255" y="27" width="672" height="671" key="search.everywhere.popup/59.27.1061.673@59.27.1061.673" timestamp="1575494748759" />
+    <state x="255" y="27" width="672" height="671" key="search.everywhere.popup/59.27.1061.673@59.27.1061.673" timestamp="1575507124253" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/OnlinePriceComparison@branchinfos_controller.rcov" NAME="branchinfos_controller Coverage Results" MODIFIED="1572699929535" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/controllers" MODULE_NAME="OnlinePriceComparison" />

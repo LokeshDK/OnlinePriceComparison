@@ -1,6 +1,23 @@
-<h1>Editing Storeinfo</h1>
+<!DOCTYPE html>
+<html>
 
-<%= render 'form', storeinfo: @storeinfo %>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
 
-<%= link_to 'Show', @storeinfo %> |
-<%= link_to 'Back', storeinfos_path %>
+<body>
+<div class ="container">
+  </br>
+
+  <h3 class="card-header">Edit Store Info</h3>
+
+  <%= render 'form', storeinfo: @storeinfo %>
+  <div class="btn alert alert-primary col-sm-1">
+    <%= link_to 'Back', storeinfos_path %>
+  </div>
+</div>
+</body>
+</html>
