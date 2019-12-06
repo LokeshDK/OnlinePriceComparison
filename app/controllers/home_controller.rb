@@ -18,9 +18,9 @@ class HomeController < ApplicationController
 
     if @search.present? &&  @productSearch.empty?
       prodSearch = @search["productname"]
-      @tescoProduct = TescoProductSearch.find(prodSearch,1)
+      @tescoProduct = TescoProductSearch.find(prodSearch)
     elsif @productSearch.present? == false
-    @productList = Productinfo.all
+    @productList = Productinfo.all.order(:id)
   end
 
     if @productList.present?

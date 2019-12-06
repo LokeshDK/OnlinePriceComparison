@@ -8,7 +8,7 @@ class BranchinfosController < ApplicationController
   def index
     @storeinfo = Storeinfo.find(params[:storeinfo_id])
 
-    @branchList = @storeinfo.branchinfos
+    @branchList = @storeinfo.branchinfos.order(:id)
   end
 
   # GET /branchinfos/1

@@ -9,9 +9,9 @@ class ProductinfosController < ApplicationController
     @branchinfo = Branchinfo.find(params[:branchinfo_id])
 
     if !current_user.admin?
-      @productList= @branchinfo.productinfos.where(user_id: current_user.id)
+      @productList= @branchinfo.productinfos.where(user_id: current_user.id).order(:id)
     else
-      @productList = @branchinfo.productinfos
+      @productList = @branchinfo.productinfos.order(:id)
     end
     storeid = @branchinfo.storeinfo_id
     branchid = @branchinfo.id

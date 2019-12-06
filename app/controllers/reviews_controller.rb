@@ -5,7 +5,7 @@ class ReviewsController < ApplicationController
   # GET /reviews.json
   def index
     @productinfo = Productinfo.find(params[:productinfo_id])
-    @reviews = Review.where(productinfo_id: params[:productinfo_id])
+    @reviews = Review.where(productinfo_id: params[:productinfo_id]).order(:id)
   end
 
   # GET /reviews/1

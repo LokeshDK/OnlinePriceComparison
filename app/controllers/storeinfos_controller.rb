@@ -6,7 +6,7 @@ class StoreinfosController < ApplicationController
   # GET /storeinfos
   # GET /storeinfos.json
   def index
-    @storeinfos = Storeinfo.all
+    @storeinfos = Storeinfo.order(:id)
   end
 
   # GET /storeinfos/1

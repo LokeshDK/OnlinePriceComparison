@@ -50,13 +50,15 @@
   </table>
 
   <div class="row">
-  <h3>Current cart total is <%= current_order.subtotal %> EURO</h3>
-  <div class="col text-right">
-    <div class="btn alert alert-primary col-sm-4 float-right" style="float: right;">
-      <%= link_to "Save this order", {:controller => "baskets", :action => "new",
-                                      :odArr => @odItemIdArr}%>
-    </div>
-  </div>
+    <h3>Current cart total is <%= current_order.subtotal %> EURO</h3>
+    <% if !@odItemIdArr.empty? %>
+      <div class="col text-right">
+        <div class="btn alert alert-primary col-sm-4 float-right" style="float: right;">
+          <%= link_to "Save this order", {:controller => "baskets", :action => "new",
+                                          :odArr => @odItemIdArr}%>
+        </div>
+      </div>
+    <% end %>
   </div>
 </body>
 

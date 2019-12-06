@@ -7,17 +7,16 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/branchinfos_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/branchinfos_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/productinfos_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/productinfos_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/reviews_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/reviews_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/branchinfos/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/branchinfos/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/branchinfos/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/branchinfos/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/compare/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/compare/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/storeinfos_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/storeinfos_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/branchinfos/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/branchinfos/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/carts/_carts_item.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/carts/_carts_item.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/home/Index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/Index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/productinfos/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/productinfos/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/productinfos/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/productinfos/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/reviews/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/reviews/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/reviews/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/reviews/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/reviews/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/reviews/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/storeinfos/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/storeinfos/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mylog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/mylog.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -285,6 +284,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state width="851" height="438" key="DebuggerActiveHint" timestamp="1575645173681">
+      <screen x="59" y="27" width="1061" height="673" />
+    </state>
+    <state width="851" height="438" key="DebuggerActiveHint/59.27.1061.673@59.27.1061.673" timestamp="1575645173681" />
     <state x="159" y="125" width="861" height="475" key="DiffContextDialog" timestamp="1575506774378">
       <screen x="59" y="27" width="1061" height="673" />
     </state>
@@ -293,26 +296,42 @@
       <screen x="59" y="27" width="1061" height="673" />
     </state>
     <state x="372" y="120" width="424" height="484" key="FileChooserDialogImpl/59.27.1061.673@59.27.1061.673" timestamp="1575163782010" />
-    <state width="1015" height="153" key="GridCell.Tab.0.bottom" timestamp="1575241529933">
+    <state width="1015" height="191" key="GridCell.Tab.0.bottom" timestamp="1575652012437">
       <screen x="59" y="27" width="1061" height="673" />
     </state>
-    <state width="1015" height="153" key="GridCell.Tab.0.bottom/59.27.1061.673@59.27.1061.673" timestamp="1575241529933" />
-    <state width="1015" height="153" key="GridCell.Tab.0.center" timestamp="1575241529933">
+    <state width="1015" height="191" key="GridCell.Tab.0.bottom/59.27.1061.673@59.27.1061.673" timestamp="1575652012437" />
+    <state width="1015" height="191" key="GridCell.Tab.0.center" timestamp="1575652012436">
       <screen x="59" y="27" width="1061" height="673" />
     </state>
-    <state width="1015" height="153" key="GridCell.Tab.0.center/59.27.1061.673@59.27.1061.673" timestamp="1575241529933" />
-    <state width="1015" height="153" key="GridCell.Tab.0.left" timestamp="1575241529933">
+    <state width="1015" height="191" key="GridCell.Tab.0.center/59.27.1061.673@59.27.1061.673" timestamp="1575652012436" />
+    <state width="1015" height="191" key="GridCell.Tab.0.left" timestamp="1575652012436">
       <screen x="59" y="27" width="1061" height="673" />
     </state>
-    <state width="1015" height="153" key="GridCell.Tab.0.left/59.27.1061.673@59.27.1061.673" timestamp="1575241529933" />
-    <state width="1015" height="153" key="GridCell.Tab.0.right" timestamp="1575241529933">
+    <state width="1015" height="191" key="GridCell.Tab.0.left/59.27.1061.673@59.27.1061.673" timestamp="1575652012436" />
+    <state width="1015" height="191" key="GridCell.Tab.0.right" timestamp="1575652012436">
       <screen x="59" y="27" width="1061" height="673" />
     </state>
-    <state width="1015" height="153" key="GridCell.Tab.0.right/59.27.1061.673@59.27.1061.673" timestamp="1575241529933" />
-    <state x="247" y="236" width="743" height="464" key="dock-window-1" timestamp="1575583258666">
+    <state width="1015" height="191" key="GridCell.Tab.0.right/59.27.1061.673@59.27.1061.673" timestamp="1575652012436" />
+    <state width="1015" height="191" key="GridCell.Tab.1.bottom" timestamp="1575652012438">
       <screen x="59" y="27" width="1061" height="673" />
     </state>
-    <state x="247" y="236" width="743" height="464" key="dock-window-1/59.27.1061.673@59.27.1061.673" timestamp="1575583258666" />
+    <state width="1015" height="191" key="GridCell.Tab.1.bottom/59.27.1061.673@59.27.1061.673" timestamp="1575652012438" />
+    <state width="1015" height="191" key="GridCell.Tab.1.center" timestamp="1575652012437">
+      <screen x="59" y="27" width="1061" height="673" />
+    </state>
+    <state width="1015" height="191" key="GridCell.Tab.1.center/59.27.1061.673@59.27.1061.673" timestamp="1575652012437" />
+    <state width="1015" height="191" key="GridCell.Tab.1.left" timestamp="1575652012437">
+      <screen x="59" y="27" width="1061" height="673" />
+    </state>
+    <state width="1015" height="191" key="GridCell.Tab.1.left/59.27.1061.673@59.27.1061.673" timestamp="1575652012437" />
+    <state width="1015" height="191" key="GridCell.Tab.1.right" timestamp="1575652012437">
+      <screen x="59" y="27" width="1061" height="673" />
+    </state>
+    <state width="1015" height="191" key="GridCell.Tab.1.right/59.27.1061.673@59.27.1061.673" timestamp="1575652012437" />
+    <state x="133" y="223" width="743" height="464" key="dock-window-1" timestamp="1575642153797">
+      <screen x="59" y="27" width="1061" height="673" />
+    </state>
+    <state x="133" y="223" width="743" height="464" key="dock-window-1/59.27.1061.673@59.27.1061.673" timestamp="1575642153797" />
     <state x="366" y="159" width="754" height="464" key="dock-window-10" timestamp="1575500039602">
       <screen x="59" y="27" width="1061" height="673" />
     </state>
@@ -353,10 +372,10 @@
       <screen x="59" y="27" width="1061" height="673" />
     </state>
     <state x="171" y="229" width="754" height="464" key="dock-window-19/59.27.1061.673@59.27.1061.673" timestamp="1575504632929" />
-    <state x="59" y="236" width="743" height="464" key="dock-window-2" timestamp="1575589232650">
+    <state x="377" y="179" width="743" height="464" key="dock-window-2" timestamp="1575644742986">
       <screen x="59" y="27" width="1061" height="673" />
     </state>
-    <state x="59" y="236" width="743" height="464" key="dock-window-2/59.27.1061.673@59.27.1061.673" timestamp="1575589232650" />
+    <state x="377" y="179" width="743" height="464" key="dock-window-2/59.27.1061.673@59.27.1061.673" timestamp="1575644742986" />
     <state x="366" y="215" width="754" height="464" key="dock-window-20" timestamp="1575505025888">
       <screen x="59" y="27" width="1061" height="673" />
     </state>
@@ -409,22 +428,23 @@
       <screen x="59" y="27" width="1061" height="673" />
     </state>
     <state x="195" y="169" width="754" height="464" key="dock-window-9/59.27.1061.673@59.27.1061.673" timestamp="1575499993422" />
-    <state x="241" y="98" width="704" height="528" key="find.popup" timestamp="1575595528378">
+    <state x="241" y="98" width="704" height="528" key="find.popup" timestamp="1575643745291">
       <screen x="59" y="27" width="1061" height="673" />
     </state>
     <state x="229" y="98" width="704" height="528" key="find.popup/45.27.1075.673@45.27.1075.673" timestamp="1575070142679" />
-    <state x="241" y="98" width="704" height="528" key="find.popup/59.27.1061.673@59.27.1061.673" timestamp="1575595528378" />
+    <state x="241" y="98" width="704" height="528" key="find.popup/59.27.1061.673@59.27.1061.673" timestamp="1575643745291" />
     <state x="253" y="158" key="run.anything.popup" timestamp="1575330252823">
       <screen x="59" y="27" width="1061" height="673" />
     </state>
     <state x="253" y="158" key="run.anything.popup/59.27.1061.673@59.27.1061.673" timestamp="1575330252823" />
-    <state x="255" y="27" width="672" height="671" key="search.everywhere.popup" timestamp="1575596577016">
+    <state x="255" y="27" width="672" height="671" key="search.everywhere.popup" timestamp="1575653019405">
       <screen x="59" y="27" width="1061" height="673" />
     </state>
     <state x="244" y="27" width="672" height="671" key="search.everywhere.popup/45.27.1075.673@45.27.1075.673" timestamp="1575127994382" />
-    <state x="255" y="27" width="672" height="671" key="search.everywhere.popup/59.27.1061.673@59.27.1061.673" timestamp="1575596577016" />
+    <state x="255" y="27" width="672" height="671" key="search.everywhere.popup/59.27.1061.673@59.27.1061.673" timestamp="1575653019405" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/OnlinePriceComparison@.rcov" NAME=" Coverage Results" MODIFIED="1575645081981" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="OnlinePriceComparison" />
     <SUITE FILE_PATH="coverage/OnlinePriceComparison@branchinfos_controller.rcov" NAME="branchinfos_controller Coverage Results" MODIFIED="1572699929535" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/controllers" MODULE_NAME="OnlinePriceComparison" />
     <SUITE FILE_PATH="coverage/OnlinePriceComparison@test.rcov" NAME="test Coverage Results" MODIFIED="1575240922380" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/controllers" MODULE_NAME="OnlinePriceComparison" />
   </component>
