@@ -103,3 +103,5 @@ Basket status has changed
 +++ ProductObserver: The price of Milk 2 litre has been updated. New price is  Updated by  Surya Govindan suryajapan@gmail.com
 +++ ProductObserver: A new product Milk 3 litre has been created. The price is 
 >>>>>>> 80724cf9ddca0c33a8994eec347a66c1c8a65c0a
++++ A new store Test has been created. 
++++ A new store  has been created. 
