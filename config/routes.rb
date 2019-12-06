@@ -40,6 +40,8 @@ Rails.application.routes.draw do
   get '/privacy_policy' => 'profiles#privacy_policy'
 
   get '/check' =>'places#checkStore'
+  get '/maps' =>'places#maps'
+
   #validate that a number is even
   post '/results', :controller=>'places', :action=>'locator'
   post '/details', :controller=>'places', :action=>'details'
