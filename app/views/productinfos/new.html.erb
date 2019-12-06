@@ -15,11 +15,7 @@
   <h3 class="card-header">New Product</h3>
 
   <%= render'form'%>
-  <div class="btn alert alert-primary col-sm-1">
-    <%= link_to'Back', {:controller => "productinfos", :action => "index",
-                        :branchinfo_id => @branchinfo.id,
-                        :storeinfo_id => Storeinfo.find(@branchinfo.storeinfo_id)} %>
-  </div>
+
 </div>
 </body>
 </html>
