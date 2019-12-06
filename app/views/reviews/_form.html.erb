@@ -1,19 +1,47 @@
+<!DOCTYPE html>
+<html>
 
-<%= simple_form_for(@review) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
 
-  <div class="form-inputs">
+<body>
+<div class ="container">
+  </br>
+  <%= simple_form_for(@review) do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-    Rating
+      <div class="row">
+        <div class="col-sm-2 col-form-label">
+      Rating
+        </div>
+        <div class="col-sm-2 col-form-label">
+          <%=  f.select :rating, options_for_select(['1','2','3','4','5'])%>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-2 col-form-label">
+          <%= f.label :Comment %>
+        </div>
+        <div class="col-sm-2 col-form-label">
+          <%= f.text_area(:comment, size: '20x3')  %>
+        </div>
+      </div>
 
-    <%=  f.select :rating, options_for_select(['1','2','3','4','5'])%>
-    <%= f.input :comment %>
-    <%= f.text_field :user_id, :value => current_user.id %>
-    <%= f.text_field :productinfo_id, :value => @productid %>
-  </div>
+      <%= f.hidden_field :user_id, :value => current_user.id %>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+    <% if @productinfo.present? %>
+      <%= f.hidden_field :productinfo_id, :value => @productinfo.id %>
+    <% end %>
+
+    <div class="btn alert alert-secondary col-sm-4" style="background-color: #eee;">
+      <%= f.button :submit %>
+    </div>
+  <% end %>
+</div>
+</body>
+</html>

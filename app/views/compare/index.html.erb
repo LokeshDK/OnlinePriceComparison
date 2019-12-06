@@ -42,7 +42,7 @@
             <%= f.submit "Add to Cart", :class => "btn btn-secondary btn-sm" %>
           <% end %>
         </td>
-        <td><%= link_to 'Show reviews', {:controller => "reviews", :action => "index",
+        <td class="btn badge badge-info"><%= link_to 'Show reviews', {:controller => "reviews", :action => "index",
                                          :productinfo_id => product.id} %></td>
       </tr>
     <% } %>

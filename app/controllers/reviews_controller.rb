@@ -4,6 +4,7 @@ class ReviewsController < ApplicationController
   # GET /reviews
   # GET /reviews.json
   def index
+    @productinfo = Productinfo.find(params[:productinfo_id])
     @reviews = Review.where(productinfo_id: params[:productinfo_id])
   end
 
@@ -14,8 +15,8 @@ class ReviewsController < ApplicationController
 
   # GET /reviews/new
   def new
-    @productid = params[:productinfo_id]
-        @review = Review.new
+    @productinfo = Productinfo.find(params[:productinfo_id])
+    @review = Review.new
   end
 
   # GET /reviews/1/edit

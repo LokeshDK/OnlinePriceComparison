@@ -85,3 +85,4 @@ Basket status has changed
 +++ ProductObserver: A new product Garlic Bread has been created. The price is 0.28
 >>>>>>> b6ee3c66f5110d2c526d8dced9350b18cf00c225
 +++ A new store Test has been created. 
++++ ProductObserver: The price of Roasted Peanuts has been updated. New price is 0.46 Updated by  Lokesh Arcade lokesh@gmail.com

@@ -1,3 +1,5 @@
+require 'tescoProductSearch'
+
 class HomeController < ApplicationController
   def Index
 
@@ -14,9 +16,12 @@ class HomeController < ApplicationController
       @order_item = current_order.order_items.new
     end
 
-    if @productSearch.present? == false
-      @productList = Productinfo.all
-    end
+    if @search.present? &&  @productSearch.empty?
+      prodSearch = @search["productname"]
+      @tescoProduct = TescoProductSearch.find(prodSearch,1)
+    elsif @productSearch.present? == false
+    @productList = Productinfo.all
+  end
 
     if @productList.present?
       @productHash = {}
