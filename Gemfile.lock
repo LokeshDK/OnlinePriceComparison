@@ -340,11 +340,7 @@ DEPENDENCIES
   simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
-<<<<<<< HEAD
   tescoProductSearch (~> 2.1.0)
-=======
-  tescoProductSearch (~> 2.0)
->>>>>>> f37271e54188f10ff3162c5c0002495fed38d78d
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 3.3.0)
